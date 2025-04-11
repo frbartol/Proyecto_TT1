@@ -1,4 +1,4 @@
-#include "..\include\matrix.h"
+#include "..\include\matrix.hpp"
 
 Matrix::Matrix(const int n_row, const int n_column) {
     if (n_row <= 0 || n_column <= 0) {
@@ -89,6 +89,49 @@ Matrix& Matrix::operator / (Matrix &m) {
 }
 
 Matrix& Matrix::operator = (Matrix &m) {
+}
+Matrix& Matrix::operator + (double s){
+	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
+	for(int i = 1; i <= this->n_row; i++){
+		for(int j = 1; j <= this->n_row; j++){
+			(*m_aux)(i,j) = (*this)(i,j) + s;
+		}
+	}
+	return m_aux;
+}
+
+Matrix& Matrix::operator - (double s){
+	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
+	for(int i = 1; i <= this->n_row; i++){
+		for(int j = 1; j <= this->n_row; j++){
+			(*m_aux)(i,j) = (*this)(i,j) - s;
+		}
+	}
+	return m_aux;
+}
+
+Matrix& Matrix::operator * (double s){
+	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
+	for(int i = 1; i <= this->n_row; i++){
+		for(int j = 1; j <= this->n_row; j++){
+			(*m_aux)(i,j) = (*this)(i,j)*s;
+		}
+	}
+	return m_aux;
+}
+
+Matrix& Matrix::operator / (double s){
+	if (s==0) {
+		cout << "Divisor can't be 0";
+        exit(EXIT_FAILURE);
+	}
+	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
+	for(int i = 1; i <= this->n_row; i++){
+		for(int j = 1; j <= this->n_row; j++){
+			(*m_aux)(i,j) = (*this)(i,j)/s;
+		}
+	}
+	return m_aux;
 }
 
 ostream& operator << (ostream &o, Matrix &m) {
