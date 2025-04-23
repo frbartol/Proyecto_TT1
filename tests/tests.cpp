@@ -90,11 +90,43 @@ int m_zeros_01() {
     return 0;
 }
 
+int m_mul_01(){
+	int fa = 3, ca = 4;
+	int fb = 4, cb = 2;
+	int fc = 3, cc = 2;
+	
+	Matrix A(fa,ca);
+	A(1,1) = 0; A(1,2) = 2; A(1,3) = 8; A(1,4) = 0;
+	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
+	A(3,1) = 0; A(3,2) = 1; A(3,3) = 0; A(3,4) = 5;
+	
+	Matrix B(fb,cb);
+	
+	B(1,1) = 1; B(1,2) = 0;
+	B(2,1) = 0; B(2,2) = 1;
+	B(3,1) = -1; B(3,2) = 0;
+	B(4,1) = 0; B(4,2) = 1;
+	
+	Matrix C(fc,cc);
+	
+	C(1,1) = -8; C(1,2) = 2;
+	C(2,1) = 1; C(2,2) = -1;
+	C(3,1) = 0; C(3,2) = 6;
+	
+	Matrix R = A*B;
+	
+	_assert(m_equals(A, B, 1e-10));
+	
+	return 0;
+}
+	
+
 int all_tests()
 {
     _verify(m_sum_01);
     _verify(m_sub_01);
     _verify(m_zeros_01);
+	_verify(m_mul_01);
 
     return 0;
 }
