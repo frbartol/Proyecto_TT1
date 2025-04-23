@@ -1,5 +1,6 @@
 #include "..\include\matrix.hpp"
 
+//hay que añadir un constructor vacio
 Matrix::Matrix(const int n_row, const int n_column) {
     if (n_row <= 0 || n_column <= 0) {
 		cout << "Matrix create: error in n_row/n_column\n";
@@ -89,12 +90,22 @@ Matrix& Matrix::operator * (Matrix &m) {
 
 Matrix& Matrix::operator / (Matrix &m) {
 }
+*/
 
 Matrix& Matrix::operator = (Matrix &m) {
-	
+	this->n_row = m.n_row;
+	this->n_column = m.n_column;
+	this->data = (double **) malloc(n_row*sizeof(double *));
+	for(int i = 0; i < n_row; i++) {
+		this->data[i] = (double *) malloc(n_column*sizeof(double));
+		for (int j = 0; j < this->n_column; j++) {
+            this->data[i][j] = m.data[i][j];
+        }
+	}
+	return *this;
 }
 
-*/
+
 
 Matrix& Matrix::operator + (double s){
 	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
@@ -162,7 +173,18 @@ Matrix& zeros(const int n_row, const int n_column) {
 	return (*m_aux);
 }
 /*
-Matrix& inv(Matrix m){
+Matrix& transpose(Matrix &m){
+	Matrix *m_aux = new Matrix(m.n_column, m.n_row);
+	for(int i = 1; i <= m.n_row; i++) {
+		for(int j = 1; j <= m.n_column; j++) {
+			(*m_aux)(j,i) = m(i,j);
+		}
+	}
+	return *m_aux;
+}
+
+
+Matrix& inv(Matrix &m){
 	if (m.n_row != m.n_column) {
 		cout << "Matrix sub: error in n_row/n_column\n";
         exit(EXIT_FAILURE);

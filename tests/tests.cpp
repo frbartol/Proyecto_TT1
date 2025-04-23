@@ -115,7 +115,7 @@ int m_mul_01(){
 	
 	Matrix R = A*B;
 	
-	_assert(m_equals(A, B, 1e-10));
+	_assert(m_equals(C, R, 1e-10));
 	
 	return 0;
 }
