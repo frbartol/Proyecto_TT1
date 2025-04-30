@@ -21,6 +21,26 @@ Matrix::Matrix(const int n_row, const int n_column) {
 	}
 }
 
+Matrix::Matrix(const int n) {
+    if (n <= 0) {
+		cout << "Matrix create: error in n\n";
+        exit(EXIT_FAILURE);
+	}
+	
+	this->n_row = n;
+	this->n_column = n;
+	this->data = (double **) malloc(n*sizeof(double *));
+	
+    if (this->data == NULL) {
+		cout << "Matrix create: error in data\n";
+        exit(EXIT_FAILURE);
+	}
+	
+	for(int i = 0; i < n_row; i++) {
+		this->data[i] = (double *) malloc(n*sizeof(double));
+	}
+}
+
 double& Matrix::operator () (const int row, const int column) {
 	if (row <= 0 || row > this->n_row || column <= 0 || column > this->n_column) {
 		cout << "Matrix get: error in row/column\n";
@@ -120,7 +140,7 @@ Matrix& Matrix::operator + (double s){
 Matrix& Matrix::operator - (double s){
 	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
 	for(int i = 1; i <= this->n_row; i++){
-		for(int j = 1; j <= this->n_row; j++){
+		for(int j = 1; j <= this->n_column; j++){
 			(*m_aux)(i,j) = (*this)(i,j) - s;
 		}
 	}
@@ -130,7 +150,7 @@ Matrix& Matrix::operator - (double s){
 Matrix& Matrix::operator * (double s){
 	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
 	for(int i = 1; i <= this->n_row; i++){
-		for(int j = 1; j <= this->n_row; j++){
+		for(int j = 1; j <= this->n_column; j++){
 			(*m_aux)(i,j) = (*this)(i,j)*s;
 		}
 	}
@@ -144,7 +164,7 @@ Matrix& Matrix::operator / (double s){
 	}
 	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
 	for(int i = 1; i <= this->n_row; i++){
-		for(int j = 1; j <= this->n_row; j++){
+		for(int j = 1; j <= this->n_column; j++){
 			(*m_aux)(i,j) = (*this)(i,j)/s;
 		}
 	}
@@ -172,18 +192,30 @@ Matrix& zeros(const int n_row, const int n_column) {
 	
 	return (*m_aux);
 }
-/*
+
+Matrix& zeros(const int n) {
+	Matrix *m_aux = new Matrix(n);
+	
+	for(int i = 1; i <= n; i++) {
+		for(int j = 1; j <= n; j++) {
+			(*m_aux)(i,j) = 0;
+		}
+	}
+	
+	return (*m_aux);
+}
+
 Matrix& transpose(Matrix &m){
 	Matrix *m_aux = new Matrix(m.n_column, m.n_row);
-	for(int i = 1; i <= m.n_row; i++) {
-		for(int j = 1; j <= m.n_column; j++) {
-			(*m_aux)(j,i) = m(i,j);
+	for(int i = 1; i <= (*m_aux).n_row; i++){
+		for(int j = 1; j <= (*m_aux).n_column; j++){
+			(*m_aux)(i,j) = m(j,i);
 		}
 	}
 	return *m_aux;
 }
 
-
+/*
 Matrix& inv(Matrix &m){
 	if (m.n_row != m.n_column) {
 		cout << "Matrix sub: error in n_row/n_column\n";
