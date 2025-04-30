@@ -110,7 +110,7 @@ Matrix& Matrix::operator = (Matrix &m) {
 Matrix& Matrix::operator + (double s){
 	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
 	for(int i = 1; i <= this->n_row; i++){
-		for(int j = 1; j <= this->n_row; j++){
+		for(int j = 1; j <= this->n_column; j++){
 			(*m_aux)(i,j) = (*this)(i,j) + s;
 		}
 	}
