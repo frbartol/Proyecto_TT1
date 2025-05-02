@@ -40,8 +40,9 @@ ostream& operator << (ostream &o, Matrix &m);
 // Methods
 Matrix& zeros(const int n_row, const int n_column);
 Matrix& zeros(const int n);
+Matrix& eye(const int n);
 Matrix& transpose(Matrix &m);
-Matrix& inv(Matrix m);
+Matrix& inv(Matrix &m);
 
 
 #endif

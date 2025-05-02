@@ -135,6 +135,26 @@ int m_mul_01(){
 	return 0;
 }
 
+int m_div_01(){
+	int n = 2;
+	Matrix A(n);
+	A(1,1) = 10; A(1,2) = 6;
+	A(2,1) = 4; A(2,2) = 2;
+
+	Matrix B(n);
+	B(1,1) = 2; B(1,2) = 0;
+	B(2,1) = 1; B(2,2) = 1;
+
+	Matrix C(n);
+	C(1,1) = 2; C(1,2) = 6;
+	C(2,1) = 1; C(2,2) = 2;
+
+	Matrix R = A/B;
+	_assert(m_equals(C,R,1e-10));
+
+	return 0;
+}
+
 int m_asign_01(){
 	int fa = 3, ca = 4;
 	int fb = 4, cb = 2;
@@ -238,7 +258,43 @@ int m_divScalar_01(){
 	return 0;
 }
 
+int m_transpose_01(){
+	int f = 3;
+    int c = 4;
+	Matrix A(f, c);
+	A(1,1) = 0; A(1,2) =  2; A(1,3) = 8; A(1,4) = 0;
+	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
+	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
 
+	Matrix B(c, f);
+	B(1,1) = 0;  B(1,2) = 1;  B(1,3) = 0;
+	B(2,1) = 2;  B(2,2) = -1; B(2,3) = 1;
+	B(3,1) = 8;  B(3,2) = 0;  B(3,3) = 0;
+	B(4,1) = 0;  B(4,2) = 0;  B(4,3) = 5;
+
+	Matrix R=transpose(A);
+	_assert(m_equals(R,B,1e-10));
+
+	return 0;
+}
+
+int m_inv_01(){
+	int n=3;
+	Matrix A(n);
+	A(1,1) = 2; A(1,2) =  1; A(1,3) = 1; 
+	A(2,1) = 1; A(2,2) = 3; A(2,3) = 2; 
+	A(3,1) = 1; A(3,2) =  0; A(3,3) = 0;
+
+	Matrix B(n);
+	B(1,1) = 0; B(1,2) =  0; B(1,3) = 1; 
+	B(2,1) = -2; B(2,2) = 1; B(2,3) = 3; 
+	B(3,1) = 3; B(3,2) =  -1; B(3,3) = -5;
+
+	Matrix R = inv(A);
+	_assert(m_equals(R,B,1e-10));
+
+	return 0;
+}
 
 int all_tests()
 {
@@ -247,11 +303,14 @@ int all_tests()
     _verify(m_zeros_01);
 	_verify(m_zerosSquare_01);
 	_verify(m_mul_01);
+	_verify(m_div_01);
 	_verify(m_asign_01);
 	_verify(m_sumScalar_01);
 	_verify(m_subScalar_01);
 	_verify(m_mulScalar_01);
 	_verify(m_divScalar_01);
+	_verify(m_transpose_01);
+	_verify(m_inv_01);
 
     return 0;
 }

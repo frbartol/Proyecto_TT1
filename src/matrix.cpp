@@ -86,7 +86,7 @@ Matrix& Matrix::operator - (Matrix &m) {
 
 Matrix& Matrix::operator * (Matrix &m) {
 	if (this->n_column != m.n_row) {
-		cout << "Matrix sub: error in n_row/n_column\n";
+		cout << "Matrix mul: error in n_row/n_column\n";
         exit(EXIT_FAILURE);
 	}
 	
@@ -106,11 +106,30 @@ Matrix& Matrix::operator * (Matrix &m) {
 	return *m_aux;
 }
 
-/*
-
 Matrix& Matrix::operator / (Matrix &m) {
+	if (this->n_column != m.n_row) {
+		cout << "Matrix div: error in n_row/n_column\n";
+        exit(EXIT_FAILURE);
+	}
+	
+	Matrix &m_inv = inv(m);
+	Matrix *m_aux = new Matrix(this->n_row, m.n_column);
+
+	double sum;
+
+	for (int i = 1; i <= this->n_row; i++){
+		for (int j = 1; j <= m_inv.n_column; j++){
+			sum=0;
+			for (int k=1; k<= this->n_column; k++){
+				sum += (*this)(i,k)*m_inv(k,j);
+			}
+			(*m_aux)(i,j) = sum;
+		}
+	}		
+	
+	return *m_aux;
 }
-*/
+
 
 Matrix& Matrix::operator = (Matrix &m) {
 	this->n_row = m.n_row;
@@ -193,6 +212,17 @@ Matrix& zeros(const int n_row, const int n_column) {
 	return (*m_aux);
 }
 
+Matrix& eye(const int n){
+	Matrix *m_aux = new Matrix(n);
+	for(int i=1; i<=n; i++){
+		for(int j=1; j<=n; j++){
+			if(i==j) (*m_aux)(i,j)=1;
+			else (*m_aux)(i,j)=0;
+		}
+	}
+	return (*m_aux);
+}
+
 Matrix& zeros(const int n) {
 	Matrix *m_aux = new Matrix(n);
 	
@@ -215,11 +245,65 @@ Matrix& transpose(Matrix &m){
 	return *m_aux;
 }
 
-/*
 Matrix& inv(Matrix &m){
 	if (m.n_row != m.n_column) {
-		cout << "Matrix sub: error in n_row/n_column\n";
+		cout << "Matrix inv: error in n_row/n_column\n";
         exit(EXIT_FAILURE);
 	}
-	Matrix *m_aux = new Matrix
-*/
+
+	int n = m.n_row;
+	Matrix *m_aux = new Matrix(n);  // Copia de m
+	Matrix &I = eye(n);             // Matriz identidad
+
+	// Copiar contenido de m a m_aux
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= n; j++) {
+			(*m_aux)(i, j) = m(i, j);
+		}
+	}
+
+	// Gauss-Jordan para obtener la inversa
+	for (int i = 1; i <= n; i++) {
+		double pivot = (*m_aux)(i, i);
+
+		// Si el pivote es 0, buscar fila para intercambiar
+		if (pivot == 0) {
+			int swap_row = -1;
+			for (int k = i + 1; k <= n; k++) {
+				if ((*m_aux)(k, i) != 0) {
+					swap_row = k;
+					break;
+				}
+			}
+			if (swap_row == -1) {
+				cout << "Matrix inv: matriz no invertible (pivot = 0)\n";
+				exit(EXIT_FAILURE);
+			}
+
+			// Intercambiar filas en ambas matrices
+			for (int j = 1; j <= n; j++) {
+				swap((*m_aux)(i, j), (*m_aux)(swap_row, j));
+				swap(I(i, j), I(swap_row, j));
+			}
+			pivot = (*m_aux)(i, i);
+		}
+
+		// Normalizar fila i
+		for (int j = 1; j <= n; j++) {
+			(*m_aux)(i, j) /= pivot;
+			I(i, j) /= pivot;
+		}
+
+		// Hacer ceros en otras filas de la columna
+		for (int k = 1; k <= n; k++) {
+			if (k == i) continue;
+			double factor = (*m_aux)(k, i);
+			for (int j = 1; j <= n; j++) {
+				(*m_aux)(k, j) -= factor * (*m_aux)(i, j);
+				I(k, j) -= factor * I(i, j);
+			}
+		}
+	}
+
+	return I;
+}
