@@ -50,6 +50,14 @@ double& Matrix::operator () (const int row, const int column) {
 	return this->data[row - 1][column - 1];
 }
 
+double& Matrix::operator () (const int n){
+	if(n<=0||n>this->n_row*this->n_column){
+		cout<<"Matrix get2: error in row/column\n";
+		exit(EXIT_FAILURE);
+	}
+	return this->data[(n-1)/this->n_column][(n-1)%this->n_column];
+}
+
 Matrix& Matrix::operator + (Matrix &m) {
 	if (this->n_row != m.n_row || this->n_column != m.n_column) {
 		cout << "Matrix sum: error in n_row/n_column\n";
