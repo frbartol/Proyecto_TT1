@@ -296,6 +296,33 @@ int m_inv_01(){
 	return 0;
 }
 
+int m_norm_01(){
+	int n= 2;
+	Matrix A(n);
+	A(1,1) = 3; A(1,2) = 4; 
+	A(2,1) = 0; A(2,2) = 5;
+
+	double r= sqrt(3*3 + 4*4 + 0*0 + 5*5);
+
+	_assert(fabs(A.norm()-r)<1e-10);
+
+	return 0;
+}
+
+int m_dot_01(){
+	int f = 1, c = 3;
+
+	Matrix A(1,3);
+	A(1,1)= 1; A(1,1)= 2; A(1,1)= 2; 
+
+	Matrix B(1,3);
+	B(1,1)= 4; B(1,1)= -5; B(1,1)= 6; 
+
+	_assert(fabs(12-A.dot(B)<1e-10));
+
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -311,6 +338,8 @@ int all_tests()
 	_verify(m_divScalar_01);
 	_verify(m_transpose_01);
 	_verify(m_inv_01);
+	_verify(m_norm_01);
+	_verify(m_dot_01);
 
     return 0;
 }

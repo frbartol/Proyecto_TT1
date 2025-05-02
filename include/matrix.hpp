@@ -30,6 +30,9 @@ public:
 	Matrix& operator - (double s);
 	Matrix& operator * (double s);
 	Matrix& operator / (double s);
+
+	double norm();
+	double dot(Matrix &m);
 	
 	// Non-member operators
 	friend ostream& operator << (ostream &o, Matrix &m);

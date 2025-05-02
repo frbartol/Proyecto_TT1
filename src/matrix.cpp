@@ -243,6 +243,30 @@ Matrix& zeros(const int n) {
 	return (*m_aux);
 }
 
+double Matrix::norm(){
+	double result=0;
+	for(int i= 1; i<=this->n_row; i++){
+		for(int j= 1; j<=this->n_column;j++){
+			result+= pow((*this)(i,j),2);
+		}
+	}
+	return sqrt(result);
+}
+
+double Matrix::dot(Matrix &m){
+	if(this->n_row!=m.n_row || this->n_column!=m.n_column){
+		cout<<"Matrix dot: error in n_tow/n_column";
+		exit(EXIT_FAILURE);
+	}
+
+	double result=0;
+	for(int j= 1; j<=this->n_column; j++){
+		result+= (*this)(1,j)*m(1,j);
+	}
+
+	return result;
+}
+
 Matrix& transpose(Matrix &m){
 	Matrix *m_aux = new Matrix(m.n_column, m.n_row);
 	for(int i = 1; i <= (*m_aux).n_row; i++){
