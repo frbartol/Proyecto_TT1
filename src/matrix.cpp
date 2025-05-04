@@ -255,7 +255,7 @@ double Matrix::norm(){
 
 double Matrix::dot(Matrix &m){
 	if(this->n_row!=m.n_row || this->n_column!=m.n_column){
-		cout<<"Matrix dot: error in n_tow/n_column";
+		cout<<"Matrix dot: error in n_row/n_column";
 		exit(EXIT_FAILURE);
 	}
 
@@ -265,6 +265,111 @@ double Matrix::dot(Matrix &m){
 	}
 
 	return result;
+}
+
+Matrix& Matrix::cross(Matrix &m){
+	if(this->n_row!=1 || this->n_column!=3 || m.n_row!=1 || m.n_column!=3){
+		cout<<"Matrix cross: error in n_row/n_column";
+	}
+
+	Matrix *m_aux = new Matrix(1,3);
+
+	(*m_aux)(1,1) = (*this)(1,2)*m(1,3) - (*this)(1,3)*m(1,2);
+	(*m_aux)(1,2) = (*this)(1,3)*m(1,1) - (*this)(1,1)*m(1,3);
+	(*m_aux)(1,3) = (*this)(1,1)*m(1,2) - (*this)(1,2)*m(1,1);
+
+	return (*m_aux);
+
+}
+
+Matrix& Matrix::extract_vector(int a, int b){
+	int total_size = this->n_row*this->n_column;
+
+	if(a<1 || a>b || a>total_size || b>total_size){
+		cout<<"Matrix extract_vector: invalid range";
+		exit(EXIT_FAILURE);
+	}
+
+	int size = b-a+1;
+
+	Matrix *m_aux = new Matrix(1,size);
+
+	for(int i = 0; i<size; i++){
+		(*m_aux)(i+1) = (*this)(a+i);
+	}
+
+	return *m_aux;
+}
+
+Matrix& Matrix::union_vector(Matrix& m){
+	if(this->n_row!=1 || m.n_row!=1){
+		cout<<"Matrix union_vector: Error in n_row/n_column";
+		exit(EXIT_FAILURE);
+	}
+
+	int size = this->n_column + m.n_column;
+
+	Matrix *m_aux = new Matrix(1,size);
+
+	for(int i = 1; i<=this->n_column; i++){
+		(*m_aux)(1,i) = (*this)(1,i);
+	}
+
+	for(int i = 1; i<=m.n_column; i++){
+		(*m_aux)(1,this->n_column+i) = m(1,i);
+	}
+
+	return *m_aux;
+}
+
+Matrix& Matrix::extract_row(const int n){
+	if(n>this->n_row){
+		cout<<"Matrix extract_row: Error in input row";
+		exit(EXIT_FAILURE);
+	}
+	Matrix *m_aux = new Matrix(1,this->n_column);
+
+	for(int j = 1; j<=this->n_column; j++){
+		(*m_aux)(1,j) = (*this)(n,j);
+	}
+
+	return *m_aux;
+}
+
+Matrix& Matrix::extract_column(const int n){
+	if(n>this->n_column){
+		cout<<"Matrix extract_column: Error in input column";
+		exit(EXIT_FAILURE);
+	}
+	Matrix *m_aux = new Matrix(this->n_row,1);
+
+	for(int i = 1; i<=this->n_row; i++){
+		(*m_aux)(i,1) = (*this)(i,n);
+	}
+
+	return *m_aux;
+}
+
+void Matrix::asign_row(int n, Matrix &m){
+	if(n>this->n_row || n_column!=m.n_column){
+		cout<<"Matrix asign_row: Error in input matrix/row";
+		exit(EXIT_FAILURE);
+	}
+
+	for(int i = 1; i<=this->n_column; i++){
+		(*this)(n,i) = m(1,i);
+	}
+}
+
+void Matrix::asign_column(int n, Matrix &m){
+	if(n>this->n_column || n_row!=m.n_row){
+		cout<<"Matrix asign_column: Error in input matrix/column";
+		exit(EXIT_FAILURE);
+	}
+
+	for(int i = 1; i<=this->n_row; i++){
+		(*this)(i,n) = m(i,1);
+	}
 }
 
 Matrix& transpose(Matrix &m){

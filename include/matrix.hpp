@@ -33,6 +33,13 @@ public:
 
 	double norm();
 	double dot(Matrix &m);
+	Matrix& cross(Matrix &m);
+	Matrix& extract_vector(int a, int b);
+	Matrix& union_vector(Matrix &m);
+	Matrix& extract_row(const int n);
+	Matrix& extract_column(const int n);
+	void asign_row(int n, Matrix &m);
+	void asign_column(int n, Matrix &m);
 	
 	// Non-member operators
 	friend ostream& operator << (ostream &o, Matrix &m);
