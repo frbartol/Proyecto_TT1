@@ -1,4 +1,5 @@
 #include "..\include\matrix.hpp"
+#include "..\include\AccelPointMass.hpp"
 #include <iostream>
 
 using namespace std;
@@ -21,20 +22,14 @@ int main() {
 	
 	cout << M1(1,1) << "\n";
 	*/
-	int f = 3;
-	int c = 4;
+	double GM = 3.986004418e14;
+	int f = 1;
+	int c = 3;
+	Matrix r(f,c);
+	r(1,1)= 7000000; r(1,2)= 0; r(1,3)= 0;
 
-	Matrix A(f, c);
-	A(1,1) = 0; A(1,2) =  2; A(1,3) = 8; A(1,4) = 0;
-	A(2,1) = 1; A(2,2) = -1; A(2,3) = 0; A(2,4) = 0;
-	A(3,1) = 0; A(3,2) =  1; A(3,3) = 0; A(3,4) = 5;
+	Matrix s(f,c);
+	s(1,1)= 0; s(1,2)= 6371000; s(1,3)= 0;
 
-	Matrix B(f,1);
-	B(1,1) = 9;
-	B(2,1) = 9;
-	B(3,1) = 9;
-
-	cout<<A<<"====================================================\n";
-	A.asign_column(2,B);
-	cout<<A;
+	cout<<AccelPointMass(r,s,GM);
 }
