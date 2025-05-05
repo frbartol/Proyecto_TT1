@@ -1,4 +1,5 @@
 #include "..\include\matrix.hpp"
+#include "..\include\AccelPointMass.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -462,6 +463,25 @@ int m_asign_column_01(){
 	return 0;
 }
 
+int accel_point_mass_01(){
+	double GM = 3.986004418e14;
+	int f = 1;
+	int c = 3;
+	Matrix r(f,c);
+	r(1,1)= 7000000; r(1,2)= 0; r(1,3)= 0;
+
+	Matrix s(f,c);
+	s(1,1)= 0; s(1,2)= 6371000; s(1,3)= 0;
+
+	Matrix a = AccelPointMass(r,s,GM);
+
+	Matrix C(f,c);
+	C(1,1)= -3.2904032183; C(1,2)= -6.8255135008; C(1,3)= 0;
+
+	_assert(m_equals(a,C,1e-10));
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -486,6 +506,7 @@ int all_tests()
 	_verify(m_extract_column_01);
 	_verify(m_asign_row_01);
 	_verify(m_asign_column_01);
+	_verify(accel_point_mass_01);
 
     return 0;
 }

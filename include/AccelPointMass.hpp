@@ -4,6 +4,6 @@
 #include "matrix.hpp"
 #include <iostream>
 
-Matrix& AccelPointMass(Matrix &r, Matrix &s, double GM);
+Matrix AccelPointMass(Matrix &r, Matrix &s, double GM);
 
 #endif

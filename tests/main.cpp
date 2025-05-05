@@ -31,5 +31,6 @@ int main() {
 	Matrix s(f,c);
 	s(1,1)= 0; s(1,2)= 6371000; s(1,3)= 0;
 
-	cout<<AccelPointMass(r,s,GM);
+	Matrix a = AccelPointMass(r,s,GM);
+	cout<<a;
 }
