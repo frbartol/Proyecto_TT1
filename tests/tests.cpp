@@ -1,5 +1,6 @@
 #include "..\include\matrix.hpp"
 #include "..\include\AccelPointMass.hpp"
+#include "..\include\Cheb3D.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -463,7 +464,7 @@ int m_asign_column_01(){
 	return 0;
 }
 
-int accel_point_mass_01(){
+int i1_accel_point_mass_01(){
 	double GM = 3.986004418e14;
 	int f = 1;
 	int c = 3;
@@ -479,6 +480,27 @@ int accel_point_mass_01(){
 	C(1,1)= -3.2904032183; C(1,2)= -6.8255135008; C(1,3)= 0;
 
 	_assert(m_equals(a,C,1e-10));
+	return 0;
+}
+
+int i1_cheb3d_01(){
+	int f = 1;
+	int c = 5;
+	Matrix Cx(f,c);
+	Cx(1,1) = 1; Cx(1,2) = 0.5; Cx(1,3) = 0.2; Cx(1,4) = 0.1; Cx(1,5) = 0.05; 
+	
+	Matrix Cy(f,c);
+	Cy(1,1) = 0.8; Cy(1,2) = 0.3; Cy(1,3) = 0.15; Cy(1,4) = 0.07; Cy(1,5) = 0.03;
+
+	Matrix Cz(f,c);
+	Cz(1,1) = 0.6; Cz(1,2) = 0.4; Cz(1,3) = 0.1; Cz(1,4) = 0.05; Cz(1,5) = 0.02;
+
+	Matrix ChebApp = Cheb3D(0.5,5,0,1,Cx,Cy,Cz);
+
+	Matrix R(1,3);
+	R(1,1) = 0.8500000000; R(1,2) = 0.6800000000; R(1,3) = 0.5200000000;
+
+	_assert(m_equals(ChebApp,R,1e-10));
 	return 0;
 }
 
@@ -506,7 +528,8 @@ int all_tests()
 	_verify(m_extract_column_01);
 	_verify(m_asign_row_01);
 	_verify(m_asign_column_01);
-	_verify(accel_point_mass_01);
+	_verify(i1_accel_point_mass_01);
+	_verify(i1_cheb3d_01);
 
     return 0;
 }

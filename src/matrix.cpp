@@ -152,8 +152,6 @@ Matrix& Matrix::operator = (Matrix &m) {
 	return *this;
 }
 
-
-
 Matrix& Matrix::operator + (double s){
 	Matrix *m_aux = new Matrix(this->n_row, this->n_column);
 	for(int i = 1; i <= this->n_row; i++){

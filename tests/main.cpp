@@ -1,5 +1,6 @@
 #include "..\include\matrix.hpp"
 #include "..\include\AccelPointMass.hpp"
+#include "..\include\Cheb3d.hpp"
 #include <iostream>
 
 using namespace std;
@@ -24,13 +25,17 @@ int main() {
 	*/
 	double GM = 3.986004418e14;
 	int f = 1;
-	int c = 3;
-	Matrix r(f,c);
-	r(1,1)= 7000000; r(1,2)= 0; r(1,3)= 0;
+	int c = 5;
+	Matrix Cx(f,c);
+	Cx(1,1) = 1; Cx(1,2) = 0.5; Cx(1,3) = 0.2; Cx(1,4) = 0.1; Cx(1,5) = 0.05; 
+	
+	Matrix Cy(f,c);
+	Cy(1,1) = 0.8; Cy(1,2) = 0.3; Cy(1,3) = 0.15; Cy(1,4) = 0.07; Cy(1,5) = 0.03;
 
-	Matrix s(f,c);
-	s(1,1)= 0; s(1,2)= 6371000; s(1,3)= 0;
+	Matrix Cz(f,c);
+	Cz(1,1) = 0.6; Cz(1,2) = 0.4; Cz(1,3) = 0.1; Cz(1,4) = 0.05; Cz(1,5) = 0.02;
 
-	Matrix a = AccelPointMass(r,s,GM);
-	cout<<a;
+	Matrix ChebApp = Cheb3D(0.5,5,0,1,Cx,Cy,Cz);
+
+	cout<<ChebApp;
 }
