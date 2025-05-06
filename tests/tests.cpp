@@ -2,6 +2,7 @@
 #include "..\include\AccelPointMass.hpp"
 #include "..\include\Cheb3D.hpp"
 #include "..\include\EccAnom.hpp"
+#include "..\include\Frac.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -513,6 +514,14 @@ int i1_eccanon_01(){
 	return 0;
 }
 
+int i1_frac_01(){
+	double x = -3.700000;
+	double r = 0.3;
+
+	_assert(fabs(r-Frac(x))<1e-10);
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -540,6 +549,7 @@ int all_tests()
 	_verify(i1_accel_point_mass_01);
 	_verify(i1_cheb3d_01);
 	_verify(i1_eccanon_01);
+	_verify(i1_frac_01);
 
     return 0;
 }
