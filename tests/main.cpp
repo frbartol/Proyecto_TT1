@@ -3,6 +3,7 @@
 #include "..\include\Cheb3d.hpp"
 #include "..\include\EccAnom.hpp"
 #include "..\include\Frac.hpp"
+#include "..\include\MeanObliquity.hpp"
 #include <iostream>
 
 using namespace std;
@@ -25,6 +26,7 @@ int main() {
 	
 	cout << M1(1,1) << "\n";
 	*/
-	double x = -3.700000;
-	cout<<Frac(x);
+	double Mjd_TT = 51544.5;
+	double MOblq = MeanObliquity(Mjd_TT);
+	cout<<MOblq;
 }
