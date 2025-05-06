@@ -1,6 +1,7 @@
 #include "..\include\matrix.hpp"
 #include "..\include\AccelPointMass.hpp"
 #include "..\include\Cheb3D.hpp"
+#include "..\include\EccAnom.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -504,6 +505,14 @@ int i1_cheb3d_01(){
 	return 0;
 }
 
+int i1_eccanon_01(){
+	double M = 0.5;
+	double e = 0.1;
+
+	_assert(fabs(0.5524799869-EccAnom(M,e))<1e-10);
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -530,6 +539,7 @@ int all_tests()
 	_verify(m_asign_column_01);
 	_verify(i1_accel_point_mass_01);
 	_verify(i1_cheb3d_01);
+	_verify(i1_eccanon_01);
 
     return 0;
 }
