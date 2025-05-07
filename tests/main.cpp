@@ -29,9 +29,15 @@ int main() {
 	
 	cout << M1(1,1) << "\n";
 	*/
-	double lat = 0.785398163397448;
-	double lon = 1.570796326794897;
-	double h = 1000;
-	Matrix r = Position(lon, lat, h);
-	cout<<r;
+	double GM = 3.986004418e14;
+	int f = 1;
+	int c = 3;
+	Matrix r(f,c);
+	r(1,1)= 7000000; r(1,2)= 0; r(1,3)= 0;
+
+	Matrix s(f,c);
+	s(1,1)= 0; s(1,2)= 6371000; s(1,3)= 0;
+
+	Matrix a = AccelPointMass(r,s,GM);
+	cout<<a;
 }
