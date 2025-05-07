@@ -1,3 +1,4 @@
+#include "..\include\SAT_Const.hpp"
 #include "..\include\matrix.hpp"
 #include "..\include\AccelPointMass.hpp"
 #include "..\include\Cheb3D.hpp"
@@ -5,6 +6,9 @@
 #include "..\include\Frac.hpp"
 #include "..\include\MeanObliquity.hpp"
 #include "..\include\Mjday.hpp"
+#include "..\include\Mjday_TDB.hpp"
+#include "..\include\Position.hpp"
+
 #include <cstdio>
 #include <cmath>
 
@@ -547,6 +551,29 @@ int i1_mjday_01(){
 	return 0;
 }
 
+int i1_mjday_tdb_01(){ // probar en matlab
+	double Mjd_TT = 51544.5;
+	
+	double r = 51544.5000000247;
+
+	_assert(fabs(r-Mjday_TDB(Mjd_TT))<1e-6);
+	return 0;
+}
+
+int i1_position_01(){ //probar en matlab
+	double lon = 0;
+	double lat = 0.785398163397448;
+	double h = 0;
+
+	Matrix r(1,3);
+	r(1,1) = 4516658.006;
+	r(1,2) = 0;
+	r(1,3) = 4486741.141;
+
+	_assert(m_equals(r,Position(lon,lat,h),1e-10));
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -577,6 +604,8 @@ int all_tests()
 	_verify(i1_frac_01);
 	_verify(i1_meanobliquity_01);
 	_verify(i1_mjday_01);
+	_verify(i1_mjday_tdb_01);
+	_verify(i1_position_01);
 
     return 0;
 }

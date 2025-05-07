@@ -6,6 +6,7 @@
 #include "..\include\MeanObliquity.hpp"
 #include "..\include\Mjday.hpp"
 #include "..\include\Mjday_TDB.hpp"
+#include "..\include\Position.hpp"
 #include <iostream>
 
 using namespace std;
@@ -28,6 +29,9 @@ int main() {
 	
 	cout << M1(1,1) << "\n";
 	*/
-	double Mjd_TT = 51544.5;
-	cout<<Mjday_TDB(Mjd_TT);
+	double lat = 0.785398163397448;
+	double lon = 1.570796326794897;
+	double h = 1000;
+	Matrix r = Position(lon, lat, h);
+	cout<<r;
 }
