@@ -4,6 +4,8 @@
 #include "..\include\EccAnom.hpp"
 #include "..\include\Frac.hpp"
 #include "..\include\MeanObliquity.hpp"
+#include "..\include\Mjday.hpp"
+#include "..\include\Mjday_TDB.hpp"
 #include <iostream>
 
 using namespace std;
@@ -27,6 +29,5 @@ int main() {
 	cout << M1(1,1) << "\n";
 	*/
 	double Mjd_TT = 51544.5;
-	double MOblq = MeanObliquity(Mjd_TT);
-	cout<<MOblq;
+	cout<<Mjday_TDB(Mjd_TT);
 }

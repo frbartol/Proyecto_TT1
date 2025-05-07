@@ -3,6 +3,8 @@
 #include "..\include\Cheb3D.hpp"
 #include "..\include\EccAnom.hpp"
 #include "..\include\Frac.hpp"
+#include "..\include\MeanObliquity.hpp"
+#include "..\include\Mjday.hpp"
 #include <cstdio>
 #include <cmath>
 
@@ -522,6 +524,29 @@ int i1_frac_01(){
 	return 0;
 }
 
+int i1_meanobliquity_01(){
+	double Mjd_TT = 51544.5;
+	double r = 0.4090928042;
+
+	_assert(fabs(r-MeanObliquity(Mjd_TT))<1e-10);
+	return 0;
+}
+
+int i1_mjday_01(){
+	int yr = 2000;
+	int mon = 1;
+	int day = 1;
+	int hr = 12;
+	int min = 30;
+	double sec = 45.5;
+
+	double r = 51544.5213599536;
+
+	_assert(fabs(r-Mjday(yr,mon,day,hr,min,sec))<1e-10);
+
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -550,6 +575,8 @@ int all_tests()
 	_verify(i1_cheb3d_01);
 	_verify(i1_eccanon_01);
 	_verify(i1_frac_01);
+	_verify(i1_meanobliquity_01);
+	_verify(i1_mjday_01);
 
     return 0;
 }

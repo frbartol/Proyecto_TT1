@@ -7,10 +7,10 @@ double EccAnom(double M, double e){
     double E;
     int i = 1;
     
-    M = fmod(M,2.0*M_PI);
+    M = fmod(M,2.0*SAT_Const::pi);
     
     if(e<0.8) E = M;
-    else E = M_PI;
+    else E = SAT_Const::pi;
 
     
     f = E -e*sin(E)-M;
