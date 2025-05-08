@@ -1,3 +1,4 @@
+#include "..\include\SAT_Const.hpp"
 #include "..\include\matrix.hpp"
 #include "..\include\AccelPointMass.hpp"
 #include "..\include\Cheb3d.hpp"
@@ -7,6 +8,9 @@
 #include "..\include\Mjday.hpp"
 #include "..\include\Mjday_TDB.hpp"
 #include "..\include\Position.hpp"
+#include "..\include\R_x.hpp"
+#include "..\include\R_y.hpp"
+#include "..\include\R_z.hpp"
 #include <iostream>
 
 using namespace std;
@@ -29,15 +33,7 @@ int main() {
 	
 	cout << M1(1,1) << "\n";
 	*/
-	double GM = 3.986004418e14;
-	int f = 1;
-	int c = 3;
-	Matrix r(f,c);
-	r(1,1)= 7000000; r(1,2)= 0; r(1,3)= 0;
-
-	Matrix s(f,c);
-	s(1,1)= 0; s(1,2)= 6371000; s(1,3)= 0;
-
-	Matrix a = AccelPointMass(r,s,GM);
-	cout<<a;
+	double angle = SAT_Const::pi/4;
+	Matrix& rotmat = R_z(angle);
+	cout<<rotmat;
 }

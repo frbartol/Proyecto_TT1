@@ -8,6 +8,9 @@
 #include "..\include\Mjday.hpp"
 #include "..\include\Mjday_TDB.hpp"
 #include "..\include\Position.hpp"
+#include "..\include\R_x.hpp"
+#include "..\include\R_y.hpp"
+#include "..\include\R_z.hpp"
 
 #include <cstdio>
 #include <cmath>
@@ -561,16 +564,52 @@ int i1_mjday_tdb_01(){ // probar en matlab
 }
 
 int i1_position_01(){ //probar en matlab
-	double lon = 0;
-	double lat = 0.785398163397448;
-	double h = 0;
+	double lon = 0.0;
+	double lat = 0.0;
+	double h = 0.0;
 
 	Matrix r(1,3);
-	r(1,1) = 4516658.006;
+	r(1,1) = 6378136.2999999998;
 	r(1,2) = 0;
-	r(1,3) = 4486741.141;
+	r(1,3) = 0;
 
 	_assert(m_equals(r,Position(lon,lat,h),1e-10));
+	return 0;
+}
+
+int i1_rx_01(){
+	double angle = SAT_Const::pi/4;
+	Matrix& rotmat = R_x(angle);
+	Matrix r(3,3);
+	r(1,1) = 1.0000000000; r(1,2) = 0.0000000000; r(1,3) = 0.0000000000; 
+	r(2,1) = 0.0000000000; r(2,2) = 0.7071067812; r(2,3) = 0.7071067812; 
+	r(3,1) = 0.0000000000; r(3,2) = -0.7071067812; r(3,3) = 0.7071067812; 
+
+	_assert(m_equals(r,rotmat,1e-10));
+	return 0;
+}
+
+int i1_ry_01(){
+	double angle = SAT_Const::pi/4;
+	Matrix& rotmat = R_y(angle);
+	Matrix r(3,3);
+	r(1,1) = 0.7071067812; r(1,2) = 0.0000000000; r(1,3) = -0.7071067812; 
+	r(2,1) = 0.0000000000; r(2,2) = 1.0000000000; r(2,3) = 0.0000000000; 
+	r(3,1) = 0.7071067812; r(3,2) = 0.0000000000; r(3,3) = 0.7071067812; 
+
+	_assert(m_equals(r,rotmat,1e-10));
+	return 0;
+}
+
+int i1_rz_01(){
+	double angle = SAT_Const::pi/4;
+	Matrix& rotmat = R_z(angle);
+	Matrix r(3,3);
+	r(1,1) = 0.7071067812; r(1,2) = 0.7071067812; r(1,3) = 0.0000000000; 
+	r(2,1) = -0.7071067812; r(2,2) = 0.7071067812; r(2,3) = 0.0000000000; 
+	r(3,1) = 0.0000000000; r(3,2) = 0.0000000000; r(3,3) = 1.0000000000; 
+
+	_assert(m_equals(r,rotmat,1e-10));
 	return 0;
 }
 
@@ -606,6 +645,9 @@ int all_tests()
 	_verify(i1_mjday_01);
 	_verify(i1_mjday_tdb_01);
 	_verify(i1_position_01);
+	_verify(i1_rx_01);
+	_verify(i1_ry_01);
+	_verify(i1_rz_01);
 
     return 0;
 }

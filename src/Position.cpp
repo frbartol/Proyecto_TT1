@@ -1,8 +1,8 @@
 #include "..\include\Position.hpp"
 
-Matrix Position(double lon, double lat, double h){
+Matrix& Position(double lon, double lat, double h){
     double R_equ, f, e2, CosLat, SinLat, N;
-    Matrix r(1,3);
+    Matrix& r = zeros(1,3);
 
     R_equ = SAT_Const::R_Earth;
     f     = SAT_Const::f_Earth;
