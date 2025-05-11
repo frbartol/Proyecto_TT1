@@ -11,6 +11,13 @@
 #include "..\include\R_x.hpp"
 #include "..\include\R_y.hpp"
 #include "..\include\R_z.hpp"
+#include "..\include\sign_.hpp"
+#include "..\include\timediff.hpp"
+#include "..\include\AzElPa.hpp"
+#include "..\include\IERS.hpp"
+#include "..\include\Legendre.hpp"
+#include "..\include\NutAngles.hpp"
+#include "..\include\TimeUpdate.hpp"
 
 #include <cstdio>
 #include <cmath>
@@ -613,6 +620,154 @@ int i1_rz_01(){
 	return 0;
 }
 
+int i1_sign_01(){
+	_assert(fabs(-2-sign_(2,-3))<1e-10);
+	return 0;
+}
+
+int i1_timediff_01(){
+	auto result = timediff(-0.5,36);
+	_assert(fabs(-36.5000000000-get<0>(result))<1e-10);
+	_assert(fabs(-17.0000000000-get<1>(result))<1e-10);
+	_assert(fabs(-17.5000000000-get<2>(result))<1e-10);
+	_assert(fabs(68.1840000000-get<3>(result))<1e-10);
+	_assert(fabs(17.0000000000-get<4>(result))<1e-10);
+	return 0;
+}
+
+int i1_AzElPa_01(){
+	Matrix s(1,3);
+	s(1,1) = 1.0;
+	s(1,2) = 1.0;
+	s(1,3) = 1.0;
+
+	auto result = AzElPa(s);
+
+	Matrix dAds(1,3);
+	dAds(1,1) = 0.5;
+	dAds(1,2) = -0.5;
+	dAds(1,3) = 0.0;
+
+	Matrix dEds(1,3);
+	dEds(1,1) = -0.2357022604;
+	dEds(1,2) = -0.2357022604;
+	dEds(1,3) = 0.4714045208;
+
+	_assert(fabs(0.7853981634-get<0>(result))<1e-10);
+	_assert(fabs(0.6154797087-get<1>(result))<1e-10);
+	_assert(m_equals(dAds, get<2>(result), 1e-10));
+	_assert(m_equals(dEds, get<3>(result), 1e-10));
+
+	return 0;
+}
+
+int i1_iers_01(){
+	Matrix& eop = zeros(13,2);
+	eop(4,1) = 51544; eop(4,2) = 51545;
+	eop(5,1) = 0.1; eop(5,2) = 0.2;
+	eop(6,1) = 0.3; eop(6,2) = 0.4;
+	eop(7,1) = -0.5; eop(7,2) = -0.6;
+	eop(8,1) = 0.001; eop(8,2) = 0.002;
+	eop(9,1) = -0.05; eop(9,2) = -0.06;
+	eop(10,1) = 0.02; eop(10,2) = 0.03;
+	eop(11,1) = 0.01; eop(11,2) = 0.02;
+	eop(12,1) = 0.03; eop(12,2) = 0.04;
+	eop(13,1) = 36.0; eop(13,2) = 36.0;
+
+	double Mjd_UTC = 51544.5;
+	auto result = IERS(eop, Mjd_UTC, 'n');
+
+	_assert(fabs(0.0000004848-get<0>(result))<1e-10);
+	_assert(fabs(0.0000014544-get<1>(result))<1e-10);
+	_assert(fabs(-0.5-get<2>(result))<1e-10);
+	_assert(fabs(0.001-get<3>(result))<1e-10);
+	_assert(fabs(-0.0000002424-get<4>(result))<1e-10);
+	_assert(fabs(0.0000000970-get<5>(result))<1e-10);
+	_assert(fabs(0.0000000485-get<6>(result))<1e-10);
+	_assert(fabs(0.0000001454-get<7>(result))<1e-10);
+	_assert(fabs(36.0-get<8>(result))<1e-10);
+	return 0;
+}
+
+int i1_iers_02(){
+	Matrix& eop = zeros(13,2);
+	eop(4,1) = 51544; eop(4,2) = 51545;
+	eop(5,1) = 0.1; eop(5,2) = 0.2;
+	eop(6,1) = 0.3; eop(6,2) = 0.4;
+	eop(7,1) = -0.5; eop(7,2) = -0.6;
+	eop(8,1) = 0.001; eop(8,2) = 0.002;
+	eop(9,1) = -0.05; eop(9,2) = -0.06;
+	eop(10,1) = 0.02; eop(10,2) = 0.03;
+	eop(11,1) = 0.01; eop(11,2) = 0.02;
+	eop(12,1) = 0.03; eop(12,2) = 0.04;
+	eop(13,1) = 36.0; eop(13,2) = 36.0;
+
+	double Mjd_UTC = 51544.5;
+	auto result = IERS(eop, Mjd_UTC, 'l');
+
+	_assert(fabs(0.0000007272-get<0>(result))<1e-10);
+	_assert(fabs(0.0000016968-get<1>(result))<1e-10);
+	_assert(fabs(-0.55-get<2>(result))<1e-10);
+	_assert(fabs(0.0015-get<3>(result))<1e-10);
+	_assert(fabs(-0.0000002666-get<4>(result))<1e-10);
+	_assert(fabs(0.0000001212-get<5>(result))<1e-10);
+	_assert(fabs(0.0000000727-get<6>(result))<1e-10);
+	_assert(fabs(0.0000001697-get<7>(result))<1e-10);
+	_assert(fabs(36.0-get<8>(result))<1e-10);
+	return 0;
+}
+
+int i1_legendre_01(){
+	int n = 1;
+	int m = 2;
+	double fi = SAT_Const::pi/4;
+
+	auto result = Legendre(n,m,fi);
+	Matrix pnm(2,3);
+	pnm(1,1) = 1.0; pnm(1,2) = 0.0; pnm(1,3) = 0.0;
+	pnm(2,1) = 1.2247448714; pnm(2,2) = 1.2247448714; pnm(2,3) = 0.0;
+
+	Matrix dpnm(2,3);
+	dpnm(1,1) = 0.0; dpnm(1,2) = 0.0; dpnm(1,3) = 0.0;
+	dpnm(2,1) = 1.2247448714; dpnm(2,2) = -1.2247448714; dpnm(2,3) = 0.0;
+
+	_assert(m_equals(pnm, get<0>(result),1e-10));
+	_assert(m_equals(dpnm, get<1>(result),1e-10));
+	return 0;
+}
+
+int i1_nutangles_01(){
+	double Mjd_TT = 58849.0;
+
+	auto result = NutAngles(Mjd_TT);
+	double dpsi = -0.0000799279;
+	double deps = -0.0000082772;
+
+	_assert(fabs(dpsi-get<0>(result))<1e-10);
+	_assert(fabs(deps-get<1>(result))<1e-10);
+	return 0;
+}
+
+int i1_timeupdate_01(){
+	Matrix& P = zeros(2);
+	P(1,1) = 1.5; P(1,2) = 0.2;
+	P(2,1) = 0.2; P(2,2) = 1.0;
+
+	Matrix& Phi = zeros(2);
+	Phi(1,1) = 1.0; Phi(1,2) = 0.1;
+	Phi(2,1) = 0.0; Phi(2,2) = 1.0;
+
+	double Qdt = 0.1;
+
+	Matrix& newP = zeros(2);
+	newP(1,1) = 1.65; newP(1,2) = 0.4;
+	newP(2,1) = 0.4; newP(2,2) = 1.1;
+
+	_assert(m_equals(newP,TimeUpdate(P,Phi,Qdt),1e-10));
+	return 0;
+	
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -648,6 +803,14 @@ int all_tests()
 	_verify(i1_rx_01);
 	_verify(i1_ry_01);
 	_verify(i1_rz_01);
+	_verify(i1_sign_01);
+	_verify(i1_timediff_01);
+	_verify(i1_AzElPa_01);
+	_verify(i1_iers_01);
+	_verify(i1_iers_02);
+	_verify(i1_legendre_01);
+	_verify(i1_nutangles_01);
+	_verify(i1_timeupdate_01);
 
     return 0;
 }

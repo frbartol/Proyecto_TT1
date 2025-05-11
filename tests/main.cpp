@@ -11,6 +11,13 @@
 #include "..\include\R_x.hpp"
 #include "..\include\R_y.hpp"
 #include "..\include\R_z.hpp"
+#include "..\include\timediff.hpp"
+#include "..\include\AzElPa.hpp"
+#include "..\include\IERS.hpp"
+#include "..\include\Legendre.hpp"
+#include "..\include\NutAngles.hpp"
+#include "..\include\TimeUpdate.hpp"
+#include <tuple>
 #include <iostream>
 
 using namespace std;
@@ -33,7 +40,15 @@ int main() {
 	
 	cout << M1(1,1) << "\n";
 	*/
-	double angle = SAT_Const::pi/4;
-	Matrix& rotmat = R_z(angle);
-	cout<<rotmat;
+	Matrix& P = zeros(2);
+	P(1,1) = 1.5; P(1,2) = 0.2;
+	P(2,1) = 0.2; P(2,2) = 1.0;
+
+	Matrix& Phi = zeros(2);
+	Phi(1,1) = 1.0; Phi(1,2) = 0.1;
+	Phi(2,1) = 0.0; Phi(2,2) = 1.0;
+
+	double Qdt = 0.1;
+
+	cout<<TimeUpdate(P,Phi,Qdt);
 }
