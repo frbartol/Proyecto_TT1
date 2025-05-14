@@ -18,6 +18,7 @@
 #include "..\include\Legendre.hpp"
 #include "..\include\NutAngles.hpp"
 #include "..\include\TimeUpdate.hpp"
+#include "..\include\global.hpp"
 
 #include <cstdio>
 #include <cmath>
@@ -818,6 +819,7 @@ int all_tests()
 
 int main()
 {
+	eop19620101(21413);
     int result = all_tests();
 
     if (result == 0)

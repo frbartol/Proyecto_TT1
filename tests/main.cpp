@@ -17,13 +17,14 @@
 #include "..\include\Legendre.hpp"
 #include "..\include\NutAngles.hpp"
 #include "..\include\TimeUpdate.hpp"
+#include "..\include\global.hpp"
 #include <tuple>
 #include <iostream>
 
 using namespace std;
 
 int main() {
-	//eop19620101(4);
+	eop19620101(4);
 	//cout<<eopdata;
 	/*
     Matrix M1(3, 2);
