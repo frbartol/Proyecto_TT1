@@ -41,12 +41,10 @@ Matrix& AccelHarmonic(Matrix& r, Matrix& E, double n_max, double m_max){
     ay = (1/d*dUdr-r_bf(3)/(pow(d,2)*sqrt(r2xy))*dUdlatgc)*r_bf(2)+(1/r2xy*dUdlon)*r_bf(1);
     az =  1/d*dUdr*r_bf(3)+sqrt(r2xy)/pow(d,2)*dUdlatgc;
 
-    Matrix& aux = zeros(1,3);
-    aux(1) = ax;
-    aux(2) = ay;
-    aux(3) = az;
-    
-    Matrix& a_bf = transpose(aux);
+    Matrix& a_bf = zeros(3,1);
+    a_bf(1) = ax;
+    a_bf(2) = ay;
+    a_bf(3) = az;
     
     // Inertial acceleration 
     return transpose(E)*a_bf;

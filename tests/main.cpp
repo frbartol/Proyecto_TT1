@@ -18,13 +18,25 @@
 #include "..\include\NutAngles.hpp"
 #include "..\include\TimeUpdate.hpp"
 #include "..\include\global.hpp"
+#include "..\include\AccelHarmonic.hpp"
 #include <tuple>
 #include <iostream>
 
 using namespace std;
 
 int main() {
-	eop19620101(4);
+	eop19620101(21413);
+	
+	Matrix& r = zeros(1,3);
+	r(1) = 7078.1363e3;
+	r(2) = 0;
+	r(3) = 0;
+
+	Matrix& E = eye(3);
+
+	double n_max_test = 10;
+	double m_max_test = 10;
+	cout<<AccelHarmonic(r,E,n_max_test, m_max_test);
 	//cout<<eopdata;
 	/*
     Matrix M1(3, 2);
@@ -41,15 +53,4 @@ int main() {
 	
 	cout << M1(1,1) << "\n";
 	*/
-	Matrix& P = zeros(2);
-	P(1,1) = 1.5; P(1,2) = 0.2;
-	P(2,1) = 0.2; P(2,2) = 1.0;
-
-	Matrix& Phi = zeros(2);
-	Phi(1,1) = 1.0; Phi(1,2) = 0.1;
-	Phi(2,1) = 0.0; Phi(2,2) = 1.0;
-
-	double Qdt = 0.1;
-
-	cout<<TimeUpdate(P,Phi,Qdt);
 }

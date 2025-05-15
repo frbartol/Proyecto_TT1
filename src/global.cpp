@@ -5,7 +5,7 @@ Matrix Snm;
 Matrix PC;
 void eop19620101(int c){
 	eopdata = zeros(13,c);
-	FILE *fid = fopen("eop19620101.txt", "r");
+	FILE *fid = fopen("../data/eop19620101.txt", "r");
 	if(fid==NULL){
 		printf("Fail open eop19620101.txt file\n");
 		exit(EXIT_FAILURE);

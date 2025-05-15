@@ -41,6 +41,12 @@ Matrix::Matrix(const int n) {
 	}
 }
 
+Matrix::Matrix(){
+	this->n_row = 0;
+	this->n_column = 0;
+	this->data = nullptr;
+}
+
 double& Matrix::operator () (const int row, const int column) {
 	if (row <= 0 || row > this->n_row || column <= 0 || column > this->n_column) {
 		cout << "Matrix get: error in row/column\n";
