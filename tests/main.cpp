@@ -26,8 +26,10 @@ using namespace std;
 
 int main() {
 	eop19620101(21413);
+	GGM03S(181);
+	DE430Coeff(2285, 1020);
 	
-	Matrix& r = zeros(1,3);
+	Matrix& r = zeros(3,1);
 	r(1) = 7078.1363e3;
 	r(2) = 0;
 	r(3) = 0;

@@ -23,6 +23,7 @@ Matrix& AccelHarmonic(Matrix& r, Matrix& E, double n_max, double m_max){
         b1 = pow((-gm/pow(d,2))*(r_ref/d),n)*(n+1);
         b2 = pow((gm/d)*(r_ref/d),n);
         b3 = pow((gm/d)*(r_ref/d),n);
+    
         for (int m=0; m<=m_max; m++){
             q1 = q1 + pnm(n+1,m+1)*(Cnm(n+1,m+1)*cos(m*lon)+Snm(n+1,m+1)*sin(m*lon));
             q2 = q2 + dpnm(n+1,m+1)*(Cnm(n+1,m+1)*cos(m*lon)+Snm(n+1,m+1)*sin(m*lon));
@@ -33,6 +34,7 @@ Matrix& AccelHarmonic(Matrix& r, Matrix& E, double n_max, double m_max){
         dUdlon   = dUdlon   + q3*b3;
         q3 = 0; q2 = q3; q1 = q2;
     }
+    
     
     // Body-fixed acceleration
     r2xy = pow(r_bf(1),2)+pow(r_bf(2),2);
