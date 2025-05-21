@@ -6,7 +6,7 @@ Matrix& AccelHarmonic(Matrix& r, Matrix& E, double n_max, double m_max){
     gm    = 398600.4415e9; // [m^3/s^2]; GGM03S
     
     // Body-fixed position 
-    Matrix& r_bf = E * r;
+    Matrix& r_bf = E * transpose(r);
     
     // Auxiliary quantities
     d = r_bf.norm();                     // distance
@@ -49,6 +49,6 @@ Matrix& AccelHarmonic(Matrix& r, Matrix& E, double n_max, double m_max){
     a_bf(3) = az;
     
     // Inertial acceleration 
-    return transpose(E)*a_bf;
+    return transpose(transpose(E)*a_bf);
     
 }

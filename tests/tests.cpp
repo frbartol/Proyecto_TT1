@@ -19,6 +19,8 @@
 #include "..\include\NutAngles.hpp"
 #include "..\include\TimeUpdate.hpp"
 #include "..\include\global.hpp"
+#include "..\include\AccelHarmonic.hpp"
+#include "..\include\EqnEquinox.hpp"
 
 #include <cstdio>
 #include <cmath>
@@ -769,6 +771,31 @@ int i1_timeupdate_01(){
 	
 }
 
+int i2_accelharmonic_01(){
+	Matrix& r = zeros(1,3);
+	r(1,1) = 7078.1363e3;
+	r(1,2) = 0;
+	r(1,3) = 0;
+
+	Matrix& E = eye(3);
+
+	double n_max_test = 10;
+	double m_max_test = 10;
+
+	Matrix& result = zeros(1,3);
+	result(1,1) = -7.96666584966782;
+	result(1,2) = -1.5109436138171e-05;
+	result(1,3) = 2.9539528788116e-05;
+
+	_assert(m_equals(result,AccelHarmonic(r,E,n_max_test, m_max_test),1e-10));
+	return 0;
+}
+
+int i2_eqnequinox_01(){
+	_assert(fabs(-4.31830493518006e-05 - EqnEquinox(58000.12345678)));
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -812,6 +839,8 @@ int all_tests()
 	_verify(i1_legendre_01);
 	_verify(i1_nutangles_01);
 	_verify(i1_timeupdate_01);
+	_verify(i2_accelharmonic_01);
+	_verify(i2_eqnequinox_01);
 
     return 0;
 }
@@ -820,6 +849,8 @@ int all_tests()
 int main()
 {
 	eop19620101(21413);
+	GGM03S(181);
+	DE430Coeff(2285, 1020);
     int result = all_tests();
 
     if (result == 0)

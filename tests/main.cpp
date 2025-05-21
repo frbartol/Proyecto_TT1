@@ -19,6 +19,7 @@
 #include "..\include\TimeUpdate.hpp"
 #include "..\include\global.hpp"
 #include "..\include\AccelHarmonic.hpp"
+#include "..\include\EqnEquinox.hpp"
 #include <tuple>
 #include <iostream>
 
@@ -28,23 +29,10 @@ int main() {
 	eop19620101(21413);
 	GGM03S(181);
 	DE430Coeff(2285, 1020);
-	/*
-	Matrix& r = zeros(3,1);
-	r(1) = 7078.1363e3;
-	r(2) = 0;
-	r(3) = 0;
 
-	Matrix& E = eye(3);
-
-	double n_max_test = 10;
-	double m_max_test = 10;
-	cout<<AccelHarmonic(r,E,n_max_test, m_max_test);
-	*/
-
-	auto [pnm,dpnm] = Legendre(5,3,SAT_Const::pi/4);
-	cout<<"pnm\n"<<pnm;
-	cout<<"dpnm\n"<<dpnm;
-
+	cout<<EqnEquinox(58000.123456);
+	
+	
 	//cout<<eopdata;
 	/*
     Matrix M1(3, 2);
