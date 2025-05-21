@@ -15,7 +15,7 @@ double EccAnom(double M, double e){
     
     f = E -e*sin(E)-M;
     E = E - f/(1.0 - e*cos(E));
-    while(abs(f)>1e2*eps){
+    while(fabs(f)>1e2*eps){
         f = E -e*sin(E) - M;
         E = E - f/(1.0-e*cos(E));
         i++;
