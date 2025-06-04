@@ -21,6 +21,12 @@
 #include "..\include\global.hpp"
 #include "..\include\AccelHarmonic.hpp"
 #include "..\include\EqnEquinox.hpp"
+#include "..\include\JPL_Eph_DE430.hpp"
+#include "..\include\LTC.hpp"
+#include "..\include\NutMatrix.hpp"
+#include "..\include\PoleMatrix.hpp"
+#include "..\include\PrecMatrix.hpp"
+#include "..\include\gmst.hpp"
 
 #include <cstdio>
 #include <cmath>
@@ -796,6 +802,123 @@ int i2_eqnequinox_01(){
 	return 0;
 }
 
+int i2_jplephde430_01(){
+	auto [r_Mercury,r_Venus,r_Earth,r_Mars,r_Jupiter,r_Saturn,r_Uranus, r_Neptune,r_Pluto,r_Moon,r_Sun] = JPL_Eph_DE430(59948.0);
+
+	Matrix& exp_Mercury = zeros(1,3);
+	exp_Mercury(1) = 37474811331.4849777222;
+	exp_Mercury(2) = -90853200205.3267974854;
+	exp_Mercury(3) = -35738960751.6226959229;
+	_assert(m_equals(exp_Mercury, r_Mercury, 1e-10));
+
+	Matrix& exp_Venus = zeros(1,3);
+	exp_Venus(1) = 122526574967.4041137695;
+	exp_Venus(2) = -185957969420.2913208008;
+	exp_Venus(3) = -87162380032.1979675293;
+	_assert(m_equals(exp_Venus, r_Venus, 1e-10));
+
+	Matrix& exp_Earth = zeros(1,3);
+	exp_Earth(1) = -34512445228.7528152466;
+	exp_Earth(2) = 131487140006.5218505859;
+	exp_Earth(3) = 57032802033.2604370117;
+	_assert(m_equals(exp_Earth, r_Earth, 1e-10));
+
+	Matrix& exp_Mars = zeros(1,3);
+	exp_Mars(1) = 36225476108.1189041138;
+	exp_Mars(2) = 81717257992.2647094727;
+	exp_Mars(3) = 40711189737.0723114014;
+	_assert(m_equals(exp_Mars, r_Mars, 1e-10));
+
+	Matrix& exp_Jupiter = zeros(1,3);
+	exp_Jupiter(1) = 756182955791.8770751953;
+	exp_Jupiter(2) = 21855341833.6717834473;
+	exp_Jupiter(3) = -8871389658.5872344971;
+	_assert(m_equals(exp_Jupiter, r_Jupiter, 1e-10));
+
+	Matrix& exp_Saturn = zeros(1,3);
+	exp_Saturn(1) = 1253250658157.5458984375;
+	exp_Saturn(2) = -871551371453.2583007812;
+	exp_Saturn(3) = -415209753505.8096313477;
+	_assert(m_equals(exp_Saturn, r_Saturn, 1e-10));
+
+	Matrix& exp_Uranus = zeros(1,3);
+	exp_Uranus(1) = 2031934646845.7473144531;
+	exp_Uranus(2) = 1856816576287.4799804688;
+	exp_Uranus(3) = 785539496767.8784179688;
+	_assert(m_equals(exp_Uranus, r_Uranus, 1e-10));
+
+	Matrix& exp_Neptune = zeros(1,3);
+	exp_Neptune(1) = 4485448149454.5195312500;
+	exp_Neptune(2) = -496882946711.2616577148;
+	exp_Neptune(3) = -317403838347.0413818359;
+	_assert(m_equals(exp_Neptune, r_Neptune, 1e-10));
+
+	Matrix& exp_Pluto = zeros(1,3);
+	exp_Pluto(1) = 2454452075393.5581054688;
+	exp_Pluto(2) = -4253417375436.2500000000;
+	exp_Pluto(3) = -2072482064861.6914062500;
+	_assert(m_equals(exp_Pluto, r_Pluto, 1e-10));
+
+	Matrix& exp_Moon = zeros(1,3);
+	exp_Moon(1) = 133734596.5636594296;
+	exp_Moon(2) = 339095411.8405320048;
+	exp_Moon(3) = 165815677.7021569312;
+	_assert(m_equals(exp_Moon, r_Moon, 1e-10));
+
+	Matrix& exp_Sun = zeros(1,3);
+	exp_Sun(1) = 33158353911.4335060120;
+	exp_Sun(2) = -131490279354.1122131348;
+	exp_Sun(3) = -56999884478.6396255493;
+	_assert(m_equals(exp_Sun, r_Sun, 1e-10));
+
+	return 0;
+}
+
+int i2_ltc_01(){
+	Matrix& r = zeros(3);
+	r(1) = 0.800354635326713; r(2) = -0.599526861542536; r(3) = 0.0;
+	r(4) = 0.596030256591891; r(5) = 0.795686747764587; r(6) = 0.107844947303148;
+	r(7) = -0.0646559427898768; r(8) = -0.08631420347064; r(9) = 0.994167725960354;
+
+	_assert(m_equals(r,LTC(123.45, -23.67),1e-10));
+	return 0;
+}
+
+int i2_nutmatrix_01(){
+	Matrix& r = zeros(3);
+	r(1) = 0.999999996769734; r(2) = -7.37348554646969e-05; r(3) = -3.19953577384509e-05;
+	r(4) = 7.37347961892059e-05; r(5) = 0.999999997279872; r(6) = -1.85380348782793e-06;
+	r(7) = 3.19954943413517e-05; r(8) = 1.85144431064099e-06; r(9) = 0.99999999948643;
+
+	_assert(m_equals(r,NutMatrix(1234.56789),1e-10));
+	return 0;
+}
+
+int i2_polematrix_01(){
+	Matrix& r = zeros(3);
+	r(1) = 0.999993875006253; r(2) = -7.34997959152141e-06; r(3) = 0.00349998513668964;
+	r(4) = 0; r(5) = 0.99999779500081; r(6) = 0.00209999845650034;
+	r(7) = -0.00349999285417104; r(8) = -0.00209998559402292; r(9) = 0.999991670020569;
+
+	_assert(m_equals(r,PoleMatrix(0.0035, -0.0021),1e-1));
+	return 0;
+}
+
+int i2_precmatrix_01(){
+	Matrix& r = zeros(3);
+	r(1) = 0.999999776973167; r(2) = -0.000612558151695768; r(3) = -0.000266131783951279;
+	r(4) = 0.000612558151695665; r(5) = 0.999999812386234; r(6) = -8.15109896675957e-08;
+	r(7) = 0.000266131783951514; r(8) = -8.15102221962074e-08; r(9) = 0.999999964586933;
+
+	_assert(m_equals(r, PrecMatrix(58000.12345, 59000.54321), 1e-10));
+	return 0;
+}
+
+int i2_gmst_01(){
+	_assert(fabs(3.13108955996666-gmst(58000.54321))<1e-10);
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -841,6 +964,12 @@ int all_tests()
 	_verify(i1_timeupdate_01);
 	_verify(i2_accelharmonic_01);
 	_verify(i2_eqnequinox_01);
+	_verify(i2_jplephde430_01);
+	_verify(i2_ltc_01);
+	_verify(i2_nutmatrix_01);
+	_verify(i2_polematrix_01);
+	_verify(i2_precmatrix_01);
+	_verify(i2_gmst_01);
 
     return 0;
 }

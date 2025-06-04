@@ -20,6 +20,13 @@
 #include "..\include\global.hpp"
 #include "..\include\AccelHarmonic.hpp"
 #include "..\include\EqnEquinox.hpp"
+#include "..\include\JPL_Eph_DE430.hpp"
+#include "..\include\LTC.hpp"
+#include "..\include\NutMatrix.hpp"
+#include "..\include\PoleMatrix.hpp"
+#include "..\include\PrecMatrix.hpp"
+#include "..\include\gmst.hpp"
+
 #include <tuple>
 #include <iostream>
 
@@ -30,7 +37,7 @@ int main() {
 	GGM03S(181);
 	DE430Coeff(2285, 1020);
 
-	cout<<EqnEquinox(58000.123456);
+	cout<<gmst(58000.54321);
 	
 	
 	//cout<<eopdata;
