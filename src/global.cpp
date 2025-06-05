@@ -3,6 +3,7 @@ Matrix eopdata;
 Matrix Cnm;
 Matrix Snm;
 Matrix PC;
+Param AuxParam;
 void eop19620101(int c){
 	eopdata = zeros(13,c);
 	FILE *fid = fopen("../data/eop19620101.txt", "r");
@@ -56,4 +57,14 @@ void DE430Coeff(int f, int c){
             fscanf(fid,"%lf",&(PC(i,j)));
         }
     }
+}
+
+void initializeAuxParam(){
+    AuxParam.Mjd_UTC = 49746.1163541665;
+    AuxParam.Mjd_TT = 49746.1170623147;
+    AuxParam.n = 20;
+    AuxParam.m = 20;
+    AuxParam.sun = 1;
+    AuxParam.moon = 1;
+    AuxParam.planets = 1;
 }

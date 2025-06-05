@@ -27,6 +27,12 @@
 #include "..\include\PoleMatrix.hpp"
 #include "..\include\PrecMatrix.hpp"
 #include "..\include\gmst.hpp"
+#include "..\include\gast.hpp"
+#include "..\include\MeasUpdate.hpp"
+#include "..\include\G_AccelHarmonic.hpp"
+#include "..\include\GHAMatrix.hpp"
+#include "..\include\Accel.hpp"
+#include "..\include\VarEqn.hpp"
 
 #include <cstdio>
 #include <cmath>
@@ -919,6 +925,153 @@ int i2_gmst_01(){
 	return 0;
 }
 
+int i3_gast_01(){
+	_assert(fabs(3.13104627466474-gast(58000.54321))<1e-10);
+	return 0;
+}
+
+int i3_measupdate_01(){
+
+    const int n = 1;
+    Matrix x(n, 1);
+    x(1,1) = 2.0;
+    
+    Matrix P = eye(n);
+    P(1,1) = 1.0;
+    
+    double z = 3.0;
+    double g = 2.5;
+    double s = 0.5;
+    
+    Matrix G(1, n);
+    G(1,1) = 1.0;
+    
+    auto [K, x_updated, P_updated] = MeasUpdate(x, z, g, s, G, P, n);
+
+    double expected_K = 0.8;       
+    double expected_x = 2.4;        
+    double expected_P = 0.2;      
+    
+    const double tolerance = 1e-6;
+
+    
+    _assert(fabs(K(1,1) - expected_K) < tolerance);
+    _assert(fabs(x_updated(1,1) - expected_x) < tolerance); 
+    _assert(fabs(P_updated(1,1) - expected_P) < tolerance);
+
+    return 0;
+}
+
+int i3_gaccelharmonic_01(){
+	Matrix& r = zeros(1,3);
+    r(1) = 7000e3; r(2) = 0; r(3) = 0;
+
+    Matrix& U = eye(3);
+
+    int n_max = 4;
+    int m_max = 4;
+
+	Matrix& result = zeros(3);
+	result(1) = 0.233048175246609; result(2) = -0.000001880628986; result(3) = -0.000005189093599;
+	result(4) = -0.000001880403020;   result(5) = -0.116369304011321; result(6) = -0.000000590145164;
+	result(7) = -0.000005189005889;   result(8) = -0.000000590145165; result(9) = -0.116678871423607;
+
+	result = result*1e-5;
+
+	_assert(m_equals(result,G_AccelHarmonic(r,U,n_max,m_max),1e-10));
+	return 0;
+}
+
+int i3_ghamatrix_01(){
+	Matrix& r = zeros(3);
+	r(1) = -0.999944387461251; r(2) =  0.010546183420693; r(3) = 0.0;
+	r(4) = -0.010546183420693; r(5) = -0.999944387461251; r(6) = 0.0;
+	r(7) =  0.0;                r(8) =  0.0;                r(9) = 1.0;
+
+	_assert(m_equals(r,GHAMatrix(58000.54321),1e-10));
+	return 0;
+}
+
+int i3_accel_01(){
+	double x = 3600;
+    Matrix& Y = zeros(1,6);
+    Y(1) = 7000e3;
+    Y(2) = 0;
+    Y(3) = 0;
+    Y(4) = 0;
+    Y(5) = 7.5e3;
+    Y(6) = 0;
+
+	Matrix& result = zeros(1,6);
+	result(1) = 0.0;             result(2) = 7.500000000000000; result(3) = 0.0;
+	result(4) = -0.008145746493786; result(5) = -0.000000071640030; result(6) = -0.000000049183314;
+
+	result = result*1e3;
+
+	_assert(m_equals(result,Accel(x,Y),1e-10));
+	return 0;
+}
+
+int i3_vareqn_01(){
+	double x = 3600;
+    Matrix& yPhi = zeros(1,42);
+    yPhi(1) = 7000000; yPhi(2) = 0;       yPhi(3) = 0;       yPhi(4) = 0;     yPhi(5) = 7500;   yPhi(6) = 0;
+    yPhi(7) = 1;       yPhi(8) = 0;       yPhi(9) = 0;       yPhi(10) = 0;    yPhi(11) = 0;     yPhi(12) = 0;
+    yPhi(13) = 0;      yPhi(14) = 1;      yPhi(15) = 0;      yPhi(16) = 0;    yPhi(17) = 0;     yPhi(18) = 0;
+    yPhi(19) = 0;      yPhi(20) = 0;      yPhi(21) = 1;      yPhi(22) = 0;    yPhi(23) = 0;     yPhi(24) = 0;
+    yPhi(25) = 0;      yPhi(26) = 0;      yPhi(27) = 0;      yPhi(28) = 1;    yPhi(29) = 0;     yPhi(30) = 0;
+    yPhi(31) = 0;      yPhi(32) = 0;      yPhi(33) = 0;      yPhi(34) = 0;    yPhi(35) = 1;     yPhi(36) = 0;
+    yPhi(37) = 0;      yPhi(38) = 0;      yPhi(39) = 0;      yPhi(40) = 0;    yPhi(41) = 0;     yPhi(42) = 1;
+
+	Matrix& result = zeros(1, 42);
+	result(1)  = 0;
+	result(2)  = 7500;
+	result(3)  = 0;
+	result(4)  = -8.14573205035272;
+	result(5)  = -2.73247066264748e-05;
+	result(6)  = -1.83319533570083e-05;
+	result(7)  = 0;
+	result(8)  = 0;
+	result(9)  = 0;
+	result(10) = 2.33048819886505e-06;
+	result(11) = -2.23201457316691e-11;
+	result(12) = 2.14778542173555e-12;
+	result(13) = 0;
+	result(14) = 0;
+	result(15) = 0;
+	result(16) = -2.23252527575823e-11;
+	result(17) = -1.16365971392085e-06;
+	result(18) = 2.16918540421607e-11;
+	result(19) = 0;
+	result(20) = 0;
+	result(21) = 0;
+	result(22) = 2.1440627051561e-12;
+	result(23) = 2.16913154105214e-11;
+	result(24) = -1.1668284973388e-06;
+	result(25) = 1;
+	result(26) = 0;
+	result(27) = 0;
+	result(28) = 0;
+	result(29) = 0;
+	result(30) = 0;
+	result(31) = 0;
+	result(32) = 1;
+	result(33) = 0;
+	result(34) = 0;
+	result(35) = 0;
+	result(36) = 0;
+	result(37) = 0;
+	result(38) = 0;
+	result(39) = 1;
+	result(40) = 0;
+	result(41) = 0;
+	result(42) = 0;
+    
+	_assert(m_equals(result,VarEqn(x,yPhi),1e-10));
+
+	return 0;
+}
+
 int all_tests()
 {
     _verify(m_sum_01);
@@ -970,6 +1123,12 @@ int all_tests()
 	_verify(i2_polematrix_01);
 	_verify(i2_precmatrix_01);
 	_verify(i2_gmst_01);
+	_verify(i3_gast_01);
+	_verify(i3_measupdate_01);
+	_verify(i3_gaccelharmonic_01);
+	_verify(i3_ghamatrix_01);
+	_verify(i3_accel_01);
+	_verify(i3_vareqn_01);
 
     return 0;
 }
@@ -980,6 +1139,7 @@ int main()
 	eop19620101(21413);
 	GGM03S(181);
 	DE430Coeff(2285, 1020);
+	initializeAuxParam();
     int result = all_tests();
 
     if (result == 0)

@@ -39,6 +39,7 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp",
-        "azelpa": "cpp"
+        "azelpa": "cpp",
+        "random": "cpp"
     }
 }
