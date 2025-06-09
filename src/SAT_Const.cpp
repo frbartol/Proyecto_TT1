@@ -38,4 +38,4 @@ const double SAT_Const::GM_Pluto    = 977.0000000000009e9;              // [m^3/
 
 // Solar radiation pressure at 1 AU 
 const double SAT_Const::P_Sol       = 1367/SAT_Const::c_light; // [N/m^2] (~1367 W/m^2) IERS 96
-
+const double SAT_Const::eps = 2.22044604925031e-16;

@@ -32,6 +32,7 @@
 #include "..\include\GHAMatrix.hpp"
 #include "..\include\Accel.hpp"
 #include "..\include\VarEqn.hpp"
+#include "..\include\DEInteg.hpp"
 
 #include <tuple>
 #include <iostream>
@@ -44,17 +45,16 @@ int main() {
 	DE430Coeff(2285, 1020);
     initializeAuxParam();
 
-	double x = 3600;
-    Matrix& yPhi = zeros(1,42);
-    yPhi(1) = 7000000; yPhi(2) = 0;       yPhi(3) = 0;       yPhi(4) = 0;     yPhi(5) = 7500;   yPhi(6) = 0;
-    yPhi(7) = 1;       yPhi(8) = 0;       yPhi(9) = 0;       yPhi(10) = 0;    yPhi(11) = 0;     yPhi(12) = 0;
-    yPhi(13) = 0;      yPhi(14) = 1;      yPhi(15) = 0;      yPhi(16) = 0;    yPhi(17) = 0;     yPhi(18) = 0;
-    yPhi(19) = 0;      yPhi(20) = 0;      yPhi(21) = 1;      yPhi(22) = 0;    yPhi(23) = 0;     yPhi(24) = 0;
-    yPhi(25) = 0;      yPhi(26) = 0;      yPhi(27) = 0;      yPhi(28) = 1;    yPhi(29) = 0;     yPhi(30) = 0;
-    yPhi(31) = 0;      yPhi(32) = 0;      yPhi(33) = 0;      yPhi(34) = 0;    yPhi(35) = 1;     yPhi(36) = 0;
-    yPhi(37) = 0;      yPhi(38) = 0;      yPhi(39) = 0;      yPhi(40) = 0;    yPhi(41) = 0;     yPhi(42) = 1;
+	int n_eqn = 6;
+    double t = 0.0, relerr = 1e-13, abserr = 1e-6, tout = -134.999991953373;
 
-    cout<<transpose(yPhi);
+    Matrix Y = zeros(1,6);
+
+    Y(1) = 6221397.62857869; Y(2) = 2867713.77965738; Y(3) = 3006155.98509949; Y(4) = 4645.04725161806; Y(5) = -2752.21591588204; Y(6) = -7507.99940987031;
+    
+    Matrix& R = DEInteg(Accel, t, tout, relerr, abserr, n_eqn, Y);
+
+    cout<<R;
     //cout<<transpose(VarEqn(x,yPhi));
 	//cout<<eopdata;
 	/*

@@ -42,6 +42,7 @@ public:
 
     // Solar radiation pressure at 1 AU 
     static const double P_Sol;
+    static const double eps;
 };
 
 
