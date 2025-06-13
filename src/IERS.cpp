@@ -8,6 +8,7 @@ tuple<double, double, double, double, double, double, double, double, double> IE
 
     if (interp =='l'){
         mjd = (floor(Mjd_UTC));
+        cout<<"mjd:"<<mjd<<endl;
         i = 0;
         for (int col = 1; col <= eop.n_column; col++) {
             if (mjd == eop(4, col)) {
