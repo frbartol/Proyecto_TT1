@@ -128,7 +128,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
     }
 
     while (true){  // Start step loop
-    cout<<"Entra en bucle grande"<<endl;
+    cout<<"Empieza en bucle grande"<<endl;
         // If already past output point, interpolate solution and return
         if (fabs(x-t) >= absdel){
             yout  = zeros(n_eqn,1);
@@ -285,6 +285,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         // Repeat blocks 1, 2 (and 3) until step is successful               
         //                                                                   
         while(true){
+            cout<<"Empieza bucle pequeño\n";
             //                                                                 
             // Begin block 1                                                   
             //                                                                 
@@ -539,6 +540,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             if (success){
                 break;
             }
+            cout<<"Acaba bucle pequeño\n";
         }
 
         //

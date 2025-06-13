@@ -21,8 +21,8 @@ tuple<double, double, double, double, double, double, double, double, double> IE
         }
         preeop = eop.extract_column(i);
         nexteop = eop.extract_column(i+1);
-        mfme = 1440*(Mjd_UTC-floor(Mjd_UTC));
-        fixf = mfme/1440;
+        mfme = 1440.0*(Mjd_UTC-floor(Mjd_UTC));
+        fixf = mfme/1440.0;
         x_pole  = preeop(5)+(nexteop(5)-preeop(5))*fixf;
         y_pole  = preeop(6)+(nexteop(6)-preeop(6))*fixf;
         UT1_UTC = preeop(7)+(nexteop(7)-preeop(7))*fixf;

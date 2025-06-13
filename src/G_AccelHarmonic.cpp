@@ -14,7 +14,7 @@ Matrix& G_AccelHarmonic( Matrix& r, Matrix& U, int n_max, int m_max ){
         dr = zeros(1,3);
         dr(i) = d;
         // Acceleration difference
-        da = transpose(AccelHarmonic ( r+dr/2,U, n_max, m_max ) - AccelHarmonic ( r-dr/2,U, n_max, m_max ));
+        da = transpose(AccelHarmonic ( r+dr/2.0,U, n_max, m_max ) - AccelHarmonic ( r-dr/2.0,U, n_max, m_max ));
         // Derivative with respect to i-th axis
         G.asign_column(i, da/d);
     }
