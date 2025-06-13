@@ -60,7 +60,7 @@ void DE430Coeff(int f, int c){
 }
 
 void initializeAuxParam(){
-    AuxParam.Mjd_UTC = 49746.1163541665;
+    AuxParam.Mjd_UTC = 49746.1112847221;
     AuxParam.Mjd_TT = 49746.1170623147;
     AuxParam.n = 20;
     AuxParam.m = 20;

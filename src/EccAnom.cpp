@@ -8,6 +8,7 @@ double EccAnom(double M, double e){
     int i = 1;
     
     M = fmod(M,2.0*SAT_Const::pi);
+    if(M<0) M += 2.0*SAT_Const::pi;
     
     if(e<0.8) E = M;
     else E = SAT_Const::pi;

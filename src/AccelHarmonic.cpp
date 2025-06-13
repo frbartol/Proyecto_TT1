@@ -15,10 +15,10 @@ Matrix& AccelHarmonic(Matrix& r, Matrix& E, double n_max, double m_max){
     
     auto [pnm, dpnm] = Legendre(n_max,m_max,latgc);
     
-    dUdr = 0;
-    dUdlatgc = 0;
-    dUdlon = 0;
-    q3 = 0; q2 = q3; q1 = q2;
+    dUdr = 0.0;
+    dUdlatgc = 0.0;
+    dUdlon = 0.0;
+    q3 = 0.0; q2 = q3; q1 = q2;
     for (int n=0; n<=n_max; n++){
         b1 = (-gm/pow(d,2))*pow((r_ref/d),n)*(n+1);
         b2 = (gm/d)*pow((r_ref/d),n);
@@ -32,7 +32,7 @@ Matrix& AccelHarmonic(Matrix& r, Matrix& E, double n_max, double m_max){
         dUdr     = dUdr     + q1*b1;
         dUdlatgc = dUdlatgc + q2*b2;
         dUdlon   = dUdlon   + q3*b3;
-        q3 = 0; q2 = q3; q1 = q2;
+        q3 = 0.0; q2 = q3; q1 = q2;
     }
     
     

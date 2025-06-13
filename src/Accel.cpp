@@ -1,10 +1,10 @@
 #include "..\include\Accel.hpp"
 
 Matrix& Accel(double x, Matrix& Y){
-    auto [x_pole,y_pole,UT1_UTC,LOD,dpsi,deps,dx_pole,dy_pole,TAI_UTC] = IERS(eopdata,AuxParam.Mjd_UTC + x/86400,'l');
+    auto [x_pole,y_pole,UT1_UTC,LOD,dpsi,deps,dx_pole,dy_pole,TAI_UTC] = IERS(eopdata,AuxParam.Mjd_UTC + x/86400.0,'l');
     auto [UT1_TAI,UTC_GPS,UT1_GPS,TT_UTC,GPS_UTC] = timediff(UT1_UTC,TAI_UTC);
-    double Mjd_UT1 = AuxParam.Mjd_UTC + x/86400 + UT1_UTC/86400;
-    double Mjd_TT = AuxParam.Mjd_UTC + x/86400 + TT_UTC/86400;
+    double Mjd_UT1 = AuxParam.Mjd_UTC + x/86400.0 + UT1_UTC/86400.0;
+    double Mjd_TT = AuxParam.Mjd_UTC + x/86400.0 + TT_UTC/86400.0;
 
     Matrix& P = PrecMatrix(SAT_Const::MJD_J2000,Mjd_TT);
     Matrix& N = NutMatrix(Mjd_TT);

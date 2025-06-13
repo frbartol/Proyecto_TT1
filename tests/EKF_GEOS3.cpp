@@ -62,7 +62,7 @@ int main() {
 	}
 
     for (int i=1; i<=nobs; i++){
-        fgets(tline, sizeof(tline), fid);
+        fgets(tline, sizeof(tline) + 2, fid);
 
         strncpy(aux, tline + 0, 4);
         aux[4] = '\0';
@@ -143,7 +143,7 @@ int main() {
     n_eqn  = 6;
 
     Matrix& Y = DEInteg(Accel,0,-(obs(9,1)-Mjd0)*86400.0,1e-13,1e-6,6,Y0_apr);
-
+    cout<<Y;
     Matrix& P = zeros(6);
     
     for (int i=1; i<=3; i++){
@@ -155,11 +155,11 @@ int main() {
     
     Matrix& LT = LTC(lon,lat);
 
-    Matrix& yPhi = zeros(42,1);
+    Matrix& yPhi = zeros(1,42);
     Matrix& Phi  = zeros(6);
 
     // Measurement loop
-    t = 0;
+    t = 0.0;
 
     Matrix& Y_old = zeros(1);
     Matrix& U = zeros(1);
@@ -173,7 +173,7 @@ int main() {
     Matrix& dAds = zeros(1);
     Matrix& dEds = zeros(1);
     
-    for (int i=1; i<=nobs; i++){    
+    for (int i=1; i<=nobs; i++){
         // Previous step
         t_old = t;
         Y_old = Y;
@@ -188,28 +188,28 @@ int main() {
         Mjd_UT1 = Mjd_TT + (UT1_UTC-TT_UTC)/86400.0;
         AuxParam.Mjd_UTC = Mjd_UTC;
         AuxParam.Mjd_TT = Mjd_TT;
-            
+        
         for (int ii=1; ii<=6; ii++){
             yPhi(ii) = Y_old(ii);
             for (int j=1; j<=6; j++){  
                 if (ii==j){
-                    yPhi(6*j+ii) = 1; 
+                    yPhi(6*j+ii) = 1.0; 
                 }
                 else{
-                    yPhi(6*j+ii) = 0;
+                    yPhi(6*j+ii) = 0.0;
                 }
             }
         }
-        
-        yPhi = DEInteg (VarEqn,0,t-t_old,1e-13,1e-6,42,transpose(yPhi));
-        
+        cout<<VarEqn<<endl<<t-t_old<<endl<<yPhi<<endl;
+        yPhi = DEInteg (VarEqn,0,t-t_old,1e-13,1e-6,42,yPhi);
+        cout<<yPhi<<endl;
         // Extract state transition matrices
         for (int j=1; j<=6; j++){
             Phi.asign_column(j, transpose(yPhi.extract_vector(6*j+1,6*j+6)));
         }
-        
+        cout<<"22\n";
         Y = DEInteg (Accel,0,t-t_old,1e-13,1e-6,6,Y_old);
-        
+        cout<<"3\n";
         // Topocentric coordinates
         theta = gmst(Mjd_UT1);                    // Earth rotation
         U = R_z(theta);
@@ -219,7 +219,7 @@ int main() {
         
         // Time update
         P = TimeUpdate(P, Phi);
-            
+            cout<<"4\n";
         // Azimuth and partials
         std::tie(Azim, Elev, dAds, dEds) = AzElPa(s);     // Azimuth, Elevation
         dAdY = (dAds*LT*U).union_vector(zeros(1,3));
@@ -230,6 +230,7 @@ int main() {
         // Elevation and partials
         r = Y.extract_vector(1,3);
         s = LT*(U*transpose(r)-Rs);                          // Topocentric position [m]
+        cout<<"5\n";
         auto [Azim, Elev, dAds, dEds] = AzElPa(s);     // Azimuth, Elevation
         dEdY = (dEds*LT*U).union_vector(zeros(1,3));
         
@@ -241,17 +242,18 @@ int main() {
         s = LT*(U*transpose(r)-Rs);                          // Topocentric position [m]
         Dist = s.norm(); dDds = transpose(s/Dist);         // Range
         dDdY = (dDds*LT*U).union_vector(zeros(1,3));
-        
+        cout<<"6\n";
         // Measurement update
-        std::tie(K, Y, P) = MeasUpdate ( Y, obs(i,4), Dist, sigma_range, dDdY, P, 6 );
+        std::tie(K, Y, P) = MeasUpdate ( Y, obs(i,4), Dist, sigma_range, dDdY, P, 6 );   
+        
     }
-    cout<<"1\n";
     auto [x_pole,y_pole,UT1_UTC,LOD,dpsi,deps,dx_pole,dy_pole,TAI_UTC] = IERS(eopdata,obs(46,1),'l');
     auto [UT1_TAI,UTC_GPS,UT1_GPS,TT_UTC,GPS_UTC] = timediff(UT1_UTC,TAI_UTC);
-    Mjd_TT = Mjd_UTC + TT_UTC/86400;
+    
+    Mjd_TT = Mjd_UTC + TT_UTC/86400.0;
     AuxParam.Mjd_UTC = Mjd_UTC;
     AuxParam.Mjd_TT = Mjd_TT;
-    cout<<"13\n";
+    cout<<"13\n\n";
     Matrix& Y0 = DEInteg (Accel,0,-(obs(46,1)-obs(1,1))*86400.0,1e-13,1e-6,6,Y);
 
     Matrix& Y_True = zeros(6,1);

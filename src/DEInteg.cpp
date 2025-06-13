@@ -98,7 +98,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         y = transpose(y);
         return y;                                     // Exit
     }
-
+    
     // On each call set interval of integration and counter for
     // number of steps. Adjust input error tolerances to define
     // weight vector for subroutine STEP.
@@ -124,11 +124,11 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         x      = t;
         yy     = y;
         delsgn = sign_(1.0, del);
-        h      = sign_( fmax(fouru*abs(x), abs(tout-x)), tout-x );
+        h      = sign_( fmax(fouru*fabs(x), fabs(tout-x)), tout-x );
     }
 
     while (true){  // Start step loop
-
+    cout<<"Entra en bucle grande"<<endl;
         // If already past output point, interpolate solution and return
         if (fabs(x-t) >= absdel){
             yout  = zeros(n_eqn,1);
@@ -176,7 +176,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         
         // If cannot go past output point and sufficiently close,
         // extrapolate and return
-        if ( !PermitTOUT && ( abs(tout-x) < fouru*abs(x) ) ){
+        if ( !PermitTOUT && ( fabs(tout-x) < fouru*fabs(x) ) ){
             h = tout - x;
             yp = func(x,yy);          // Compute derivative yp(x)
             y = yy + yp*h;                // Extrapolate vector from x to tout
@@ -285,7 +285,6 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         // Repeat blocks 1, 2 (and 3) until step is successful               
         //                                                                   
         while(true){
-        
             //                                                                 
             // Begin block 1                                                   
             //                                                                 
@@ -305,9 +304,9 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
                 ns=0.0;
             }
             if (ns<=kold){
-                ns=ns+1;
+                ns=ns+1.0;
             }
-            nsp1 = ns+1;
+            nsp1 = ns+1.0;
             
             if (k>=ns){
                 // Compute those components of alpha[*],beta[*],psi[*],sig[*] 
@@ -337,7 +336,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
                     if (k>kold){
                         temp4 = k*kp1;
                         v(k+1) = 1.0/temp4;
-                        nsm2 = ns-2;
+                        nsm2 = ns-2.0;
                         for (int j=1; j<=nsm2; j++){
                             i = k-j;
                             v(i+1) = v(i+1) - alpha(j+2)*v(i+2);
@@ -424,7 +423,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             }
             xold = x;
             x = x + h;
-            absh = abs(h);
+            absh = fabs(h);
             yp = func(x,p);
             
             // Estimate errors at orders k, k-1, k-2 
@@ -540,7 +539,6 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             if (success){
                 break;
             }
-        
         }
 
         //
@@ -580,7 +578,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
                 phi(l,i+1) = phi(l,i+1) + phi(l,kp1+1);
             }
         }
-
+        
         // Estimate error at order k+1 unless               
         // - in first phase when always raise order,        
         // - already decided to lower order,                
@@ -678,7 +676,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         if (kle4>=50){
             stiff = true;
         }
-    
+        cout<<"Acaba bucle grande\n";
     } // End step loop
     
     //   if ( State_==DE_STATE.DE_INVPARAM )
