@@ -80,6 +80,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
     // Return, if output time equals input time
 
     if (t==tout){   // No integration
+        cout<<"1\n";
         y = transpose(y);
         return y;
     }
@@ -95,6 +96,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         ( (State_ != DE_STATE.DE_INIT) &&       
         (t != told)           ) ){
         State_ = DE_STATE.DE_INVPARAM;              // Set error code
+        cout<<"2\n";
         y = transpose(y);
         return y;                                     // Exit
     }
@@ -128,7 +130,6 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
     }
 
     while (true){  // Start step loop
-    cout<<"Empieza en bucle grande"<<endl;
         // If already past output point, interpolate solution and return
         if (fabs(x-t) >= absdel){
             yout  = zeros(n_eqn,1);
@@ -170,6 +171,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             t         = tout;             // Set independent variable
             told      = t;                // Store independent variable
             OldPermit = PermitTOUT;
+            cout<<"3\n";
             y = transpose(y);
             return y;                       // Normal exit
         }                         
@@ -184,6 +186,8 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             t         = tout;             // Set independent variable
             told      = t;                // Store independent variable
             OldPermit = PermitTOUT;
+        
+            cout<<"4\n";
             y = transpose(y);
             return y;                       // Normal exit
         }
@@ -220,6 +224,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         if (fabs(h) < fouru*fabs(x)){
             h = sign_(fouru*fabs(x),h);
             crash = true;
+            cout<<"5\n";
             y = transpose(y);
             return y;           // Exit 
         }
@@ -243,6 +248,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         if (p5eps<round){
             epsilon = 2.0*round*(1.0+fouru);
             crash = true;
+            cout<<"6\n";
             y = transpose(y);
             return y;
         }
@@ -285,7 +291,6 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         // Repeat blocks 1, 2 (and 3) until step is successful               
         //                                                                   
         while(true){
-            cout<<"Empieza bucle pequeño\n";
             //                                                                 
             // Begin block 1                                                   
             //                                                                 
@@ -527,6 +532,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
                     crash = true;
                     h = sign_(fouru*fabs(x), h);
                     epsilon = epsilon*2.0;
+                    cout<<"7\n";
                     y = transpose(y);
                     return y;                 // Exit 
                 }
@@ -540,7 +546,6 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             if (success){
                 break;
             }
-            cout<<"Acaba bucle pequeño\n";
         }
 
         //
@@ -663,6 +668,7 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
             t         = x;
             told      = t;
             OldPermit = true;
+            cout<<"8\n";
             y = transpose(y);
             return y;                       // Weak failure exit
         }
@@ -678,7 +684,6 @@ Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double rel
         if (kle4>=50){
             stiff = true;
         }
-        cout<<"Acaba bucle grande\n";
     } // End step loop
     
     //   if ( State_==DE_STATE.DE_INVPARAM )

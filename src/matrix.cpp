@@ -258,12 +258,12 @@ double Matrix::norm(){
 }
 
 double Matrix::dot(Matrix &m){
-	if(this->n_row!=m.n_row || this->n_column!=m.n_column){
+	if(this->n_row!=m.n_row || this->n_row!=1 || m.n_row!=1){
 		cout<<"Matrix dot: error in n_row/n_column";
 		exit(EXIT_FAILURE);
 	}
 
-	double result=0;
+	double result=0.0;
 	for(int j= 1; j<=this->n_column; j++){
 		result+= (*this)(1,j)*m(1,j);
 	}

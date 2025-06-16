@@ -1083,8 +1083,10 @@ int i4_deinteg_01(){
 	Matrix r = zeros(1,6);
 
     r(1) = 5542555.93722861; r(2) = 3213514.8673492; r(3) = 3990892.97587685; r(4) = 5394.06842166351; r(5) = -2365.21337882342; r(6) = -7061.84554200295;
+	Matrix& result = DEInteg(Accel, t, tout, relerr, abserr, n_eqn, Y);
+	cout<<result;
     
-	_assert(m_equals(DEInteg(Accel, t, tout, relerr, abserr, n_eqn, Y), r, 1e-8));
+	_assert(m_equals(result, r, 1e-8));
 	return 0;
 }
 

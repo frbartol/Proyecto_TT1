@@ -174,7 +174,6 @@ int main() {
     Matrix& dEds = zeros(1);
     
     for (int i=1; i<=nobs; i++){
-        cout<<"Empieza iteracion "<<i<<endl;
         // Previous step
         t_old = t;
         Y_old = Y;
@@ -201,10 +200,11 @@ int main() {
                 }
             }
         }
-        
+        cout<<"yPhi\n"<<yPhi<<endl;
         yPhi = DEInteg (VarEqn,0,t-t_old,1e-13,1e-6,42,yPhi);
         
         // Extract state transition matrices
+        cout<<"yPhi\n"<<yPhi<<endl;
         for (int j=1; j<=6; j++){
             Phi.asign_column(j, transpose(yPhi.extract_vector(6*j+1,6*j+6)));
         }
@@ -219,23 +219,36 @@ int main() {
         s = LT*(U*transpose(r)-Rs);                          // Topocentric position [m]
         
         // Time update
+        cout<<"Phi\n"<<Phi<<endl;
         P = TimeUpdate(P, Phi);
             
         // Azimuth and partials
-        std::tie(Azim, Elev, dAds, dEds) = AzElPa(s);     // Azimuth, Elevation
+        std::tie(Azim, Elev, dAds, dEds) = AzElPa(transpose(s));     // Azimuth, Elevation
+        
         dAdY = (dAds*LT*U).union_vector(zeros(1,3));
         
         // Measurement update
+        cout<<"Y\n"<<Y<<endl;
+        cout<<"obs(i,2)\n"<<obs(i,2)<<endl;
+        cout<<"Azim\n"<<Azim<<endl;
+        cout<<"sigma_az\n"<<sigma_az<<endl;
+        cout<<"dAdY\n"<<dAdY<<endl;
+        cout<<"P\n"<<P<<endl;
         std::tie(K, Y, P) = MeasUpdate ( Y, obs(i,2), Azim, sigma_az, dAdY, P, 6 );
-        
+        cout<<"K\n"<<K<<endl;
+        cout<<"Y\n"<<Y<<endl;
+        cout<<"P\n"<<P<<endl;
         // Elevation and partials
         r = Y.extract_vector(1,3);
         s = LT*(U*transpose(r)-Rs);                          // Topocentric position [m]
         
-        auto [Azim, Elev, dAds, dEds] = AzElPa(s);     // Azimuth, Elevation
+        auto [Azim, Elev, dAds, dEds] = AzElPa(transpose(s));     // Azimuth, Elevation
+        
         dEdY = (dEds*LT*U).union_vector(zeros(1,3));
         
         // Measurement update
+        
+
         std::tie(K, Y, P) = MeasUpdate ( Y, obs(i,3), Elev, sigma_el, dEdY, P, 6 );
         
         // Range and partials
@@ -245,8 +258,7 @@ int main() {
         dDdY = (dDds*LT*U).union_vector(zeros(1,3));
         
         // Measurement update
-        std::tie(K, Y, P) = MeasUpdate ( Y, obs(i,4), Dist, sigma_range, dDdY, P, 6 );   
-        cout<<"Termina iteracion "<<i<<endl;
+        std::tie(K, Y, P) = MeasUpdate ( Y, obs(i,4), Dist, sigma_range, dDdY, P, 6 );
     }
     auto [x_pole,y_pole,UT1_UTC,LOD,dpsi,deps,dx_pole,dy_pole,TAI_UTC] = IERS(eopdata,obs(46,1),'l');
     auto [UT1_TAI,UTC_GPS,UT1_GPS,TT_UTC,GPS_UTC] = timediff(UT1_UTC,TAI_UTC);

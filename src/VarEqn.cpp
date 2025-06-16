@@ -34,10 +34,10 @@ Matrix& VarEqn(double x, Matrix& yPhi){
             dfdy(i,j) = 0.0;                 // dv/dr(i,j)
             dfdy(i+3,j) = G(i,j);            // da/dr(i,j)
             if ( i==j ){
-                dfdy(i,j+3) = 1;
+                dfdy(i,j+3) = 1.0;
             }
             else{
-                dfdy(i,j+3) = 0;             // dv/dv(i,j)
+                dfdy(i,j+3) = 0.0;             // dv/dv(i,j)
             }
             dfdy(i+3,j+3) = 0.0;             // da/dv(i,j)
         }
