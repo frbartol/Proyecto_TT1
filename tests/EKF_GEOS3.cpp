@@ -200,11 +200,10 @@ int main() {
                 }
             }
         }
-        cout<<"yPhi\n"<<yPhi<<endl;
+        
         yPhi = DEInteg (VarEqn,0,t-t_old,1e-13,1e-6,42,yPhi);
         
         // Extract state transition matrices
-        cout<<"yPhi\n"<<yPhi<<endl;
         for (int j=1; j<=6; j++){
             Phi.asign_column(j, transpose(yPhi.extract_vector(6*j+1,6*j+6)));
         }
@@ -219,7 +218,6 @@ int main() {
         s = LT*(U*transpose(r)-Rs);                          // Topocentric position [m]
         
         // Time update
-        cout<<"Phi\n"<<Phi<<endl;
         P = TimeUpdate(P, Phi);
             
         // Azimuth and partials
