@@ -1,0 +1,85 @@
+\doxysection{src/\+DEInteg.cpp File Reference}
+\hypertarget{_d_e_integ_8cpp}{}\label{_d_e_integ_8cpp}\index{src/DEInteg.cpp@{src/DEInteg.cpp}}
+
+
+Implementación del integrador numérico multistep de Shampine y Gordon.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+DEInteg.\+hpp"{}}\newline
+Include dependency graph for DEInteg.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_integ_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_d_e_integ_8cpp_a672d74731618f1054414496efdb8ffe0}{DEInteg}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&func(double, \mbox{\hyperlink{class_matrix}{Matrix}} \&), double t, double tout, double relerr, double abserr, int n\+\_\+eqn, \mbox{\hyperlink{class_matrix}{Matrix}} \&y)
+\begin{DoxyCompactList}\small\item\em Integrador multistep con paso y orden variable basado en el método de Shampine \& Gordon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación del integrador numérico multistep de Shampine y Gordon. 
+
+Este integrador resuelve sistemas de ecuaciones diferenciales ordinarias mediante un método de paso y orden variable. Controla el error relativo y absoluto especificado por el usuario, ajustando dinámicamente el paso y la orden del método.
+
+La función está dividida en bloques lógicos\+:
+\begin{DoxyItemize}
+\item Bloque 0\+: inicialización y validación de parámetros
+\item Bloque 1\+: cálculo de coeficientes del método
+\item Bloque 2\+: predicción y estimación del error local
+\item Bloque 3\+: tratamiento de pasos fallidos y reducción de orden
+\item Bloque 4\+: corrección del estado, evaluación final y preparación del siguiente paso
+\end{DoxyItemize}
+
+Internamente utiliza diferencias divididas para interpolar la solución y su derivada, y adapta el orden para optimizar el rendimiento. Es especialmente útil para problemas no rígidos que requieren alta precisión y control detallado del error.
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_d_e_integ_8cpp_source}{DEInteg.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_d_e_integ_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_d_e_integ_8cpp_a672d74731618f1054414496efdb8ffe0}\index{DEInteg.cpp@{DEInteg.cpp}!DEInteg@{DEInteg}}
+\index{DEInteg@{DEInteg}!DEInteg.cpp@{DEInteg.cpp}}
+\doxysubsubsection{\texorpdfstring{DEInteg()}{DEInteg()}}
+{\footnotesize\ttfamily \label{_d_e_integ_8cpp_a672d74731618f1054414496efdb8ffe0} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& DEInteg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{func}{double, Matrix \&, }\item[{double}]{t}{, }\item[{double}]{tout}{, }\item[{double}]{relerr}{, }\item[{double}]{abserr}{, }\item[{int}]{n\+\_\+eqn}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Integrador multistep con paso y orden variable basado en el método de Shampine \& Gordon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Función que define el sistema de ecuaciones diferenciales (debe devolver la derivada de y). \\
+\hline
+{\em t} & Tiempo inicial. \\
+\hline
+{\em tout} & Tiempo final deseado de integración. \\
+\hline
+{\em relerr} & Error relativo permitido. \\
+\hline
+{\em abserr} & Error absoluto permitido. \\
+\hline
+{\em n\+\_\+eqn} & Número de ecuaciones del sistema. \\
+\hline
+{\em y} & Vector de estado inicial (y se actualiza con el estado final). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector de estado final tras la integración. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_e_integ_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_d_e_integ_8cpp_source}{DEInteg.\+cpp}}.
+

@@ -1,3 +1,8 @@
+/**
+ * @file gast.cpp
+ * @brief Implementación del cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST).
+ * @author Francisco Bartolome Alcalde
+ */
 #include "..\include\gast.hpp"
 
 double gast(double Mjd_UT1){

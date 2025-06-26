@@ -1,3 +1,9 @@
+/**
+ * @file R_x.cpp
+ * @brief Implementación de la matriz de rotación respecto al eje X.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\R_x.hpp"
 
 Matrix& R_x(double angle){

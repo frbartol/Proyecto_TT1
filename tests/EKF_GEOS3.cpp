@@ -39,6 +39,33 @@
 #include <string.h>
 
 using namespace std;
+/**
+ * @file EKF_GEOS3.cpp
+ * @brief Estimación de la órbita de un satélite usando el filtro de Kalman extendido (EKF) y medidas reales del satélite GEOS-3.
+ * 
+ * El programa carga observaciones topocéntricas (acimut, elevación, distancia) desde el fichero `GEOS3.txt` y estima la trayectoria del satélite
+ * integrando su movimiento con un modelo dinámico completo que incluye:
+ * - Campo gravitatorio armónico terrestre (modelo GGM03S)
+ * - Perturbaciones de cuerpos mayores (Luna, Sol, planetas)
+ * - Parámetros de orientación terrestre (EOP) e instantes en distintos sistemas de tiempo (UTC, UT1, TT, TDB)
+ * 
+ * Se inicializa el estado con una aproximación, se propaga usando `DEInteg`, y se aplica el EKF con las funciones:
+ * - `Accel`: dinámica orbital
+ * - `VarEqn`: derivadas de transición
+ * - `MeasUpdate`: actualizaciones del estado por medidas
+ * - `TimeUpdate`: predicción de la covarianza
+ * - `AzElPa`: conversión de coordenadas topocéntricas y derivadas parciales
+ * 
+ * Finalmente se compara el estado estimado con el estado real para evaluar la precisión de la estimación.
+ * 
+ * Entradas:
+ * - Fichero `../data/GEOS3.txt` con 46 observaciones (formato fijo)
+ * 
+ * Salida:
+ * - Errores de posición y velocidad estimados respecto a valores conocidos
+ * 
+ * @author Francisco Bartolome Alcalde
+ */
 
 int main() {
 	eop19620101(21413);

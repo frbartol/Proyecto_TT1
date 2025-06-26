@@ -1,0 +1,38 @@
+<map id="include/global.hpp" name="include/global.hpp">
+<area shape="rect" id="Node000001" title="Declaraciones globales para el sistema de estimación orbital." alt="" coords="469,5,595,32"/>
+<area shape="rect" id="Node000002" href="$_accel_8hpp.html" title="Prototipo de la función que calcula la aceleración total que actúa sobre un satélite." alt="" coords="317,155,441,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="510,45,394,156,390,152,506,41"/>
+<area shape="rect" id="Node000004" href="$_e_k_f___g_e_o_s3_8cpp.html" title="Estimación de la órbita de un satélite usando el filtro de Kalman extendido (EKF) y medidas reales de..." alt="" coords="297,229,455,256"/>
+<area shape="poly" id="edge22_Node000001_Node000004" title=" " alt="" coords="454,30,335,46,201,71,137,88,82,108,40,131,13,156,8,168,12,179,116,199,298,227,297,232,116,204,9,183,3,168,9,153,36,126,80,103,136,83,200,66,335,40,454,25"/>
+<area shape="rect" id="Node000005" href="$tests_8cpp.html" title="Batería de tests unitarios del sistema de dinámica orbital." alt="" coords="613,229,721,256"/>
+<area shape="poly" id="edge23_Node000001_Node000005" title=" " alt="" coords="611,26,729,42,863,68,927,85,983,105,1027,127,1057,153,1063,168,1057,183,1034,200,999,214,909,232,808,241,721,244,721,239,808,236,908,227,998,209,1031,196,1053,180,1058,168,1053,156,1024,132,981,110,925,90,862,73,728,47,610,31"/>
+<area shape="rect" id="Node000006" href="$_accel_harmonic_8hpp.html" title="Cálculo de la aceleración gravitatoria debido al campo armónico terrestre." alt="" coords="611,80,792,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="577,36,673,77,671,82,575,41"/>
+<area shape="rect" id="Node000007" href="$_var_eqn_8hpp.html" title="Declaración de la función para calcular la derivada del sistema variacional para propagación de la ma..." alt="" coords="465,155,599,181"/>
+<area shape="poly" id="edge20_Node000001_Node000007" title=" " alt="" coords="535,48,535,154,529,154,529,48"/>
+<area shape="rect" id="Node000011" href="$_j_p_l___eph___d_e430_8hpp.html" title="Cálculo de posiciones planetarias usando la efeméride JPL DE430." alt="" coords="183,80,374,107"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="474,39,324,82,323,77,473,34"/>
+<area shape="rect" id="Node000013" href="$global_8cpp.html" title="Implementación de las funciones y variables globales para el sistema de dinámica orbital." alt="" coords="1153,80,1255,107"/>
+<area shape="poly" id="edge21_Node000001_Node000013" title=" " alt="" coords="611,23,846,44,1135,77,1153,80,1152,85,1134,83,845,50,610,29"/>
+<area shape="rect" id="Node000003" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total actuando sobre un satélite." alt="" coords="172,229,273,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="339,191,251,231,249,226,337,186"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="380,197,379,229,374,229,375,197"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="444,183,617,226,616,231,443,188"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="631,113,436,157,435,151,630,108"/>
+<area shape="poly" id="edge13_Node000006_Node000004" title=" " alt="" coords="807,93,888,99,960,114,986,125,1002,141,1005,160,991,183,979,191,959,198,900,209,735,222,467,232,455,233,455,228,467,227,735,216,899,203,957,193,977,186,988,179,1000,159,998,143,983,130,958,119,887,105,807,98"/>
+<area shape="poly" id="edge14_Node000006_Node000005" title=" " alt="" coords="808,97,875,103,943,114,999,130,1021,141,1036,153,1042,168,1036,183,1014,199,982,212,898,230,804,240,722,243,721,238,804,234,897,225,980,207,1011,195,1031,180,1036,168,1031,156,1018,145,997,135,941,119,875,109,807,102"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="659,116,563,156,561,152,657,111"/>
+<area shape="rect" id="Node000009" href="$_accel_harmonic_8cpp.html" title="Implementación de la aceleración perturbadora debida al campo gravitacional armónico terrestre." alt="" coords="623,155,780,181"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="704,122,704,154,699,154,699,122"/>
+<area shape="rect" id="Node000010" href="$_g___accel_harmonic_8cpp.html" title="Implementación del cálculo del gradiente de la aceleración armónica gravitacional terrestre por difer..." alt="" coords="804,155,978,181"/>
+<area shape="poly" id="edge12_Node000006_Node000010" title=" " alt="" coords="750,110,858,152,857,157,748,115"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="492,191,405,231,402,226,490,186"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="570,187,644,226,642,231,567,191"/>
+<area shape="rect" id="Node000008" href="$_var_eqn_8cpp.html" title="Implementación de la derivada del sistema variacional para la propagación de la matriz de transición ..." alt="" coords="478,229,589,256"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="535,197,536,229,531,229,530,197"/>
+<area shape="poly" id="edge16_Node000011_Node000002" title=" " alt="" coords="310,114,363,152,360,156,307,118"/>
+<area shape="poly" id="edge18_Node000011_Node000004" title=" " alt="" coords="266,121,257,151,257,166,262,180,275,196,291,208,328,226,325,231,288,213,271,199,258,183,252,167,252,150,261,120"/>
+<area shape="poly" id="edge19_Node000011_Node000005" title=" " alt="" coords="282,121,289,153,296,167,306,179,330,193,363,203,446,215,533,221,600,227,613,229,612,234,600,232,533,226,446,220,362,208,327,198,302,183,291,170,284,154,277,123"/>
+<area shape="rect" id="Node000012" href="$_j_p_l___eph___d_e430_8cpp.html" title="Implementación de la función JPL_Eph_DE430 para calcular posiciones de cuerpos celestes desde la efem..." alt="" coords="23,155,191,181"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="236,115,138,156,136,152,234,111"/>
+</map>

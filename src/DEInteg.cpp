@@ -1,3 +1,23 @@
+/**
+ * @file DEInteg.cpp
+ * @brief Implementación del integrador numérico multistep de Shampine y Gordon.
+ * 
+ * Este integrador resuelve sistemas de ecuaciones diferenciales ordinarias mediante un método de paso y orden variable.
+ * Controla el error relativo y absoluto especificado por el usuario, ajustando dinámicamente el paso y la orden del método.
+ * 
+ * La función está dividida en bloques lógicos:
+ * - Bloque 0: inicialización y validación de parámetros
+ * - Bloque 1: cálculo de coeficientes del método
+ * - Bloque 2: predicción y estimación del error local
+ * - Bloque 3: tratamiento de pasos fallidos y reducción de orden
+ * - Bloque 4: corrección del estado, evaluación final y preparación del siguiente paso
+ * 
+ * Internamente utiliza diferencias divididas para interpolar la solución y su derivada, y adapta el orden para optimizar el rendimiento.
+ * Es especialmente útil para problemas no rígidos que requieren alta precisión y control detallado del error.
+ * 
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\DEInteg.hpp"
 
 Matrix& DEInteg(Matrix& func(double, Matrix&), double t, double tout, double relerr, double abserr, int n_eqn, Matrix& y){

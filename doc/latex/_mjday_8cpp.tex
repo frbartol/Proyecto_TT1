@@ -1,0 +1,70 @@
+\doxysection{src/\+Mjday.cpp File Reference}
+\hypertarget{_mjday_8cpp}{}\label{_mjday_8cpp}\index{src/Mjday.cpp@{src/Mjday.cpp}}
+
+
+Implementación del cálculo del Modified Julian Date (MJD) desde fecha y hora calendario.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Mjday.\+hpp"{}}\newline
+Include dependency graph for Mjday.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{_mjday_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_mjday_8cpp_a65ebba8d35ce1a0e3ed379a09487d971}{Mjday}} (int yr, int mon, int day, int hr, int min, double sec)
+\begin{DoxyCompactList}\small\item\em Calcula el Modified Julian Date (MJD) a partir de una fecha y hora dadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación del cálculo del Modified Julian Date (MJD) desde fecha y hora calendario. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_mjday_8cpp_source}{Mjday.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_mjday_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_mjday_8cpp_a65ebba8d35ce1a0e3ed379a09487d971}\index{Mjday.cpp@{Mjday.cpp}!Mjday@{Mjday}}
+\index{Mjday@{Mjday}!Mjday.cpp@{Mjday.cpp}}
+\doxysubsubsection{\texorpdfstring{Mjday()}{Mjday()}}
+{\footnotesize\ttfamily \label{_mjday_8cpp_a65ebba8d35ce1a0e3ed379a09487d971} 
+double Mjday (\begin{DoxyParamCaption}\item[{int}]{yr}{, }\item[{int}]{mon}{, }\item[{int}]{day}{, }\item[{int}]{hr}{ = {\ttfamily 0}, }\item[{int}]{min}{ = {\ttfamily 0}, }\item[{double}]{sec}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Calcula el Modified Julian Date (MJD) a partir de una fecha y hora dadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em yr} & Año. \\
+\hline
+{\em mon} & Mes (1–12). \\
+\hline
+{\em day} & Día del mes. \\
+\hline
+{\em hr} & Hora (por defecto 0). \\
+\hline
+{\em min} & Minutos (por defecto 0). \\
+\hline
+{\em sec} & Segundos (por defecto 0.\+0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Fecha en MJD. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mjday_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_mjday_8cpp_source}{Mjday.\+cpp}}.
+

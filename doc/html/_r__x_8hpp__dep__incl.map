@@ -1,0 +1,41 @@
+<map id="include/R_x.hpp" name="include/R_x.hpp">
+<area shape="rect" id="Node000001" title="Matriz de rotación en torno al eje X." alt="" coords="559,5,674,32"/>
+<area shape="rect" id="Node000002" href="$_l_t_c_8hpp.html" title="Construye una matriz de transformación de coordenadas locales topocéntricas a coordenadas geocéntrica..." alt="" coords="5,155,121,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="543,26,441,32,323,43,215,59,172,70,140,82,118,98,99,118,72,156,68,153,95,114,114,94,138,78,170,65,214,54,323,37,440,26,543,20"/>
+<area shape="rect" id="Node000004" href="$_e_k_f___g_e_o_s3_8cpp.html" title="Estimación de la órbita de un satélite usando el filtro de Kalman extendido (EKF) y medidas reales de..." alt="" coords="278,229,435,256"/>
+<area shape="poly" id="edge24_Node000001_Node000004" title=" " alt="" coords="544,35,447,54,338,82,287,98,243,116,208,136,185,156,179,170,179,181,186,192,198,201,235,217,278,228,277,233,233,222,196,206,182,195,174,183,173,169,181,153,205,131,241,111,286,93,337,76,445,49,543,29"/>
+<area shape="rect" id="Node000005" href="$tests_8cpp.html" title="Batería de tests unitarios del sistema de dinámica orbital." alt="" coords="585,229,693,256"/>
+<area shape="poly" id="edge25_Node000001_Node000005" title=" " alt="" coords="690,22,761,33,839,56,877,73,913,95,945,121,972,153,978,168,971,183,694,234,693,229,968,179,972,168,967,156,941,125,910,99,875,78,837,61,760,38,689,27"/>
+<area shape="rect" id="Node000006" href="$_nut_matrix_8hpp.html" title="Cálculo de la matriz de nutación a partir del tiempo terrestre (Mjd_TT)." alt="" coords="441,80,589,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="588,44,534,82,531,77,585,39"/>
+<area shape="rect" id="Node000012" href="$_pole_matrix_8hpp.html" title="Corrección de coordenadas debido al movimiento del polo terrestre." alt="" coords="621,80,774,107"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="644,41,685,78,682,82,640,44"/>
+<area shape="rect" id="Node000014" href="$_r__x_8cpp.html" title="Implementación de la matriz de rotación respecto al eje X." alt="" coords="1060,80,1152,107"/>
+<area shape="poly" id="edge23_Node000001_Node000014" title=" " alt="" coords="690,27,1041,77,1059,81,1059,86,1040,83,689,32"/>
+<area shape="rect" id="Node000003" href="$_l_t_c_8cpp.html" title="Implementación de la matriz de transformación Local Topocentric Coordinate (LTC)." alt="" coords="17,229,109,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="66,197,66,229,60,229,60,197"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="130,183,306,226,304,231,129,188"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="137,174,334,195,573,227,585,229,584,234,572,232,333,201,136,179"/>
+<area shape="poly" id="edge15_Node000006_Node000004" title=" " alt="" coords="456,115,422,132,392,156,379,174,370,194,361,230,356,229,365,192,374,172,388,153,419,128,454,110"/>
+<area shape="poly" id="edge16_Node000006_Node000005" title=" " alt="" coords="545,114,585,153,614,193,635,227,630,230,610,196,581,156,541,118"/>
+<area shape="rect" id="Node000007" href="$_accel_8hpp.html" title="Prototipo de la función que calcula la aceleración total que actúa sobre un satélite." alt="" coords="446,155,570,181"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="515,123,512,155,507,154,510,122"/>
+<area shape="rect" id="Node000009" href="$_var_eqn_8hpp.html" title="Declaración de la función para calcular la derivada del sistema variacional para propagación de la ma..." alt="" coords="646,155,779,181"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="565,110,679,152,677,157,563,115"/>
+<area shape="rect" id="Node000011" href="$_nut_matrix_8cpp.html" title="Implementación del cálculo de la matriz de nutación." alt="" coords="195,155,320,181"/>
+<area shape="poly" id="edge14_Node000006_Node000011" title=" " alt="" coords="456,114,304,157,302,151,455,109"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="469,191,384,231,382,226,467,186"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="546,187,617,226,615,231,543,192"/>
+<area shape="rect" id="Node000008" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total actuando sobre un satélite." alt="" coords="459,229,560,256"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="512,197,512,229,507,229,506,197"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="635,188,419,231,418,226,634,182"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="691,194,653,231,650,227,687,191"/>
+<area shape="rect" id="Node000010" href="$_var_eqn_8cpp.html" title="Implementación de la derivada del sistema variacional para la propagación de la matriz de transición ..." alt="" coords="717,229,828,256"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="734,192,764,227,760,231,730,195"/>
+<area shape="poly" id="edge21_Node000012_Node000004" title=" " alt="" coords="606,112,507,133,465,145,435,157,413,174,393,194,366,231,362,228,389,190,409,170,432,152,463,139,506,127,605,107"/>
+<area shape="poly" id="edge22_Node000012_Node000005" title=" " alt="" coords="790,95,859,103,920,118,942,129,956,144,959,162,947,183,694,234,693,228,944,179,954,161,951,146,939,133,918,123,858,108,790,101"/>
+<area shape="poly" id="edge18_Node000012_Node000007" title=" " alt="" coords="651,115,543,157,541,152,649,110"/>
+<area shape="poly" id="edge19_Node000012_Node000009" title=" " alt="" coords="706,122,712,154,707,155,701,123"/>
+<area shape="rect" id="Node000013" href="$_pole_matrix_8cpp.html" title="Implementación de la matriz de corrección por el desplazamiento del polo terrestre." alt="" coords="803,155,934,181"/>
+<area shape="poly" id="edge20_Node000012_Node000013" title=" " alt="" coords="743,111,839,152,837,156,740,116"/>
+</map>

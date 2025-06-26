@@ -1,0 +1,62 @@
+\doxysection{src/\+Var\+Eqn.cpp File Reference}
+\hypertarget{_var_eqn_8cpp}{}\label{_var_eqn_8cpp}\index{src/VarEqn.cpp@{src/VarEqn.cpp}}
+
+
+Implementación de la derivada del sistema variacional para la propagación de la matriz de transición en dinámica orbital.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Var\+Eqn.\+hpp"{}}\newline
+Include dependency graph for Var\+Eqn.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_var_eqn_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_var_eqn_8cpp_a6e153d0ae05034cb5b346189ebb847d3}{Var\+Eqn}} (double x, \mbox{\hyperlink{class_matrix}{Matrix}} \&y\+Phi)
+\begin{DoxyCompactList}\small\item\em Calcula la derivada del sistema de ecuaciones variacionales. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la derivada del sistema variacional para la propagación de la matriz de transición en dinámica orbital. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_var_eqn_8cpp_source}{Var\+Eqn.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_var_eqn_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_var_eqn_8cpp_a6e153d0ae05034cb5b346189ebb847d3}\index{VarEqn.cpp@{VarEqn.cpp}!VarEqn@{VarEqn}}
+\index{VarEqn@{VarEqn}!VarEqn.cpp@{VarEqn.cpp}}
+\doxysubsubsection{\texorpdfstring{VarEqn()}{VarEqn()}}
+{\footnotesize\ttfamily \label{_var_eqn_8cpp_a6e153d0ae05034cb5b346189ebb847d3} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Var\+Eqn (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{y\+Phi}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la derivada del sistema de ecuaciones variacionales. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Tiempo (en segundos desde una fecha de referencia). \\
+\hline
+{\em y\+Phi} & Vector que contiene el estado y la matriz de transición aplanada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Derivada del vector estado y de la matriz de transición. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_var_eqn_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_var_eqn_8cpp_source}{Var\+Eqn.\+cpp}}.
+

@@ -1,3 +1,9 @@
+/**
+ * @file EccAnom.cpp
+ * @brief Implementación del cálculo de la anomalía excéntrica mediante el método de Newton-Raphson.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\EccAnom.hpp"
 double EccAnom(double M, double e){
 

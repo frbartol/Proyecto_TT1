@@ -1,3 +1,9 @@
+/**
+ * @file MeanObliquity.cpp
+ * @brief Implementación del cálculo de la oblicuidad media de la eclíptica.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\MeanObliquity.hpp"
 double MeanObliquity(double Mjd_TT){
     double T = (Mjd_TT-SAT_Const::MJD_J2000)/36525.0;

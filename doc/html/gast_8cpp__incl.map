@@ -1,0 +1,25 @@
+<map id="src/gast.cpp" name="src/gast.cpp">
+<area shape="rect" id="Node000001" title="Implementación del cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST)." alt="" coords="300,5,394,32"/>
+<area shape="rect" id="Node000002" href="$gast_8hpp.html" title="Cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST)." alt="" coords="283,80,411,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="350,33,350,64,344,64,344,33"/>
+<area shape="rect" id="Node000003" href="$gmst_8hpp.html" title="Cálculo del Tiempo Sidéreo Medio de Greenwich (GMST) a partir del MJD en UT1." alt="" coords="189,155,264,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,109,262,149,259,144,325,105"/>
+<area shape="rect" id="Node000006" href="$_s_a_t___const_8hpp.html" title="Constantes astronómicas y físicas usadas en dinámica orbital y propagación satelital." alt="" coords="246,304,360,331"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="371,105,398,125,420,153,433,181,439,206,437,230,425,257,401,283,371,300,368,296,398,279,421,255,432,229,434,206,428,183,415,156,394,129,368,109"/>
+<area shape="rect" id="Node000007" href="$_eqn_equinox_8hpp.html" title="Cálculo de la ecuación de los equinoccios." alt="" coords="289,155,405,181"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="350,107,350,139,344,139,344,107"/>
+<area shape="rect" id="Node000004" href="$_frac_8hpp.html" title="Cálculo de la parte fraccionaria de un número real." alt="" coords="5,229,78,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="196,184,89,226,87,221,194,179"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="235,181,273,255,291,289,287,291,268,257,231,183"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="32,304,89,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="47,256,56,288,51,289,42,257"/>
+<area shape="rect" id="Node000008" href="$_nut_angles_8hpp.html" title="Cálculo de los ángulos de nutación: Δψ y Δε." alt="" coords="101,229,208,256"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="314,184,203,226,202,221,312,179"/>
+<area shape="rect" id="Node000010" href="$_mean_obliquity_8hpp.html" title="Cálculo de la oblicuidad media de la eclíptica en función del tiempo." alt="" coords="283,229,411,256"/>
+<area shape="poly" id="edge12_Node000007_Node000010" title=" " alt="" coords="350,182,350,214,344,214,344,182"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="140,259,90,297,87,292,137,254"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="182,254,264,294,262,299,179,259"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="130,304,180,331"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="158,257,158,288,152,288,152,257"/>
+<area shape="poly" id="edge13_Node000010_Node000006" title=" " alt="" coords="341,258,321,292,316,289,337,255"/>
+</map>

@@ -1,0 +1,356 @@
+\doxysection{SAT\+\_\+\+Const Class Reference}
+\hypertarget{class_s_a_t___const}{}\label{class_s_a_t___const}\index{SAT\_Const@{SAT\_Const}}
+
+
+Contiene constantes matemáticas, astronómicas y físicas necesarias para cálculos orbitales.  
+
+
+
+
+{\ttfamily \#include $<$SAT\+\_\+\+Const.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{pi}} = 3.\+14159265358979324
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a89e036b4f6b1dd503242c44cd398d9b1}{pi2}} = 2\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{pi}}
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a8cd545a117a0d02fba3e18c843a8e112}{Rad}} = \mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{pi}}/180.\+0
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a46f0def10d9eb7d0493a8fbf586f4116}{Deg}} = 180.\+0/\mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{pi}}
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a7c2f8d8faddb10fda901e41c30d8f010}{Arcs}} = 3600\texorpdfstring{$\ast$}{*}180.\+0/\mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{pi}}
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_ab7ba8d3bdb9b06b52877b1e6c24b3d37}{MJD\+\_\+\+J2000}} = 51544.\+5
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_ac4762d2517541975d0d8b3ec769159ae}{T\+\_\+\+B1950}} = -\/0.\+500002108
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a345960ccb16807824cb455f1ffacbf3e}{c\+\_\+light}} = 299792458.\+000000000
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a30755b97cd70f618bfeca6abe7f45b08}{AU}} = 149597870700.\+000000
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a8520a4aca82e0459f65ed4bb55c5d97f}{R\+\_\+\+Earth}} = 6378.\+1363e3
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a695e88747bb620787c6e9f8d952ccd17}{f\+\_\+\+Earth}} = 1/298.\+257223563
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a7bed1960da63500f83498fefef9ff315}{R\+\_\+\+Sun}} = 696000e3
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a9ec80315ce97ed4a4c2b90ada9c49d0e}{R\+\_\+\+Moon}} = 1738e3
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a34bed0ab80bb7cd372419a346b139678}{omega\+\_\+\+Earth}} = 15.\+04106717866910/3600.\+0\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_s_a_t___const_a8cd545a117a0d02fba3e18c843a8e112}{SAT\+\_\+\+Const\+::\+Rad}}
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_aa561286ef1a10f479fee20edb32faa16}{GM\+\_\+\+Earth}} = 398600.\+435436e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_aa2cf8c2fc4b178a2ddbc47ec94b756e8}{GM\+\_\+\+Sun}} = 132712440041.\+939400e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_aeb5c26a48ab670ef46de848a8a14da68}{GM\+\_\+\+Moon}} = \mbox{\hyperlink{class_s_a_t___const_aa561286ef1a10f479fee20edb32faa16}{SAT\+\_\+\+Const\+::\+GM\+\_\+\+Earth}}/81.\+30056907419062
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_ae4b07e964995d768c891f2e54204e788}{GM\+\_\+\+Mercury}} = 22031.\+780000e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a72e68505611ebd6ee5c30f8614f25b11}{GM\+\_\+\+Venus}} = 324858.\+592000e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a722cc664533818278459dcdf14765970}{GM\+\_\+\+Mars}} = 42828.\+375214e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a6080247fc6db7327ec51d6ddea91cc68}{GM\+\_\+\+Jupiter}} = 126712764.\+800000e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a9e96aee2b02c6387fbc0f525f4cb5d5c}{GM\+\_\+\+Saturn}} = 37940585.\+200000e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a6d53fbd66032be649f31df560d8893c4}{GM\+\_\+\+Uranus}} = 5794548.\+600000e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_adb10f75e70cb3513eadf7aeef2c0e58c}{GM\+\_\+\+Neptune}} = 6836527.\+100580e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a9108d8a0b68e98dfaad65d2d28ca84b5}{GM\+\_\+\+Pluto}} = 977.\+0000000000009e9
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a3bbc5b26ba9eddf1f55cf24a5c04638c}{P\+\_\+\+Sol}} = 1367.\+0/\mbox{\hyperlink{class_s_a_t___const_a345960ccb16807824cb455f1ffacbf3e}{SAT\+\_\+\+Const\+::c\+\_\+light}}
+\item 
+static const double \mbox{\hyperlink{class_s_a_t___const_a8e29051f337676262ad402b0c60ff808}{eps}} = 2.\+22044604925031e-\/16
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contiene constantes matemáticas, astronómicas y físicas necesarias para cálculos orbitales. 
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_s_a_t___const_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_s_a_t___const_a7c2f8d8faddb10fda901e41c30d8f010}\index{SAT\_Const@{SAT\_Const}!Arcs@{Arcs}}
+\index{Arcs@{Arcs}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{Arcs}{Arcs}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a7c2f8d8faddb10fda901e41c30d8f010} 
+const double SAT\+\_\+\+Const\+::\+Arcs = 3600\texorpdfstring{$\ast$}{*}180.\+0/\mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{pi}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a30755b97cd70f618bfeca6abe7f45b08}\index{SAT\_Const@{SAT\_Const}!AU@{AU}}
+\index{AU@{AU}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{AU}{AU}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a30755b97cd70f618bfeca6abe7f45b08} 
+const double SAT\+\_\+\+Const\+::\+AU = 149597870700.\+000000\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00028}{28}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a345960ccb16807824cb455f1ffacbf3e}\index{SAT\_Const@{SAT\_Const}!c\_light@{c\_light}}
+\index{c\_light@{c\_light}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{c\_light}{c\_light}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a345960ccb16807824cb455f1ffacbf3e} 
+const double SAT\+\_\+\+Const\+::c\+\_\+light = 299792458.\+000000000\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00027}{27}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a46f0def10d9eb7d0493a8fbf586f4116}\index{SAT\_Const@{SAT\_Const}!Deg@{Deg}}
+\index{Deg@{Deg}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{Deg}{Deg}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a46f0def10d9eb7d0493a8fbf586f4116} 
+const double SAT\+\_\+\+Const\+::\+Deg = 180.\+0/\mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{pi}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a8e29051f337676262ad402b0c60ff808}\index{SAT\_Const@{SAT\_Const}!eps@{eps}}
+\index{eps@{eps}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{eps}{eps}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a8e29051f337676262ad402b0c60ff808} 
+const double SAT\+\_\+\+Const\+::eps = 2.\+22044604925031e-\/16\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00056}{56}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a695e88747bb620787c6e9f8d952ccd17}\index{SAT\_Const@{SAT\_Const}!f\_Earth@{f\_Earth}}
+\index{f\_Earth@{f\_Earth}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{f\_Earth}{f\_Earth}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a695e88747bb620787c6e9f8d952ccd17} 
+const double SAT\+\_\+\+Const\+::f\+\_\+\+Earth = 1/298.\+257223563\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00034}{34}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_aa561286ef1a10f479fee20edb32faa16}\index{SAT\_Const@{SAT\_Const}!GM\_Earth@{GM\_Earth}}
+\index{GM\_Earth@{GM\_Earth}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Earth}{GM\_Earth}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_aa561286ef1a10f479fee20edb32faa16} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Earth = 398600.\+435436e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a6080247fc6db7327ec51d6ddea91cc68}\index{SAT\_Const@{SAT\_Const}!GM\_Jupiter@{GM\_Jupiter}}
+\index{GM\_Jupiter@{GM\_Jupiter}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Jupiter}{GM\_Jupiter}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a6080247fc6db7327ec51d6ddea91cc68} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Jupiter = 126712764.\+800000e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00048}{48}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a722cc664533818278459dcdf14765970}\index{SAT\_Const@{SAT\_Const}!GM\_Mars@{GM\_Mars}}
+\index{GM\_Mars@{GM\_Mars}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Mars}{GM\_Mars}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a722cc664533818278459dcdf14765970} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Mars = 42828.\+375214e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00047}{47}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_ae4b07e964995d768c891f2e54204e788}\index{SAT\_Const@{SAT\_Const}!GM\_Mercury@{GM\_Mercury}}
+\index{GM\_Mercury@{GM\_Mercury}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Mercury}{GM\_Mercury}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_ae4b07e964995d768c891f2e54204e788} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Mercury = 22031.\+780000e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00045}{45}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_aeb5c26a48ab670ef46de848a8a14da68}\index{SAT\_Const@{SAT\_Const}!GM\_Moon@{GM\_Moon}}
+\index{GM\_Moon@{GM\_Moon}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Moon}{GM\_Moon}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_aeb5c26a48ab670ef46de848a8a14da68} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Moon = \mbox{\hyperlink{class_s_a_t___const_aa561286ef1a10f479fee20edb32faa16}{SAT\+\_\+\+Const\+::\+GM\+\_\+\+Earth}}/81.\+30056907419062\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_adb10f75e70cb3513eadf7aeef2c0e58c}\index{SAT\_Const@{SAT\_Const}!GM\_Neptune@{GM\_Neptune}}
+\index{GM\_Neptune@{GM\_Neptune}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Neptune}{GM\_Neptune}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_adb10f75e70cb3513eadf7aeef2c0e58c} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Neptune = 6836527.\+100580e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00051}{51}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a9108d8a0b68e98dfaad65d2d28ca84b5}\index{SAT\_Const@{SAT\_Const}!GM\_Pluto@{GM\_Pluto}}
+\index{GM\_Pluto@{GM\_Pluto}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Pluto}{GM\_Pluto}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a9108d8a0b68e98dfaad65d2d28ca84b5} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Pluto = 977.\+0000000000009e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00052}{52}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a9e96aee2b02c6387fbc0f525f4cb5d5c}\index{SAT\_Const@{SAT\_Const}!GM\_Saturn@{GM\_Saturn}}
+\index{GM\_Saturn@{GM\_Saturn}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Saturn}{GM\_Saturn}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a9e96aee2b02c6387fbc0f525f4cb5d5c} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Saturn = 37940585.\+200000e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00049}{49}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_aa2cf8c2fc4b178a2ddbc47ec94b756e8}\index{SAT\_Const@{SAT\_Const}!GM\_Sun@{GM\_Sun}}
+\index{GM\_Sun@{GM\_Sun}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Sun}{GM\_Sun}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_aa2cf8c2fc4b178a2ddbc47ec94b756e8} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Sun = 132712440041.\+939400e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a6d53fbd66032be649f31df560d8893c4}\index{SAT\_Const@{SAT\_Const}!GM\_Uranus@{GM\_Uranus}}
+\index{GM\_Uranus@{GM\_Uranus}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Uranus}{GM\_Uranus}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a6d53fbd66032be649f31df560d8893c4} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Uranus = 5794548.\+600000e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00050}{50}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a72e68505611ebd6ee5c30f8614f25b11}\index{SAT\_Const@{SAT\_Const}!GM\_Venus@{GM\_Venus}}
+\index{GM\_Venus@{GM\_Venus}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{GM\_Venus}{GM\_Venus}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a72e68505611ebd6ee5c30f8614f25b11} 
+const double SAT\+\_\+\+Const\+::\+GM\+\_\+\+Venus = 324858.\+592000e9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00046}{46}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_ab7ba8d3bdb9b06b52877b1e6c24b3d37}\index{SAT\_Const@{SAT\_Const}!MJD\_J2000@{MJD\_J2000}}
+\index{MJD\_J2000@{MJD\_J2000}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{MJD\_J2000}{MJD\_J2000}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_ab7ba8d3bdb9b06b52877b1e6c24b3d37} 
+const double SAT\+\_\+\+Const\+::\+MJD\+\_\+\+J2000 = 51544.\+5\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00025}{25}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a34bed0ab80bb7cd372419a346b139678}\index{SAT\_Const@{SAT\_Const}!omega\_Earth@{omega\_Earth}}
+\index{omega\_Earth@{omega\_Earth}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{omega\_Earth}{omega\_Earth}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a34bed0ab80bb7cd372419a346b139678} 
+const double SAT\+\_\+\+Const\+::omega\+\_\+\+Earth = 15.\+04106717866910/3600.\+0\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_s_a_t___const_a8cd545a117a0d02fba3e18c843a8e112}{SAT\+\_\+\+Const\+::\+Rad}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a3bbc5b26ba9eddf1f55cf24a5c04638c}\index{SAT\_Const@{SAT\_Const}!P\_Sol@{P\_Sol}}
+\index{P\_Sol@{P\_Sol}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{P\_Sol}{P\_Sol}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a3bbc5b26ba9eddf1f55cf24a5c04638c} 
+const double SAT\+\_\+\+Const\+::\+P\+\_\+\+Sol = 1367.\+0/\mbox{\hyperlink{class_s_a_t___const_a345960ccb16807824cb455f1ffacbf3e}{SAT\+\_\+\+Const\+::c\+\_\+light}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00055}{55}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}\index{SAT\_Const@{SAT\_Const}!pi@{pi}}
+\index{pi@{pi}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{pi}{pi}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381} 
+const double SAT\+\_\+\+Const\+::pi = 3.\+14159265358979324\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a89e036b4f6b1dd503242c44cd398d9b1}\index{SAT\_Const@{SAT\_Const}!pi2@{pi2}}
+\index{pi2@{pi2}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{pi2}{pi2}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a89e036b4f6b1dd503242c44cd398d9b1} 
+const double SAT\+\_\+\+Const\+::pi2 = 2\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{pi}}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a8520a4aca82e0459f65ed4bb55c5d97f}\index{SAT\_Const@{SAT\_Const}!R\_Earth@{R\_Earth}}
+\index{R\_Earth@{R\_Earth}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{R\_Earth}{R\_Earth}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a8520a4aca82e0459f65ed4bb55c5d97f} 
+const double SAT\+\_\+\+Const\+::\+R\+\_\+\+Earth = 6378.\+1363e3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00033}{33}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a9ec80315ce97ed4a4c2b90ada9c49d0e}\index{SAT\_Const@{SAT\_Const}!R\_Moon@{R\_Moon}}
+\index{R\_Moon@{R\_Moon}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{R\_Moon}{R\_Moon}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a9ec80315ce97ed4a4c2b90ada9c49d0e} 
+const double SAT\+\_\+\+Const\+::\+R\+\_\+\+Moon = 1738e3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a7bed1960da63500f83498fefef9ff315}\index{SAT\_Const@{SAT\_Const}!R\_Sun@{R\_Sun}}
+\index{R\_Sun@{R\_Sun}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{R\_Sun}{R\_Sun}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a7bed1960da63500f83498fefef9ff315} 
+const double SAT\+\_\+\+Const\+::\+R\+\_\+\+Sun = 696000e3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_a8cd545a117a0d02fba3e18c843a8e112}\index{SAT\_Const@{SAT\_Const}!Rad@{Rad}}
+\index{Rad@{Rad}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{Rad}{Rad}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_a8cd545a117a0d02fba3e18c843a8e112} 
+const double SAT\+\_\+\+Const\+::\+Rad = \mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{pi}}/180.\+0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+\Hypertarget{class_s_a_t___const_ac4762d2517541975d0d8b3ec769159ae}\index{SAT\_Const@{SAT\_Const}!T\_B1950@{T\_B1950}}
+\index{T\_B1950@{T\_B1950}!SAT\_Const@{SAT\_Const}}
+\doxysubsubsection{\texorpdfstring{T\_B1950}{T\_B1950}}
+{\footnotesize\ttfamily \label{class_s_a_t___const_ac4762d2517541975d0d8b3ec769159ae} 
+const double SAT\+\_\+\+Const\+::\+T\+\_\+\+B1950 = -\/0.\+500002108\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_a_t___const_8hpp_source_l00026}{26}} of file \mbox{\hyperlink{_s_a_t___const_8hpp_source}{SAT\+\_\+\+Const.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_s_a_t___const_8hpp}{SAT\+\_\+\+Const.\+hpp}}\item 
+src/\mbox{\hyperlink{_s_a_t___const_8cpp}{SAT\+\_\+\+Const.\+cpp}}\end{DoxyCompactItemize}

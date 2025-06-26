@@ -1,0 +1,64 @@
+\doxysection{src/\+Nut\+Angles.cpp File Reference}
+\hypertarget{_nut_angles_8cpp}{}\label{_nut_angles_8cpp}\index{src/NutAngles.cpp@{src/NutAngles.cpp}}
+
+
+Implementación del cálculo de los ángulos de nutación Δψ y Δε a partir de la fecha TT.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Nut\+Angles.\+hpp"{}}\newline
+Include dependency graph for Nut\+Angles.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{_nut_angles_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ double, double $>$ \mbox{\hyperlink{_nut_angles_8cpp_a8028f5f2ac1a0a2126d8edf6a5ed80c6}{Nut\+Angles}} (double Mjd\+\_\+\+TT)
+\begin{DoxyCompactList}\small\item\em Calcula los ángulos de nutación en longitud (Δψ) y oblicuidad (Δε). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación del cálculo de los ángulos de nutación Δψ y Δε a partir de la fecha TT. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_nut_angles_8cpp_source}{Nut\+Angles.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_nut_angles_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_nut_angles_8cpp_a8028f5f2ac1a0a2126d8edf6a5ed80c6}\index{NutAngles.cpp@{NutAngles.cpp}!NutAngles@{NutAngles}}
+\index{NutAngles@{NutAngles}!NutAngles.cpp@{NutAngles.cpp}}
+\doxysubsubsection{\texorpdfstring{NutAngles()}{NutAngles()}}
+{\footnotesize\ttfamily \label{_nut_angles_8cpp_a8028f5f2ac1a0a2126d8edf6a5ed80c6} 
+tuple$<$ double, double $>$ Nut\+Angles (\begin{DoxyParamCaption}\item[{double}]{Mjd\+\_\+\+TT}{}\end{DoxyParamCaption})}
+
+
+
+Calcula los ángulos de nutación en longitud (Δψ) y oblicuidad (Δε). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mjd\+\_\+\+TT} & Fecha en tiempo terrestre (Modified Julian Date). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con\+:
+\begin{DoxyItemize}
+\item Δψ\+: Nutación en longitud (rad).
+\item Δε\+: Nutación en oblicuidad (rad). 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_nut_angles_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_nut_angles_8cpp_source}{Nut\+Angles.\+cpp}}.
+

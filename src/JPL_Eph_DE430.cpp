@@ -1,5 +1,30 @@
 #include "..\include\JPL_Eph_DE430.hpp"
 
+/**
+ * @file JPL_Eph_DE430.cpp
+ * @brief Implementación de la función JPL_Eph_DE430 para calcular posiciones de cuerpos celestes desde la efeméride DE430.
+ * 
+ * Utiliza coeficientes de polinomios de Chebyshev almacenados en la matriz global `PC` para interpolar posiciones
+ * de los planetas, la Luna y el Sol, así como datos de nutación y libración.
+ * 
+ * Ajusta los vectores de posición al sistema centrado en la Tierra y escala a metros.
+ * 
+ * @return Tupla con las posiciones (columnas 3x1 en metros) relativas a la Tierra de:
+ * - Mercurio
+ * - Venus
+ * - Tierra (baricentro Tierra-Luna)
+ * - Marte
+ * - Júpiter
+ * - Saturno
+ * - Urano
+ * - Neptuno
+ * - Plutón
+ * - Luna (relativa a la Tierra)
+ * - Sol
+ * 
+ * @author Francisco Bartolome Alcalde
+ */
+
 tuple<Matrix&, Matrix&, Matrix&, Matrix&, Matrix&, Matrix&, Matrix&, Matrix&, Matrix&, Matrix&, Matrix&> JPL_Eph_DE430(double Mjd_TDB){
 
     double JD = Mjd_TDB + 2400000.5;

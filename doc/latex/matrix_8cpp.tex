@@ -1,0 +1,194 @@
+\doxysection{src/matrix.cpp File Reference}
+\hypertarget{matrix_8cpp}{}\label{matrix_8cpp}\index{src/matrix.cpp@{src/matrix.cpp}}
+
+
+Implementación de la clase \doxylink{class_matrix}{Matrix} y funciones asociadas.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+hpp"{}}\newline
+Include dependency graph for matrix.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{matrix_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{matrix_8cpp_a6ce0bc529fe2ee6fb2d0eb8acbdc1e92}{operator$<$$<$}} (ostream \&o, \mbox{\hyperlink{class_matrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Operador de salida para imprimir una matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8cpp_a56d60ea1f08402246a7cfd477d69a618}{zeros}} (const int n\+\_\+row, const int n\+\_\+column)
+\begin{DoxyCompactList}\small\item\em Crea una matriz de ceros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8cpp_a6d5ff1bcc8ce1f0309a47210e1231c6c}{eye}} (const int n)
+\begin{DoxyCompactList}\small\item\em Crea una matriz identidad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8cpp_ab2f05195ce5c6c4b6e00df63a50c329d}{zeros}} (const int n)
+\begin{DoxyCompactList}\small\item\em Crea una matriz cuadrada de ceros. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8cpp_acbd9778b697f9ad3da64ef53b850e2c9}{transpose}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Transpone una matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{matrix_8cpp_ad8d8519e7f94df41a4c5b535b4899222}{inv}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Calcula la inversa de una matriz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la clase \doxylink{class_matrix}{Matrix} y funciones asociadas. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{matrix_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{matrix_8cpp_a6d5ff1bcc8ce1f0309a47210e1231c6c}\index{matrix.cpp@{matrix.cpp}!eye@{eye}}
+\index{eye@{eye}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{eye()}{eye()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a6d5ff1bcc8ce1f0309a47210e1231c6c} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& eye (\begin{DoxyParamCaption}\item[{const int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Crea una matriz identidad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Dimensión. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz identidad. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{matrix_8cpp_source_l00232}{232}} of file \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_ad8d8519e7f94df41a4c5b535b4899222}\index{matrix.cpp@{matrix.cpp}!inv@{inv}}
+\index{inv@{inv}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{inv()}{inv()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_ad8d8519e7f94df41a4c5b535b4899222} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& inv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la inversa de una matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Matriz a invertir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz inversa. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{matrix_8cpp_source_l00394}{394}} of file \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_a6ce0bc529fe2ee6fb2d0eb8acbdc1e92}\index{matrix.cpp@{matrix.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a6ce0bc529fe2ee6fb2d0eb8acbdc1e92} 
+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{o}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Operador de salida para imprimir una matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Flujo de salida. \\
+\hline
+{\em m} & Matriz a imprimir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia al flujo de salida.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Flujo de salida. \\
+\hline
+{\em m} & Matriz a imprimir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Flujo resultante. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{matrix_8cpp_source_l00210}{210}} of file \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_acbd9778b697f9ad3da64ef53b850e2c9}\index{matrix.cpp@{matrix.cpp}!transpose@{transpose}}
+\index{transpose@{transpose}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily \label{matrix_8cpp_acbd9778b697f9ad3da64ef53b850e2c9} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& transpose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Transpone una matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & Matriz a transponer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz transpuesta. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{matrix_8cpp_source_l00384}{384}} of file \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_ab2f05195ce5c6c4b6e00df63a50c329d}\index{matrix.cpp@{matrix.cpp}!zeros@{zeros}}
+\index{zeros@{zeros}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{zeros()}{zeros()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_ab2f05195ce5c6c4b6e00df63a50c329d} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& zeros (\begin{DoxyParamCaption}\item[{const int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Crea una matriz cuadrada de ceros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Dimensión. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz de ceros. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{matrix_8cpp_source_l00243}{243}} of file \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+
+\Hypertarget{matrix_8cpp_a56d60ea1f08402246a7cfd477d69a618}\index{matrix.cpp@{matrix.cpp}!zeros@{zeros}}
+\index{zeros@{zeros}!matrix.cpp@{matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{zeros()}{zeros()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{matrix_8cpp_a56d60ea1f08402246a7cfd477d69a618} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& zeros (\begin{DoxyParamCaption}\item[{const int}]{n\+\_\+row}{, }\item[{const int}]{n\+\_\+column}{}\end{DoxyParamCaption})}
+
+
+
+Crea una matriz de ceros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+row} & Número de filas. \\
+\hline
+{\em n\+\_\+column} & Número de columnas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz de ceros. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{matrix_8cpp_source_l00220}{220}} of file \mbox{\hyperlink{matrix_8cpp_source}{matrix.\+cpp}}.
+

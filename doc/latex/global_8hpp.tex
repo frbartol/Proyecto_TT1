@@ -1,0 +1,221 @@
+\doxysection{include/global.hpp File Reference}
+\hypertarget{global_8hpp}{}\label{global_8hpp}\index{include/global.hpp@{include/global.hpp}}
+
+
+Declaraciones globales para el sistema de estimación orbital.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+hpp"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for global.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{global_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{global_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_param}{Param}}
+\begin{DoxyCompactList}\small\item\em Estructura que contiene parámetros auxiliares para los modelos físicos y astronómicos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{global_8hpp_af1504e3e975e6f502042c7fa8b7abe60}{eop19620101}} (int c)
+\begin{DoxyCompactList}\small\item\em Carga los datos de orientación de la Tierra desde el año 1962. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{global_8hpp_a1e2e54b5a8bda6f8402f3e8bbe5f3175}{GGM03S}} (int n)
+\begin{DoxyCompactList}\small\item\em Carga los coeficientes armónicos del modelo gravitacional GGM03S. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{global_8hpp_af51b221967b797557656923d624cf0db}{DE430\+Coeff}} (int f, int c)
+\begin{DoxyCompactList}\small\item\em Carga los coeficientes del modelo de efemérides JPL DE430. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{global_8hpp_a40d37105a964a2cdadeaf0b8879dfa04}{initialize\+Aux\+Param}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa la estructura {\ttfamily Aux\+Param} con parámetros por defecto o simulados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{global_8hpp_a16817456f74489dad2c22ee5b145a1c4}{eopdata}}
+\begin{DoxyCompactList}\small\item\em Datos de parámetros de orientación de la Tierra (Earth Orientation Parameters). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{global_8hpp_aae4f5247dbe2733ec80f005dfbb2c3ed}{Cnm}}
+\begin{DoxyCompactList}\small\item\em Coeficientes Cnm de armónicos esféricos del campo gravitatorio terrestre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{global_8hpp_a19b1b61df2d43fbf34bc708611f8d589}{Snm}}
+\begin{DoxyCompactList}\small\item\em Coeficientes Snm de armónicos esféricos del campo gravitatorio terrestre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \mbox{\hyperlink{global_8hpp_abdf16b7def3047932352a98d4f907e0a}{PC}}
+\begin{DoxyCompactList}\small\item\em Coeficientes de series de interpolación para efemérides. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_param}{Param}} \mbox{\hyperlink{global_8hpp_a5706b12963234f7382e60cb7324441f9}{Aux\+Param}}
+\begin{DoxyCompactList}\small\item\em Parámetros auxiliares para cálculos globales. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaraciones globales para el sistema de estimación orbital. 
+
+Este archivo contiene definiciones y declaraciones de variables y funciones globales, como los parámetros auxiliares, coeficientes gravitacionales y datos EOP. Estas estructuras son compartidas por todo el sistema para garantizar coherencia en los cálculos astronómicos y de dinámica orbital.
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{global_8hpp_source}{global.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{global_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{global_8hpp_af51b221967b797557656923d624cf0db}\index{global.hpp@{global.hpp}!DE430Coeff@{DE430Coeff}}
+\index{DE430Coeff@{DE430Coeff}!global.hpp@{global.hpp}}
+\doxysubsubsection{\texorpdfstring{DE430Coeff()}{DE430Coeff()}}
+{\footnotesize\ttfamily \label{global_8hpp_af51b221967b797557656923d624cf0db} 
+void DE430\+Coeff (\begin{DoxyParamCaption}\item[{int}]{f}{, }\item[{int}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Carga los coeficientes del modelo de efemérides JPL DE430. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Número de filas. \\
+\hline
+{\em c} & Número de columnas. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{global_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{global_8cpp_source}{global.\+cpp}}.
+
+\Hypertarget{global_8hpp_af1504e3e975e6f502042c7fa8b7abe60}\index{global.hpp@{global.hpp}!eop19620101@{eop19620101}}
+\index{eop19620101@{eop19620101}!global.hpp@{global.hpp}}
+\doxysubsubsection{\texorpdfstring{eop19620101()}{eop19620101()}}
+{\footnotesize\ttfamily \label{global_8hpp_af1504e3e975e6f502042c7fa8b7abe60} 
+void eop19620101 (\begin{DoxyParamCaption}\item[{int}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Carga los datos de orientación de la Tierra desde el año 1962. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Número de filas a cargar del archivo. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{global_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{global_8cpp_source}{global.\+cpp}}.
+
+\Hypertarget{global_8hpp_a1e2e54b5a8bda6f8402f3e8bbe5f3175}\index{global.hpp@{global.hpp}!GGM03S@{GGM03S}}
+\index{GGM03S@{GGM03S}!global.hpp@{global.hpp}}
+\doxysubsubsection{\texorpdfstring{GGM03S()}{GGM03S()}}
+{\footnotesize\ttfamily \label{global_8hpp_a1e2e54b5a8bda6f8402f3e8bbe5f3175} 
+void GGM03S (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Carga los coeficientes armónicos del modelo gravitacional GGM03S. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Grado máximo del modelo a cargar. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{global_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{global_8cpp_source}{global.\+cpp}}.
+
+\Hypertarget{global_8hpp_a40d37105a964a2cdadeaf0b8879dfa04}\index{global.hpp@{global.hpp}!initializeAuxParam@{initializeAuxParam}}
+\index{initializeAuxParam@{initializeAuxParam}!global.hpp@{global.hpp}}
+\doxysubsubsection{\texorpdfstring{initializeAuxParam()}{initializeAuxParam()}}
+{\footnotesize\ttfamily \label{global_8hpp_a40d37105a964a2cdadeaf0b8879dfa04} 
+void initialize\+Aux\+Param (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Inicializa la estructura {\ttfamily Aux\+Param} con parámetros por defecto o simulados. 
+
+
+
+Definition at line \mbox{\hyperlink{global_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{global_8cpp_source}{global.\+cpp}}.
+
+
+
+\label{doc-var-members}
+\Hypertarget{global_8hpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{global_8hpp_a5706b12963234f7382e60cb7324441f9}\index{global.hpp@{global.hpp}!AuxParam@{AuxParam}}
+\index{AuxParam@{AuxParam}!global.hpp@{global.hpp}}
+\doxysubsubsection{\texorpdfstring{AuxParam}{AuxParam}}
+{\footnotesize\ttfamily \label{global_8hpp_a5706b12963234f7382e60cb7324441f9} 
+\mbox{\hyperlink{struct_param}{Param}} Aux\+Param\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Parámetros auxiliares para cálculos globales. 
+
+
+
+Definition at line \mbox{\hyperlink{global_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{global_8cpp_source}{global.\+cpp}}.
+
+\Hypertarget{global_8hpp_aae4f5247dbe2733ec80f005dfbb2c3ed}\index{global.hpp@{global.hpp}!Cnm@{Cnm}}
+\index{Cnm@{Cnm}!global.hpp@{global.hpp}}
+\doxysubsubsection{\texorpdfstring{Cnm}{Cnm}}
+{\footnotesize\ttfamily \label{global_8hpp_aae4f5247dbe2733ec80f005dfbb2c3ed} 
+\mbox{\hyperlink{class_matrix}{Matrix}} Cnm\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Coeficientes Cnm de armónicos esféricos del campo gravitatorio terrestre. 
+
+
+
+Definition at line \mbox{\hyperlink{global_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{global_8cpp_source}{global.\+cpp}}.
+
+\Hypertarget{global_8hpp_a16817456f74489dad2c22ee5b145a1c4}\index{global.hpp@{global.hpp}!eopdata@{eopdata}}
+\index{eopdata@{eopdata}!global.hpp@{global.hpp}}
+\doxysubsubsection{\texorpdfstring{eopdata}{eopdata}}
+{\footnotesize\ttfamily \label{global_8hpp_a16817456f74489dad2c22ee5b145a1c4} 
+\mbox{\hyperlink{class_matrix}{Matrix}} eopdata\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Datos de parámetros de orientación de la Tierra (Earth Orientation Parameters). 
+
+
+
+Definition at line \mbox{\hyperlink{global_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{global_8cpp_source}{global.\+cpp}}.
+
+\Hypertarget{global_8hpp_abdf16b7def3047932352a98d4f907e0a}\index{global.hpp@{global.hpp}!PC@{PC}}
+\index{PC@{PC}!global.hpp@{global.hpp}}
+\doxysubsubsection{\texorpdfstring{PC}{PC}}
+{\footnotesize\ttfamily \label{global_8hpp_abdf16b7def3047932352a98d4f907e0a} 
+\mbox{\hyperlink{class_matrix}{Matrix}} PC\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Coeficientes de series de interpolación para efemérides. 
+
+
+
+Definition at line \mbox{\hyperlink{global_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{global_8cpp_source}{global.\+cpp}}.
+
+\Hypertarget{global_8hpp_a19b1b61df2d43fbf34bc708611f8d589}\index{global.hpp@{global.hpp}!Snm@{Snm}}
+\index{Snm@{Snm}!global.hpp@{global.hpp}}
+\doxysubsubsection{\texorpdfstring{Snm}{Snm}}
+{\footnotesize\ttfamily \label{global_8hpp_a19b1b61df2d43fbf34bc708611f8d589} 
+\mbox{\hyperlink{class_matrix}{Matrix}} Snm\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Coeficientes Snm de armónicos esféricos del campo gravitatorio terrestre. 
+
+
+
+Definition at line \mbox{\hyperlink{global_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{global_8cpp_source}{global.\+cpp}}.
+

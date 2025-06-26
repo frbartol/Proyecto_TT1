@@ -1,0 +1,67 @@
+\doxysection{src/\+Az\+El\+Pa.cpp File Reference}
+\hypertarget{_az_el_pa_8cpp}{}\label{_az_el_pa_8cpp}\index{src/AzElPa.cpp@{src/AzElPa.cpp}}
+
+
+Implementación del cálculo del acimut, elevación y vectores parciales.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Az\+El\+Pa.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+SAT\+\_\+\+Const.\+hpp"{}}\newline
+Include dependency graph for Az\+El\+Pa.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_az_el_pa_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ double, double, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{_az_el_pa_8cpp_ae89a6c135135b96ec7057c45dced4159}{Az\+El\+Pa}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&s)
+\begin{DoxyCompactList}\small\item\em Calcula el acimut, elevación y los vectores parciales del acimut y la elevación. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación del cálculo del acimut, elevación y vectores parciales. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_az_el_pa_8cpp_source}{Az\+El\+Pa.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_az_el_pa_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_az_el_pa_8cpp_ae89a6c135135b96ec7057c45dced4159}\index{AzElPa.cpp@{AzElPa.cpp}!AzElPa@{AzElPa}}
+\index{AzElPa@{AzElPa}!AzElPa.cpp@{AzElPa.cpp}}
+\doxysubsubsection{\texorpdfstring{AzElPa()}{AzElPa()}}
+{\footnotesize\ttfamily \label{_az_el_pa_8cpp_ae89a6c135135b96ec7057c45dced4159} 
+tuple$<$ double, double, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ Az\+El\+Pa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el acimut, elevación y los vectores parciales del acimut y la elevación. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Vector topocéntrico (3x1). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con\+:
+\begin{DoxyItemize}
+\item Acimut (rad)
+\item Elevación (rad)
+\item Vector parcial respecto al acimut (3x1)
+\item Vector parcial respecto a la elevación (3x1) 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_az_el_pa_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_az_el_pa_8cpp_source}{Az\+El\+Pa.\+cpp}}.
+

@@ -1,0 +1,64 @@
+\doxysection{src/\+Position.cpp File Reference}
+\hypertarget{_position_8cpp}{}\label{_position_8cpp}\index{src/Position.cpp@{src/Position.cpp}}
+
+
+Implementación de la conversión de coordenadas geodésicas a ECEF.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Position.\+hpp"{}}\newline
+Include dependency graph for Position.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{_position_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_position_8cpp_ad3ff3004edb305ae3aed0230373b848e}{Position}} (double lon, double lat, double h)
+\begin{DoxyCompactList}\small\item\em Calcula el vector de posición ECEF a partir de longitud, latitud y altura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la conversión de coordenadas geodésicas a ECEF. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_position_8cpp_source}{Position.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_position_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_position_8cpp_ad3ff3004edb305ae3aed0230373b848e}\index{Position.cpp@{Position.cpp}!Position@{Position}}
+\index{Position@{Position}!Position.cpp@{Position.cpp}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}}
+{\footnotesize\ttfamily \label{_position_8cpp_ad3ff3004edb305ae3aed0230373b848e} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Position (\begin{DoxyParamCaption}\item[{double}]{lon}{, }\item[{double}]{lat}{, }\item[{double}]{h}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el vector de posición ECEF a partir de longitud, latitud y altura. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lon} & Longitud geodésica (en radianes). \\
+\hline
+{\em lat} & Latitud geodésica (en radianes). \\
+\hline
+{\em h} & Altura sobre el elipsoide (en km). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector posición en coordenadas ECEF (3x1). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_position_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_position_8cpp_source}{Position.\+cpp}}.
+

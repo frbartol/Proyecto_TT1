@@ -1,0 +1,14 @@
+<map id="include/EqnEquinox.hpp" name="include/EqnEquinox.hpp">
+<area shape="rect" id="Node000001" title="Cálculo de la ecuación de los equinoccios." alt="" coords="60,5,221,32"/>
+<area shape="rect" id="Node000002" href="$_nut_angles_8hpp.html" title="Cálculo de los ángulos de nutación: Δψ y Δε." alt="" coords="157,80,264,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,31,190,67,186,71,151,34"/>
+<area shape="rect" id="Node000006" href="$_mean_obliquity_8hpp.html" title="Cálculo de la oblicuidad media de la eclíptica en función del tiempo." alt="" coords="5,80,134,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="130,34,94,71,90,67,126,31"/>
+<area shape="rect" id="Node000003" href="$_s_a_t___const_8hpp.html" title="Constantes astronómicas y físicas usadas en dinámica orbital y propagación satelital." alt="" coords="30,155,144,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="191,110,123,149,120,144,188,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="177,155,226,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="212,108,208,140,202,139,207,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="250,155,308,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="225,105,259,141,255,145,221,109"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="75,107,83,139,78,140,70,108"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="include/gmst.hpp" name="include/gmst.hpp">
+<area shape="rect" id="Node000001" title="Cálculo del Tiempo Sidéreo Medio de Greenwich (GMST) a partir del MJD en UT1." alt="" coords="40,5,160,32"/>
+<area shape="rect" id="Node000002" href="$_frac_8hpp.html" title="Cálculo de la parte fraccionaria de un número real." alt="" coords="5,80,78,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,34,63,69,59,66,88,31"/>
+<area shape="rect" id="Node000004" href="$_s_a_t___const_8hpp.html" title="Constantes astronómicas y físicas usadas en dinámica orbital y propagación satelital." alt="" coords="102,80,216,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,31,141,66,137,69,108,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="13,155,70,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="44,107,44,139,39,139,39,107"/>
+</map>

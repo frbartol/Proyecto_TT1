@@ -1,3 +1,9 @@
+/**
+ * @file R_y.cpp
+ * @brief Implementación de la matriz de rotación respecto al eje Y.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\R_y.hpp"
 
 Matrix& R_y(double angle){

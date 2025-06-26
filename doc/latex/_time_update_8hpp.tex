@@ -1,0 +1,72 @@
+\doxysection{include/\+Time\+Update.hpp File Reference}
+\hypertarget{_time_update_8hpp}{}\label{_time_update_8hpp}\index{include/TimeUpdate.hpp@{include/TimeUpdate.hpp}}
+
+
+Actualización temporal de la matriz de covarianza en un filtro de Kalman.  
+
+
+{\ttfamily \#include "{}matrix.\+hpp"{}}\newline
+Include dependency graph for Time\+Update.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{_time_update_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_time_update_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_time_update_8hpp_a5b9051753af04cc9cbddb815f05a9bb2}{Time\+Update}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&P, \mbox{\hyperlink{class_matrix}{Matrix}} \&Phi, double Qdt=0.\+0)
+\begin{DoxyCompactList}\small\item\em Realiza la actualización temporal (predictiva) de la matriz de covarianza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Actualización temporal de la matriz de covarianza en un filtro de Kalman. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_time_update_8hpp_source}{Time\+Update.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_time_update_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_time_update_8hpp_a5b9051753af04cc9cbddb815f05a9bb2}\index{TimeUpdate.hpp@{TimeUpdate.hpp}!TimeUpdate@{TimeUpdate}}
+\index{TimeUpdate@{TimeUpdate}!TimeUpdate.hpp@{TimeUpdate.hpp}}
+\doxysubsubsection{\texorpdfstring{TimeUpdate()}{TimeUpdate()}}
+{\footnotesize\ttfamily \label{_time_update_8hpp_a5b9051753af04cc9cbddb815f05a9bb2} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Time\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{P}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Phi}{, }\item[{double}]{Qdt}{ = {\ttfamily 0.0}}\end{DoxyParamCaption})}
+
+
+
+Realiza la actualización temporal (predictiva) de la matriz de covarianza. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em P} & Matriz de covarianza anterior. \\
+\hline
+{\em Phi} & Matriz de transición del sistema. \\
+\hline
+{\em Qdt} & Valor escalar que representa el ruido del proceso (opcional, por defecto 0). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz de covarianza predicha. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_time_update_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_time_update_8cpp_source}{Time\+Update.\+cpp}}.
+

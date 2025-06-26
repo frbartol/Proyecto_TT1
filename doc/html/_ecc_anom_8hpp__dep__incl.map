@@ -1,0 +1,9 @@
+<map id="include/EccAnom.hpp" name="include/EccAnom.hpp">
+<area shape="rect" id="Node000001" title="Cálculo de la anomalía excéntrica a partir de la media y la excentricidad." alt="" coords="159,5,308,32"/>
+<area shape="rect" id="Node000002" href="$_ecc_anom_8cpp.html" title="Implementación del cálculo de la anomalía excéntrica mediante el método de Newton&#45;Raphson." alt="" coords="5,80,131,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,41,98,82,96,77,189,36"/>
+<area shape="rect" id="Node000003" href="$_e_k_f___g_e_o_s3_8cpp.html" title="Estimación de la órbita de un satélite usando el filtro de Kalman extendido (EKF) y medidas reales de..." alt="" coords="155,80,312,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,48,236,80,231,80,231,48"/>
+<area shape="rect" id="Node000004" href="$tests_8cpp.html" title="Batería de tests unitarios del sistema de dinámica orbital." alt="" coords="336,80,445,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="276,36,364,77,362,82,273,41"/>
+</map>

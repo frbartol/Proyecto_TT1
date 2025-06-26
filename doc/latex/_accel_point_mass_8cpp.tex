@@ -1,0 +1,64 @@
+\doxysection{src/\+Accel\+Point\+Mass.cpp File Reference}
+\hypertarget{_accel_point_mass_8cpp}{}\label{_accel_point_mass_8cpp}\index{src/AccelPointMass.cpp@{src/AccelPointMass.cpp}}
+
+
+Implementación de la función Accel\+Point\+Mass para calcular aceleración de marea por masa puntual.  
+
+
+{\ttfamily \#include "{}../include/\+Accel\+Point\+Mass.\+hpp"{}}\newline
+Include dependency graph for Accel\+Point\+Mass.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{_accel_point_mass_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_accel_point_mass_8cpp_a72b636f377c135454d41655c935c0eb3}{Accel\+Point\+Mass}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r, \mbox{\hyperlink{class_matrix}{Matrix}} \&s, double GM)
+\begin{DoxyCompactList}\small\item\em Devuelve la aceleración perturbadora causada por una masa puntual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la función Accel\+Point\+Mass para calcular aceleración de marea por masa puntual. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_accel_point_mass_8cpp_source}{Accel\+Point\+Mass.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_accel_point_mass_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_accel_point_mass_8cpp_a72b636f377c135454d41655c935c0eb3}\index{AccelPointMass.cpp@{AccelPointMass.cpp}!AccelPointMass@{AccelPointMass}}
+\index{AccelPointMass@{AccelPointMass}!AccelPointMass.cpp@{AccelPointMass.cpp}}
+\doxysubsubsection{\texorpdfstring{AccelPointMass()}{AccelPointMass()}}
+{\footnotesize\ttfamily \label{_accel_point_mass_8cpp_a72b636f377c135454d41655c935c0eb3} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Accel\+Point\+Mass (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{s}{, }\item[{double}]{GM}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve la aceleración perturbadora causada por una masa puntual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Vector posición del satélite (3x1). \\
+\hline
+{\em s} & Vector posición de la masa perturbadora (3x1). \\
+\hline
+{\em GM} & Producto de la constante gravitacional y la masa de la perturbadora. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector aceleración perturbadora (3x1). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_accel_point_mass_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_accel_point_mass_8cpp_source}{Accel\+Point\+Mass.\+cpp}}.
+

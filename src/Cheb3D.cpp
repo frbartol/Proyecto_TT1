@@ -1,3 +1,8 @@
+/**
+ * @file Cheb3D.cpp
+ * @brief Implementación de la evaluación de interpolación de Chebyshev en 3D.
+ * @author Francisco Bartolome Alcalde
+ */
 #include "../include/Cheb3D.hpp"
 Matrix& Cheb3D(double t, int N, double Ta, double Tb, Matrix& Cx, Matrix& Cy, Matrix& Cz){
     if(t<Ta || Tb<t){

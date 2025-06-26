@@ -1,0 +1,66 @@
+\doxysection{src/\+Accel\+Harmonic.cpp File Reference}
+\hypertarget{_accel_harmonic_8cpp}{}\label{_accel_harmonic_8cpp}\index{src/AccelHarmonic.cpp@{src/AccelHarmonic.cpp}}
+
+
+Implementación de la aceleración perturbadora debida al campo gravitacional armónico terrestre.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel\+Harmonic.\+hpp"{}}\newline
+Include dependency graph for Accel\+Harmonic.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_accel_harmonic_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_accel_harmonic_8cpp_aa1b4c4eec7dc53fa60ce465c27f9d47a}{Accel\+Harmonic}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r, \mbox{\hyperlink{class_matrix}{Matrix}} \&E, double n\+\_\+max, double m\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Calcula la aceleración perturbadora generada por el potencial gravitacional armónico de la Tierra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la aceleración perturbadora debida al campo gravitacional armónico terrestre. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_accel_harmonic_8cpp_source}{Accel\+Harmonic.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_accel_harmonic_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_accel_harmonic_8cpp_aa1b4c4eec7dc53fa60ce465c27f9d47a}\index{AccelHarmonic.cpp@{AccelHarmonic.cpp}!AccelHarmonic@{AccelHarmonic}}
+\index{AccelHarmonic@{AccelHarmonic}!AccelHarmonic.cpp@{AccelHarmonic.cpp}}
+\doxysubsubsection{\texorpdfstring{AccelHarmonic()}{AccelHarmonic()}}
+{\footnotesize\ttfamily \label{_accel_harmonic_8cpp_aa1b4c4eec7dc53fa60ce465c27f9d47a} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Accel\+Harmonic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{E}{, }\item[{double}]{n\+\_\+max}{, }\item[{double}]{m\+\_\+max}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la aceleración perturbadora generada por el potencial gravitacional armónico de la Tierra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Vector de posición en sistema ECEF (3x1). \\
+\hline
+{\em E} & Matriz de rotación ECI a ECEF (3x3). \\
+\hline
+{\em n\+\_\+max} & Grado máximo del desarrollo armónico. \\
+\hline
+{\em m\+\_\+max} & Orden máximo del desarrollo armónico. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector aceleración perturbadora (3x1). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_accel_harmonic_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_accel_harmonic_8cpp_source}{Accel\+Harmonic.\+cpp}}.
+

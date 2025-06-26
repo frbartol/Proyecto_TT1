@@ -1,3 +1,9 @@
+/**
+ * @file SAT_Const.cpp
+ * @brief Definición de las constantes físicas, astronómicas y matemáticas usadas en el sistema orbital.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\SAT_Const.hpp"
 // Mathematical constants
 const double SAT_Const::pi        = 3.14159265358979324;

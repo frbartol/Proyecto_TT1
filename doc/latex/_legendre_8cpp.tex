@@ -1,0 +1,68 @@
+\doxysection{src/\+Legendre.cpp File Reference}
+\hypertarget{_legendre_8cpp}{}\label{_legendre_8cpp}\index{src/Legendre.cpp@{src/Legendre.cpp}}
+
+
+Implementación del cálculo de los polinomios de Legendre normalizados y sus derivadas.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Legendre.\+hpp"{}}\newline
+Include dependency graph for Legendre.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{_legendre_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{_legendre_8cpp_a55ce532de3c95506384990ae714dd99d}{Legendre}} (int n, int m, double fi)
+\begin{DoxyCompactList}\small\item\em Calcula los polinomios de Legendre normalizados y sus derivadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación del cálculo de los polinomios de Legendre normalizados y sus derivadas. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_legendre_8cpp_source}{Legendre.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_legendre_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_legendre_8cpp_a55ce532de3c95506384990ae714dd99d}\index{Legendre.cpp@{Legendre.cpp}!Legendre@{Legendre}}
+\index{Legendre@{Legendre}!Legendre.cpp@{Legendre.cpp}}
+\doxysubsubsection{\texorpdfstring{Legendre()}{Legendre()}}
+{\footnotesize\ttfamily \label{_legendre_8cpp_a55ce532de3c95506384990ae714dd99d} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ Legendre (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int}]{m}{, }\item[{double}]{fi}{}\end{DoxyParamCaption})}
+
+
+
+Calcula los polinomios de Legendre normalizados y sus derivadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Grado máximo. \\
+\hline
+{\em m} & Orden máximo. \\
+\hline
+{\em fi} & Ángulo en radianes (fi = latitud geocéntrica). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con\+:
+\begin{DoxyItemize}
+\item Matriz de valores de los polinomios (P̅ₙᵐ)
+\item Matriz de derivadas respecto a fi (d\+P̅ₙᵐ/dfi) 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_legendre_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_legendre_8cpp_source}{Legendre.\+cpp}}.
+

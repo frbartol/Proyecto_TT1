@@ -1,0 +1,47 @@
+<map id="include/NutAngles.hpp" name="include/NutAngles.hpp">
+<area shape="rect" id="Node000001" title="Cálculo de los ángulos de nutación: Δψ y Δε." alt="" coords="700,5,852,32"/>
+<area shape="rect" id="Node000002" href="$_eqn_equinox_8hpp.html" title="Cálculo de la ecuación de los equinoccios." alt="" coords="695,80,857,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="779,48,779,80,773,80,773,48"/>
+<area shape="rect" id="Node000007" href="$_e_k_f___g_e_o_s3_8cpp.html" title="Estimación de la órbita de un satélite usando el filtro de Kalman extendido (EKF) y medidas reales de..." alt="" coords="227,379,384,405"/>
+<area shape="poly" id="edge28_Node000001_Node000007" title=" " alt="" coords="685,31,493,51,269,81,167,100,84,121,27,144,13,156,8,167,8,244,14,277,29,304,53,327,84,345,118,359,155,370,227,383,226,388,154,375,116,364,81,350,50,331,25,308,9,279,3,244,3,166,9,152,25,140,82,116,166,95,268,76,492,45,684,25"/>
+<area shape="rect" id="Node000008" href="$tests_8cpp.html" title="Batería de tests unitarios del sistema de dinámica orbital." alt="" coords="868,379,977,405"/>
+<area shape="poly" id="edge29_Node000001_Node000008" title=" " alt="" coords="868,24,938,38,973,49,1005,64,1034,83,1057,106,1072,133,1077,166,1077,244,1074,269,1064,292,1050,312,1032,330,992,360,954,380,951,376,989,356,1029,326,1046,309,1060,289,1069,267,1072,244,1072,167,1067,135,1052,109,1031,87,1003,69,971,54,936,43,867,30"/>
+<area shape="rect" id="Node000014" href="$_nut_matrix_8hpp.html" title="Cálculo de la matriz de nutación a partir del tiempo terrestre (Mjd_TT)." alt="" coords="383,229,532,256"/>
+<area shape="poly" id="edge21_Node000001_Node000014" title=" " alt="" coords="745,43,686,82,476,231,473,227,682,78,742,38"/>
+<area shape="rect" id="Node000016" href="$_nut_angles_8cpp.html" title="Implementación del cálculo de los ángulos de nutación Δψ y Δε a partir de la fecha TT." alt="" coords="1113,80,1242,107"/>
+<area shape="poly" id="edge27_Node000001_Node000016" title=" " alt="" coords="862,33,1113,78,1112,83,861,38"/>
+<area shape="rect" id="Node000003" href="$gast_8hpp.html" title="Cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST)." alt="" coords="642,155,758,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="754,119,715,156,711,152,750,116"/>
+<area shape="poly" id="edge19_Node000002_Node000007" title=" " alt="" coords="681,106,579,121,458,145,330,181,268,204,208,232,155,260,137,278,121,305,117,321,120,335,129,346,142,356,181,372,227,381,226,386,180,377,140,361,125,350,115,337,112,321,116,303,133,274,152,256,205,227,266,200,329,176,457,140,578,115,680,101"/>
+<area shape="poly" id="edge20_Node000002_Node000008" title=" " alt="" coords="872,110,907,127,935,153,950,176,960,197,965,237,959,280,948,331,931,379,926,377,943,330,953,279,960,237,954,199,946,178,931,156,904,131,870,114"/>
+<area shape="rect" id="Node000013" href="$_eqn_equinox_8cpp.html" title="Implementación del cálculo de la ecuación de los equinoccios." alt="" coords="783,155,921,181"/>
+<area shape="poly" id="edge18_Node000002_Node000013" title=" " alt="" coords="802,116,841,152,837,156,798,119"/>
+<area shape="rect" id="Node000004" href="$_g_h_a_matrix_8hpp.html" title="Cabecera de la función que calcula la matriz de ángulo horario de Greenwich (GHA) en función del tiem..." alt="" coords="555,229,712,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="680,195,647,231,643,227,676,191"/>
+<area shape="poly" id="edge16_Node000003_Node000007" title=" " alt="" coords="627,178,499,192,349,217,278,234,215,255,166,279,147,292,134,306,128,319,128,331,135,341,147,350,183,366,227,377,225,382,181,371,144,355,131,344,123,332,122,318,130,302,144,288,163,274,213,250,276,229,348,212,498,187,626,173"/>
+<area shape="poly" id="edge17_Node000003_Node000008" title=" " alt="" coords="767,184,811,201,857,226,897,260,914,280,926,303,932,323,933,344,929,379,923,378,928,344,927,324,922,305,909,283,893,263,854,231,809,206,765,189"/>
+<area shape="rect" id="Node000012" href="$gast_8cpp.html" title="Implementación del cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST)." alt="" coords="736,229,829,256"/>
+<area shape="poly" id="edge15_Node000003_Node000012" title=" " alt="" coords="728,190,770,227,767,231,724,194"/>
+<area shape="rect" id="Node000005" href="$_accel_8hpp.html" title="Prototipo de la función que calcula la aceleración total que actúa sobre un satélite." alt="" coords="395,304,520,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="590,265,489,306,487,301,588,260"/>
+<area shape="poly" id="edge13_Node000004_Node000007" title=" " alt="" coords="545,262,452,283,412,294,384,306,362,323,342,343,315,380,311,377,338,340,358,319,381,302,410,289,450,277,544,257"/>
+<area shape="poly" id="edge14_Node000004_Node000008" title=" " alt="" coords="722,257,832,279,875,291,899,302,912,320,920,341,925,378,920,378,915,342,908,322,896,306,873,296,831,285,720,262"/>
+<area shape="rect" id="Node000009" href="$_var_eqn_8hpp.html" title="Declaración de la función para calcular la derivada del sistema variacional para propagación de la ma..." alt="" coords="544,304,677,331"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="627,272,617,304,612,303,622,270"/>
+<area shape="rect" id="Node000011" href="$_g_h_a_matrix_8cpp.html" title="Implementación de la función que calcula la matriz de ángulo horario de Greenwich (GHA)." alt="" coords="752,304,885,331"/>
+<area shape="poly" id="edge12_Node000004_Node000011" title=" " alt="" coords="681,259,787,301,785,306,679,264"/>
+<area shape="rect" id="Node000006" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total actuando sobre un satélite." alt="" coords="408,379,509,405"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="461,346,461,378,456,378,455,347"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="418,340,333,380,331,376,416,335"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="536,329,869,380,868,385,535,334"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="543,337,359,381,358,375,542,332"/>
+<area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="681,332,869,375,867,381,679,337"/>
+<area shape="rect" id="Node000010" href="$_var_eqn_8cpp.html" title="Implementación de la derivada del sistema variacional para la propagación de la matriz de transición ..." alt="" coords="556,379,666,405"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="613,346,613,378,608,378,608,346"/>
+<area shape="poly" id="edge22_Node000014_Node000005" title=" " alt="" coords="460,272,460,304,455,304,455,272"/>
+<area shape="poly" id="edge25_Node000014_Node000007" title=" " alt="" coords="403,265,370,282,341,306,328,324,319,344,310,379,305,378,314,342,324,321,337,302,367,277,400,260"/>
+<area shape="poly" id="edge26_Node000014_Node000008" title=" " alt="" coords="538,257,613,276,690,302,716,315,741,328,813,355,878,376,876,381,811,360,739,333,714,319,688,306,611,281,537,263"/>
+<area shape="poly" id="edge23_Node000014_Node000009" title=" " alt="" coords="499,261,585,301,583,306,497,265"/>
+<area shape="rect" id="Node000015" href="$_nut_matrix_8cpp.html" title="Implementación del cálculo de la matriz de nutación." alt="" coords="144,304,269,331"/>
+<area shape="poly" id="edge24_Node000014_Node000015" title=" " alt="" coords="400,263,251,306,250,301,398,258"/>
+</map>

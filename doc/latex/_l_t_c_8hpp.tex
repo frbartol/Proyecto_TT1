@@ -1,0 +1,75 @@
+\doxysection{include/\+LTC.hpp File Reference}
+\hypertarget{_l_t_c_8hpp}{}\label{_l_t_c_8hpp}\index{include/LTC.hpp@{include/LTC.hpp}}
+
+
+Construye una matriz de transformación de coordenadas locales topocéntricas a coordenadas geocéntricas.  
+
+
+{\ttfamily \#include "{}matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}R\+\_\+x.\+hpp"{}}\newline
+{\ttfamily \#include "{}R\+\_\+y.\+hpp"{}}\newline
+{\ttfamily \#include "{}R\+\_\+z.\+hpp"{}}\newline
+Include dependency graph for LTC.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{_l_t_c_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_l_t_c_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_l_t_c_8hpp_a27b89059a0c4bc52a9192df16ead3359}{LTC}} (double lon, double lat)
+\begin{DoxyCompactList}\small\item\em Calcula la matriz de transformación Local Topocentric Coordinate (LTC). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Construye una matriz de transformación de coordenadas locales topocéntricas a coordenadas geocéntricas. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_l_t_c_8hpp_source}{LTC.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_l_t_c_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_l_t_c_8hpp_a27b89059a0c4bc52a9192df16ead3359}\index{LTC.hpp@{LTC.hpp}!LTC@{LTC}}
+\index{LTC@{LTC}!LTC.hpp@{LTC.hpp}}
+\doxysubsubsection{\texorpdfstring{LTC()}{LTC()}}
+{\footnotesize\ttfamily \label{_l_t_c_8hpp_a27b89059a0c4bc52a9192df16ead3359} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& LTC (\begin{DoxyParamCaption}\item[{double}]{lon}{, }\item[{double}]{lat}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la matriz de transformación Local Topocentric Coordinate (LTC). 
+
+Esta matriz transforma vectores desde el sistema de coordenadas topocéntrico local (Este, Norte, Cenit) al sistema de coordenadas geocéntrico (ECI).
+
+
+\begin{DoxyParams}{Parameters}
+{\em lon} & Longitud geográfica en radianes. \\
+\hline
+{\em lat} & Latitud geográfica en radianes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz de transformación 3x3. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_t_c_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_l_t_c_8cpp_source}{LTC.\+cpp}}.
+

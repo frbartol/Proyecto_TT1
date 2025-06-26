@@ -1,0 +1,21 @@
+<map id="src/PoleMatrix.cpp" name="src/PoleMatrix.cpp">
+<area shape="rect" id="Node000001" title="Implementación de la matriz de corrección por el desplazamiento del polo terrestre." alt="" coords="91,5,221,32"/>
+<area shape="rect" id="Node000002" href="$_pole_matrix_8hpp.html" title="Corrección de coordenadas debido al movimiento del polo terrestre." alt="" coords="74,80,239,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,33,159,64,154,64,154,33"/>
+<area shape="rect" id="Node000003" href="$matrix_8hpp.html" title=" " alt="" coords="115,229,197,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="145,109,126,129,112,155,110,172,114,187,134,217,129,219,109,190,105,172,107,154,122,126,141,105"/>
+<area shape="rect" id="Node000008" href="$_r__x_8hpp.html" title="Matriz de rotación en torno al eje X." alt="" coords="121,155,191,181"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="159,107,159,139,154,139,154,107"/>
+<area shape="rect" id="Node000009" href="$_r__y_8hpp.html" title="Matriz de rotación en torno al eje Y." alt="" coords="215,155,284,181"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="174,105,223,143,220,147,171,109"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,304,62,331"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="136,259,70,298,67,293,133,254"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="85,304,144,331"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="151,258,132,292,127,289,147,255"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="169,304,226,331"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="166,255,185,289,181,292,161,258"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="250,304,321,331"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="180,254,251,294,248,298,177,259"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="159,182,159,214,154,214,154,182"/>
+<area shape="poly" id="edge10_Node000009_Node000003" title=" " alt="" coords="235,184,186,222,183,218,232,180"/>
+</map>

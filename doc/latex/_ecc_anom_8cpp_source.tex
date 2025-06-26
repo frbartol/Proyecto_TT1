@@ -1,0 +1,37 @@
+\doxysection{Ecc\+Anom.\+cpp}
+\hypertarget{_ecc_anom_8cpp_source}{}\label{_ecc_anom_8cpp_source}\index{src/EccAnom.cpp@{src/EccAnom.cpp}}
+\mbox{\hyperlink{_ecc_anom_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ecc_anom_8hpp}{..\(\backslash\)include\(\backslash\)EccAnom.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00008}\mbox{\hyperlink{_ecc_anom_8hpp_a2ad531000471d74f459467a747a79aff}{00008}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{_ecc_anom_8cpp_a2ad531000471d74f459467a747a79aff}{EccAnom}}(\textcolor{keywordtype}{double}\ M,\ \textcolor{keywordtype}{double}\ e)\{}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ eps\ =\ numeric\_limits<double>::epsilon();}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ maxit\ =\ 15;}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordtype}{double}\ f;}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordtype}{double}\ E;}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00015}00015\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00016}00016\ \ \ \ \ M\ =\ fmod(M,2.0*\mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{SAT\_Const::pi}});}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}(M<0)\ M\ +=\ 2.0*\mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{SAT\_Const::pi}};}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00018}00018\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}(e<0.8)\ E\ =\ M;}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{else}\ E\ =\ \mbox{\hyperlink{class_s_a_t___const_a7322cb29af30ac8df9f46c9dde418381}{SAT\_Const::pi}};}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00023}00023\ \ \ \ \ f\ =\ E\ -\/e*sin(E)-\/M;}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00024}00024\ \ \ \ \ E\ =\ E\ -\/\ f/(1.0\ -\/\ e*cos(E));}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{while}(fabs(f)>1e2*eps)\{}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ f\ =\ E\ -\/e*sin(E)\ -\/\ M;}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ E\ =\ E\ -\/\ f/(1.0-\/e*cos(E));}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i==maxit)\{}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}EccAnom:\ convergence\ problems"{}};}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ exit(EXIT\_FAILURE);}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ E;}
+\DoxyCodeLine{\Hypertarget{_ecc_anom_8cpp_source_l00035}00035\ \}}
+
+\end{DoxyCode}

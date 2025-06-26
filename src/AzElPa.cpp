@@ -1,3 +1,9 @@
+/**
+ * @file AzElPa.cpp
+ * @brief Implementación del cálculo del acimut, elevación y vectores parciales.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\AzElPa.hpp"
 #include "..\include\SAT_Const.hpp"
 tuple<double, double, Matrix&, Matrix&> AzElPa(Matrix& s){

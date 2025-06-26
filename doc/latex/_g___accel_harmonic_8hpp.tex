@@ -1,0 +1,74 @@
+\doxysection{include/\+G\+\_\+\+Accel\+Harmonic.hpp File Reference}
+\hypertarget{_g___accel_harmonic_8hpp}{}\label{_g___accel_harmonic_8hpp}\index{include/G\_AccelHarmonic.hpp@{include/G\_AccelHarmonic.hpp}}
+
+
+Cálculo del gradiente de la aceleración debido al campo gravitacional armónico terrestre.  
+
+
+{\ttfamily \#include "{}matrix.\+hpp"{}}\newline
+Include dependency graph for G\+\_\+\+Accel\+Harmonic.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{_g___accel_harmonic_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g___accel_harmonic_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_g___accel_harmonic_8hpp_a8c1900d3aa2aceb61387b84a92e17818}{G\+\_\+\+Accel\+Harmonic}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&r, \mbox{\hyperlink{class_matrix}{Matrix}} \&U, int n\+\_\+max, int m\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Calcula el gradiente de la aceleración debida al campo armónico gravitacional. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cálculo del gradiente de la aceleración debido al campo gravitacional armónico terrestre. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_g___accel_harmonic_8hpp_source}{G\+\_\+\+Accel\+Harmonic.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_g___accel_harmonic_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_g___accel_harmonic_8hpp_a8c1900d3aa2aceb61387b84a92e17818}\index{G\_AccelHarmonic.hpp@{G\_AccelHarmonic.hpp}!G\_AccelHarmonic@{G\_AccelHarmonic}}
+\index{G\_AccelHarmonic@{G\_AccelHarmonic}!G\_AccelHarmonic.hpp@{G\_AccelHarmonic.hpp}}
+\doxysubsubsection{\texorpdfstring{G\_AccelHarmonic()}{G\_AccelHarmonic()}}
+{\footnotesize\ttfamily \label{_g___accel_harmonic_8hpp_a8c1900d3aa2aceb61387b84a92e17818} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& G\+\_\+\+Accel\+Harmonic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{r}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{U}{, }\item[{int}]{n\+\_\+max}{, }\item[{int}]{m\+\_\+max}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el gradiente de la aceleración debida al campo armónico gravitacional. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Vector de posición en coordenadas cartesianas. \\
+\hline
+{\em U} & Matriz de rotación del sistema inercial al sistema cuerpo. \\
+\hline
+{\em n\+\_\+max} & Grado máximo del desarrollo armónico. \\
+\hline
+{\em m\+\_\+max} & Orden máximo del desarrollo armónico. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz con el gradiente de la aceleración en coordenadas inerciales. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_g___accel_harmonic_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_g___accel_harmonic_8cpp_source}{G\+\_\+\+Accel\+Harmonic.\+cpp}}.
+

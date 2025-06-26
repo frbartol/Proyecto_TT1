@@ -14,7 +14,19 @@
 #include "JPL_Eph_DE430.hpp"
 #include "AccelHarmonic.hpp"
 #include "AccelPointMass.hpp"
+/**
+ * @file Accel.hpp
+ * @brief Prototipo de la función que calcula la aceleración total que actúa sobre un satélite.
+ * @author Francisco Bartolome Alcalde
+ */
 
+/**
+ * @brief Calcula la aceleración total sobre un satélite, teniendo en cuenta efectos gravitacionales y perturbaciones.
+ * 
+ * @param x Tiempo en MJD_TT (Modified Julian Date, Tiempo Terrestre).
+ * @param Y Vector de estado del satélite (posición y velocidad).
+ * @return Aceleración total en el sistema de referencia inercial.
+ */
 Matrix& Accel(double x, Matrix& Y);
 
 #endif

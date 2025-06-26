@@ -1,0 +1,72 @@
+\doxysection{src/\+Meas\+Update.cpp File Reference}
+\hypertarget{_meas_update_8cpp}{}\label{_meas_update_8cpp}\index{src/MeasUpdate.cpp@{src/MeasUpdate.cpp}}
+
+
+Implementación de la actualización de medida para el filtro de Kalman extendido.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Meas\+Update.\+hpp"{}}\newline
+Include dependency graph for Meas\+Update.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{_meas_update_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{_meas_update_8cpp_ae12754392beb1fd53d392978b396266f}{Meas\+Update}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&x, double z, double g, double s, \mbox{\hyperlink{class_matrix}{Matrix}} \&G, \mbox{\hyperlink{class_matrix}{Matrix}} \&P, int n)
+\begin{DoxyCompactList}\small\item\em Realiza la actualización del estado y de la matriz de covarianza utilizando una nueva medida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la actualización de medida para el filtro de Kalman extendido. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_meas_update_8cpp_source}{Meas\+Update.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_meas_update_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_meas_update_8cpp_ae12754392beb1fd53d392978b396266f}\index{MeasUpdate.cpp@{MeasUpdate.cpp}!MeasUpdate@{MeasUpdate}}
+\index{MeasUpdate@{MeasUpdate}!MeasUpdate.cpp@{MeasUpdate.cpp}}
+\doxysubsubsection{\texorpdfstring{MeasUpdate()}{MeasUpdate()}}
+{\footnotesize\ttfamily \label{_meas_update_8cpp_ae12754392beb1fd53d392978b396266f} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ Meas\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{x}{, }\item[{double}]{z}{, }\item[{double}]{g}{, }\item[{double}]{s}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{G}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{P}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Realiza la actualización del estado y de la matriz de covarianza utilizando una nueva medida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Vector de estado previo a la medida (será actualizado). \\
+\hline
+{\em z} & Valor escalar de la observación. \\
+\hline
+{\em g} & Valor escalar predicho de la observación. \\
+\hline
+{\em s} & Desviación estándar del ruido de medida. \\
+\hline
+{\em G} & Matriz de sensibilidad de la medida respecto al estado. \\
+\hline
+{\em P} & Matriz de covarianza del estado previo. \\
+\hline
+{\em n} & Dimensión del estado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una tupla con el vector de ganancia de Kalman, el estado actualizado y la covarianza actualizada. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_meas_update_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_meas_update_8cpp_source}{Meas\+Update.\+cpp}}.
+

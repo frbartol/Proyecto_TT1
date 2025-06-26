@@ -1,0 +1,22 @@
+\doxysection{LTC.\+cpp}
+\hypertarget{_l_t_c_8cpp_source}{}\label{_l_t_c_8cpp_source}\index{src/LTC.cpp@{src/LTC.cpp}}
+\mbox{\hyperlink{_l_t_c_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_l_t_c_8hpp}{..\(\backslash\)include\(\backslash\)LTC.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00007}\mbox{\hyperlink{_l_t_c_8hpp_a27b89059a0c4bc52a9192df16ead3359}{00007}}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ \mbox{\hyperlink{_l_t_c_8cpp_a27b89059a0c4bc52a9192df16ead3359}{LTC}}(\textcolor{keywordtype}{double}\ lon,\ \textcolor{keywordtype}{double}\ lat)\{}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ M\ =\ \mbox{\hyperlink{_r__y_8hpp_a25114557991f92fd6b027118c591a98f}{R\_y}}(-\/1.0*lat)*\mbox{\hyperlink{_r__z_8hpp_a4f688959a9ab144bf27d272e54bf7258}{R\_z}}(lon);}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{double}\ Aux\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=1;\ j<=3;\ j++)\{}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ Aux=M(1,j);}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ M(1,j)=M(2,j);}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ M(2,j)=M(3,j);}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ M(3,j)=\ Aux;}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return}\ M;}
+\DoxyCodeLine{\Hypertarget{_l_t_c_8cpp_source_l00020}00020\ \}}
+
+\end{DoxyCode}

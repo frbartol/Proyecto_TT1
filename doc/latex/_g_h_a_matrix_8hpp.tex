@@ -1,0 +1,72 @@
+\doxysection{include/\+GHAMatrix.hpp File Reference}
+\hypertarget{_g_h_a_matrix_8hpp}{}\label{_g_h_a_matrix_8hpp}\index{include/GHAMatrix.hpp@{include/GHAMatrix.hpp}}
+
+
+Cabecera de la función que calcula la matriz de ángulo horario de Greenwich (GHA) en función del tiempo UT1.  
+
+
+{\ttfamily \#include "{}matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}R\+\_\+z.\+hpp"{}}\newline
+{\ttfamily \#include "{}gast.\+hpp"{}}\newline
+Include dependency graph for GHAMatrix.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_h_a_matrix_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_h_a_matrix_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_g_h_a_matrix_8hpp_a49218ae38846c1175342d13a65d41f4d}{GHAMatrix}} (double Mjd\+\_\+\+UT1)
+\begin{DoxyCompactList}\small\item\em Calcula la matriz de rotación que representa el ángulo horario de Greenwich (GHA). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cabecera de la función que calcula la matriz de ángulo horario de Greenwich (GHA) en función del tiempo UT1. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_g_h_a_matrix_8hpp_source}{GHAMatrix.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_g_h_a_matrix_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_g_h_a_matrix_8hpp_a49218ae38846c1175342d13a65d41f4d}\index{GHAMatrix.hpp@{GHAMatrix.hpp}!GHAMatrix@{GHAMatrix}}
+\index{GHAMatrix@{GHAMatrix}!GHAMatrix.hpp@{GHAMatrix.hpp}}
+\doxysubsubsection{\texorpdfstring{GHAMatrix()}{GHAMatrix()}}
+{\footnotesize\ttfamily \label{_g_h_a_matrix_8hpp_a49218ae38846c1175342d13a65d41f4d} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& GHAMatrix (\begin{DoxyParamCaption}\item[{double}]{Mjd\+\_\+\+UT1}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la matriz de rotación que representa el ángulo horario de Greenwich (GHA). 
+
+Esta matriz transforma coordenadas desde el sistema de referencia inercial al sistema de referencia terrestre (TRF), aplicando una rotación alrededor del eje Z por el ángulo GAST (Greenwich Apparent Sidereal Time).
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mjd\+\_\+\+UT1} & Fecha juliana modificada en tiempo UT1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz de rotación correspondiente al ángulo horario de Greenwich. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_g_h_a_matrix_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_g_h_a_matrix_8cpp_source}{GHAMatrix.\+cpp}}.
+

@@ -1,0 +1,62 @@
+\doxysection{Legendre.\+cpp}
+\hypertarget{_legendre_8cpp_source}{}\label{_legendre_8cpp_source}\index{src/Legendre.cpp@{src/Legendre.cpp}}
+\mbox{\hyperlink{_legendre_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_legendre_8hpp}{..\(\backslash\)include\(\backslash\)Legendre.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00009}\mbox{\hyperlink{_legendre_8hpp_a55ce532de3c95506384990ae714dd99d}{00009}}\ tuple<Matrix\&,\ Matrix\&>\ \mbox{\hyperlink{_legendre_8cpp_a55ce532de3c95506384990ae714dd99d}{Legendre}}(\textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{int}\ m,\ \textcolor{keywordtype}{double}\ fi)\{}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{int}\ j,\ k;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ pnm\ =\ \mbox{\hyperlink{matrix_8hpp_a56d60ea1f08402246a7cfd477d69a618}{zeros}}(n+1,m+1);}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ dpnm\ =\ \mbox{\hyperlink{matrix_8hpp_a56d60ea1f08402246a7cfd477d69a618}{zeros}}(n+1,m+1);}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00014}00014\ \ \ \ \ pnm(1,1)=1;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00015}00015\ \ \ \ \ dpnm(1,1)=0;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00016}00016\ \ \ \ \ pnm(2,2)=sqrt(3)*cos(fi);}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00017}00017\ \ \ \ \ dpnm(2,2)=-\/sqrt(3)*sin(fi);}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00018}00018\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 2;\ i<=n;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ pnm(i+1,i+1)=\ sqrt((2.0*i+1)/(2.0*i))*cos(fi)*pnm(i,i);}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00021}00021\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 2;\ i<=n;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ dpnm(i+1,i+1)=\ sqrt((2.0*i+1)/(2.0*i))*((cos(fi)*dpnm(i,i))-\/(sin(fi)*pnm(i,i)));}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00025}00025\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=1;\ i<=n;i++)\{}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ pnm(i+1,i)=\ sqrt(2.0*i+1)*sin(fi)*pnm(i,i);}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=1;\ i<=n;i++)\{}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ dpnm(i+1,i)=\ sqrt(2.0*i+1)*((cos(fi)*pnm(i,i))+(sin(fi)*dpnm(i,i)));}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00034}00034\ \ \ \ \ j=0;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00035}00035\ \ \ \ \ k=2;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=k;\ i<=n;\ i++)\{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ pnm(i+1,j+1)=sqrt((2.0*i+1)/((i-\/j)*(i+j)))*((sqrt(2.0*i-\/1)*sin(fi)*pnm(i,j+1))-\/(sqrt(((i+j-\/1)*(i-\/j-\/1))/(2.0*i-\/3))*pnm(i-\/1,j+1)));}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ j\ =\ j+1;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ k\ =\ k+1;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j>m)\{}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00046}00046\ \ \ \ \ j\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00047}00047\ \ \ \ \ k\ =\ 2;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=k;\ i<=n;\ i++)\{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ dpnm(i+1,j+1)=sqrt((2.0*i+1)/((i-\/j)*(i+j)))*((sqrt(2.0*i-\/1)*sin(fi)*dpnm(i,j+1))+(sqrt(2.0*i-\/1)*cos(fi)*pnm(i,j+1))-\/(sqrt(((i+j-\/1)*(i-\/j-\/1))/(2.0*i-\/3))*dpnm(i-\/1,j+1)));}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ j\ =\ j+1;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ k\ =\ k+1;}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (j>m)\{}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{return}\ tie(pnm,\ dpnm);}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{_legendre_8cpp_source_l00060}00060\ }
+
+\end{DoxyCode}

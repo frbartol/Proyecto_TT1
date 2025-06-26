@@ -1,0 +1,93 @@
+\doxysection{src/\+JPL\+\_\+\+Eph\+\_\+\+DE430.cpp File Reference}
+\hypertarget{_j_p_l___eph___d_e430_8cpp}{}\label{_j_p_l___eph___d_e430_8cpp}\index{src/JPL\_Eph\_DE430.cpp@{src/JPL\_Eph\_DE430.cpp}}
+
+
+Implementación de la función JPL\+\_\+\+Eph\+\_\+\+DE430 para calcular posiciones de cuerpos celestes desde la efeméride DE430.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+JPL\+\_\+\+Eph\+\_\+\+DE430.\+hpp"{}}\newline
+Include dependency graph for JPL\+\_\+\+Eph\+\_\+\+DE430.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{_j_p_l___eph___d_e430_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{_j_p_l___eph___d_e430_8cpp_a5e6fedfbbbe0ca32aa62a9016e7d3293}{JPL\+\_\+\+Eph\+\_\+\+DE430}} (double Mjd\+\_\+\+TDB)
+\begin{DoxyCompactList}\small\item\em Devuelve las posiciones de los principales cuerpos del sistema solar desde JPL DE430. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la función JPL\+\_\+\+Eph\+\_\+\+DE430 para calcular posiciones de cuerpos celestes desde la efeméride DE430. 
+
+Utiliza coeficientes de polinomios de Chebyshev almacenados en la matriz global {\ttfamily PC} para interpolar posiciones de los planetas, la Luna y el Sol, así como datos de nutación y libración.
+
+Ajusta los vectores de posición al sistema centrado en la Tierra y escala a metros.
+
+\begin{DoxyReturn}{Returns}
+Tupla con las posiciones (columnas 3x1 en metros) relativas a la Tierra de\+:
+\begin{DoxyItemize}
+\item Mercurio
+\item Venus
+\item Tierra (baricentro Tierra-\/\+Luna)
+\item Marte
+\item Júpiter
+\item Saturno
+\item Urano
+\item Neptuno
+\item Plutón
+\item Luna (relativa a la Tierra)
+\item Sol
+\end{DoxyItemize}
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_j_p_l___eph___d_e430_8cpp_source}{JPL\+\_\+\+Eph\+\_\+\+DE430.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_j_p_l___eph___d_e430_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_j_p_l___eph___d_e430_8cpp_a5e6fedfbbbe0ca32aa62a9016e7d3293}\index{JPL\_Eph\_DE430.cpp@{JPL\_Eph\_DE430.cpp}!JPL\_Eph\_DE430@{JPL\_Eph\_DE430}}
+\index{JPL\_Eph\_DE430@{JPL\_Eph\_DE430}!JPL\_Eph\_DE430.cpp@{JPL\_Eph\_DE430.cpp}}
+\doxysubsubsection{\texorpdfstring{JPL\_Eph\_DE430()}{JPL\_Eph\_DE430()}}
+{\footnotesize\ttfamily \label{_j_p_l___eph___d_e430_8cpp_a5e6fedfbbbe0ca32aa62a9016e7d3293} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ JPL\+\_\+\+Eph\+\_\+\+DE430 (\begin{DoxyParamCaption}\item[{double}]{Mjd\+\_\+\+TDB}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve las posiciones de los principales cuerpos del sistema solar desde JPL DE430. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mjd\+\_\+\+TDB} & Fecha en Tiempo Dinámico Baricéntrico (TDB) en formato MJD. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con las posiciones (3x1) en km de\+:
+\begin{DoxyItemize}
+\item Mercurio
+\item Venus
+\item Tierra
+\item Luna
+\item Marte
+\item Júpiter
+\item Saturno
+\item Urano
+\item Neptuno
+\item Plutón
+\item Sol 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_j_p_l___eph___d_e430_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_j_p_l___eph___d_e430_8cpp_source}{JPL\+\_\+\+Eph\+\_\+\+DE430.\+cpp}}.
+

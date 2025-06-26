@@ -1,3 +1,13 @@
+/**
+ * @file Mjday_TDB.cpp
+ * @brief Implementación de la conversión de tiempo TT a TDB (Tiempo Dinámico Baricéntrico).
+ *
+ * Esta función aplica una serie de correcciones periódicas para transformar el tiempo en formato TT
+ * (Tiempo Terrestre) al tiempo TDB (Tiempo Dinámico Baricéntrico), de acuerdo con modelos astronómicos
+ * estandarizados.
+ *
+ * @author Francisco Bartolome Alcalde
+ */
 #include "..\include\Mjday_TDB.hpp"
 double Mjday_TDB(double Mjd_TT){
 double T_TT, Mjd_TDB;

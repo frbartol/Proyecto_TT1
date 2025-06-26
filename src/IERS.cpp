@@ -1,3 +1,9 @@
+/**
+ * @file IERS.cpp
+ * @brief Implementación de la interpolación de parámetros EOP del IERS para una fecha dada.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\IERS.hpp"
 
 tuple<double, double, double, double, double, double, double, double, double> IERS(Matrix& eop, double Mjd_UTC, char interp = 'n'){

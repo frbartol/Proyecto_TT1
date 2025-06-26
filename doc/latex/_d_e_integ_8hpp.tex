@@ -1,0 +1,82 @@
+\doxysection{include/\+DEInteg.hpp File Reference}
+\hypertarget{_d_e_integ_8hpp}{}\label{_d_e_integ_8hpp}\index{include/DEInteg.hpp@{include/DEInteg.hpp}}
+
+
+Definición del integrador numérico multistep de Shampine \& Gordon para sistemas de ecuaciones diferenciales ordinarias.  
+
+
+{\ttfamily \#include "{}matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}SAT\+\_\+\+Const.\+hpp"{}}\newline
+{\ttfamily \#include "{}sign\+\_\+.\+hpp"{}}\newline
+Include dependency graph for DEInteg.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_integ_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_e_integ_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_d_e_integ_8hpp_a672d74731618f1054414496efdb8ffe0}{DEInteg}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&func(double, \mbox{\hyperlink{class_matrix}{Matrix}} \&), double t, double tout, double relerr, double abserr, int n\+\_\+eqn, \mbox{\hyperlink{class_matrix}{Matrix}} \&y)
+\begin{DoxyCompactList}\small\item\em Integrador multistep con paso y orden variable basado en el método de Shampine \& Gordon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definición del integrador numérico multistep de Shampine \& Gordon para sistemas de ecuaciones diferenciales ordinarias. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_d_e_integ_8hpp_source}{DEInteg.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_d_e_integ_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_d_e_integ_8hpp_a672d74731618f1054414496efdb8ffe0}\index{DEInteg.hpp@{DEInteg.hpp}!DEInteg@{DEInteg}}
+\index{DEInteg@{DEInteg}!DEInteg.hpp@{DEInteg.hpp}}
+\doxysubsubsection{\texorpdfstring{DEInteg()}{DEInteg()}}
+{\footnotesize\ttfamily \label{_d_e_integ_8hpp_a672d74731618f1054414496efdb8ffe0} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& DEInteg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{func}{double, Matrix \&, }\item[{double}]{t}{, }\item[{double}]{tout}{, }\item[{double}]{relerr}{, }\item[{double}]{abserr}{, }\item[{int}]{n\+\_\+eqn}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Integrador multistep con paso y orden variable basado en el método de Shampine \& Gordon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Función que define el sistema de ecuaciones diferenciales (debe devolver la derivada de y). \\
+\hline
+{\em t} & Tiempo inicial. \\
+\hline
+{\em tout} & Tiempo final deseado de integración. \\
+\hline
+{\em relerr} & Error relativo permitido. \\
+\hline
+{\em abserr} & Error absoluto permitido. \\
+\hline
+{\em n\+\_\+eqn} & Número de ecuaciones del sistema. \\
+\hline
+{\em y} & Vector de estado inicial (y se actualiza con el estado final). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector de estado final tras la integración. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_e_integ_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_d_e_integ_8cpp_source}{DEInteg.\+cpp}}.
+

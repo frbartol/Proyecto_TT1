@@ -1,4 +1,9 @@
 #include "..\include\timediff.hpp"
+/**
+ * @file timediff.cpp
+ * @brief Implementación del cálculo de diferencias entre escalas temporales estándar.
+ * @author Francisco Bartolome Alcalde
+ */
 
 tuple<double, double, double, double, double> timediff(double UT1_UTC, double TAI_UTC){
     double TT_TAI, GPS_TAI, TT_GPS, TAI_GPS, UT1_TAI, UTC_TAI, UTC_GPS, UT1_GPS, TT_UTC, GPS_UTC;

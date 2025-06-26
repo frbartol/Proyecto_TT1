@@ -1,0 +1,33 @@
+<map id="include/gmst.hpp" name="include/gmst.hpp">
+<area shape="rect" id="Node000001" title="Cálculo del Tiempo Sidéreo Medio de Greenwich (GMST) a partir del MJD en UT1." alt="" coords="630,5,751,32"/>
+<area shape="rect" id="Node000002" href="$gast_8hpp.html" title="Cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST)." alt="" coords="528,80,645,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="662,43,606,82,603,77,659,39"/>
+<area shape="rect" id="Node000006" href="$_e_k_f___g_e_o_s3_8cpp.html" title="Estimación de la órbita de un satélite usando el filtro de Kalman extendido (EKF) y medidas reales de..." alt="" coords="5,304,163,331"/>
+<area shape="poly" id="edge18_Node000001_Node000006" title=" " alt="" coords="616,31,524,46,412,71,293,107,234,130,179,157,129,186,112,204,96,230,89,249,86,269,85,303,80,303,80,269,84,248,91,228,108,201,126,182,176,152,232,125,291,102,411,65,523,41,615,26"/>
+<area shape="rect" id="Node000007" href="$tests_8cpp.html" title="Batería de tests unitarios del sistema de dinámica orbital." alt="" coords="584,304,693,331"/>
+<area shape="poly" id="edge19_Node000001_Node000007" title=" " alt="" coords="695,47,695,141,689,199,676,257,664,283,650,305,646,302,659,281,671,255,683,199,690,141,690,47"/>
+<area shape="rect" id="Node000012" href="$gmst_8cpp.html" title="Implementación del cálculo del Tiempo Sidéreo Medio de Greenwich (GMST)." alt="" coords="778,80,875,107"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="729,37,804,77,802,82,727,42"/>
+<area shape="rect" id="Node000003" href="$_g_h_a_matrix_8hpp.html" title="Cabecera de la función que calcula la matriz de ángulo horario de Greenwich (GHA) en función del tiem..." alt="" coords="322,155,478,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="541,115,434,157,432,152,539,110"/>
+<area shape="poly" id="edge15_Node000002_Node000006" title=" " alt="" coords="513,97,423,105,370,113,316,125,262,143,210,166,161,195,118,231,105,248,97,268,88,304,83,303,91,267,101,246,114,228,158,190,207,161,260,138,315,120,369,108,422,99,513,92"/>
+<area shape="poly" id="edge16_Node000002_Node000007" title=" " alt="" coords="618,115,635,132,648,154,658,196,658,238,652,276,645,304,640,303,647,275,652,238,652,196,643,156,631,135,614,118"/>
+<area shape="rect" id="Node000011" href="$gast_8cpp.html" title="Implementación del cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST)." alt="" coords="540,155,633,181"/>
+<area shape="poly" id="edge14_Node000002_Node000011" title=" " alt="" coords="589,122,589,154,584,154,584,122"/>
+<area shape="rect" id="Node000004" href="$_accel_8hpp.html" title="Prototipo de la función que calcula la aceleración total que actúa sobre un satélite." alt="" coords="319,229,444,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="396,197,387,230,382,228,390,196"/>
+<area shape="poly" id="edge12_Node000003_Node000006" title=" " alt="" coords="307,179,227,197,188,212,151,232,131,248,114,268,92,305,87,302,110,265,127,244,148,227,185,207,226,192,306,174"/>
+<area shape="poly" id="edge13_Node000003_Node000007" title=" " alt="" coords="494,173,526,180,558,191,589,206,615,227,628,245,636,266,641,303,636,304,631,268,623,248,611,231,586,211,556,196,525,185,493,178"/>
+<area shape="rect" id="Node000008" href="$_var_eqn_8hpp.html" title="Declaración de la función para calcular la derivada del sistema variacional para propagación de la ma..." alt="" coords="161,229,295,256"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="357,190,259,231,257,226,355,185"/>
+<area shape="rect" id="Node000010" href="$_g_h_a_matrix_8cpp.html" title="Implementación de la función que calcula la matriz de ángulo horario de Greenwich (GHA)." alt="" coords="468,229,601,256"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="438,187,512,226,510,231,435,191"/>
+<area shape="rect" id="Node000005" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total actuando sobre un satélite." alt="" coords="331,304,432,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="384,272,384,304,379,304,379,272"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="315,263,137,306,135,301,314,258"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="441,258,594,301,593,306,440,263"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="190,266,110,306,108,301,188,261"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="310,256,585,304,584,309,309,261"/>
+<area shape="rect" id="Node000009" href="$_var_eqn_8cpp.html" title="Implementación de la derivada del sistema variacional para la propagación de la matriz de transición ..." alt="" coords="186,304,296,331"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="236,271,242,303,236,304,230,272"/>
+</map>

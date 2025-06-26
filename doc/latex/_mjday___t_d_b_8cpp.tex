@@ -1,0 +1,62 @@
+\doxysection{src/\+Mjday\+\_\+\+TDB.cpp File Reference}
+\hypertarget{_mjday___t_d_b_8cpp}{}\label{_mjday___t_d_b_8cpp}\index{src/Mjday\_TDB.cpp@{src/Mjday\_TDB.cpp}}
+
+
+Implementación de la conversión de tiempo TT a TDB (Tiempo Dinámico Baricéntrico).  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Mjday\+\_\+\+TDB.\+hpp"{}}\newline
+Include dependency graph for Mjday\+\_\+\+TDB.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{_mjday___t_d_b_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{_mjday___t_d_b_8cpp_a2512825285329f54df7d9f0be4966336}{Mjday\+\_\+\+TDB}} (double Mjd\+\_\+\+TT)
+\begin{DoxyCompactList}\small\item\em Convierte MJD en Tiempo Terrestre (TT) a Tiempo Dinámico Baricéntrico (TDB). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la conversión de tiempo TT a TDB (Tiempo Dinámico Baricéntrico). 
+
+Esta función aplica una serie de correcciones periódicas para transformar el tiempo en formato TT (Tiempo Terrestre) al tiempo TDB (Tiempo Dinámico Baricéntrico), de acuerdo con modelos astronómicos estandarizados.
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_mjday___t_d_b_8cpp_source}{Mjday\+\_\+\+TDB.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_mjday___t_d_b_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_mjday___t_d_b_8cpp_a2512825285329f54df7d9f0be4966336}\index{Mjday\_TDB.cpp@{Mjday\_TDB.cpp}!Mjday\_TDB@{Mjday\_TDB}}
+\index{Mjday\_TDB@{Mjday\_TDB}!Mjday\_TDB.cpp@{Mjday\_TDB.cpp}}
+\doxysubsubsection{\texorpdfstring{Mjday\_TDB()}{Mjday\_TDB()}}
+{\footnotesize\ttfamily \label{_mjday___t_d_b_8cpp_a2512825285329f54df7d9f0be4966336} 
+double Mjday\+\_\+\+TDB (\begin{DoxyParamCaption}\item[{double}]{Mjd\+\_\+\+TT}{}\end{DoxyParamCaption})}
+
+
+
+Convierte MJD en Tiempo Terrestre (TT) a Tiempo Dinámico Baricéntrico (TDB). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mjd\+\_\+\+TT} & Tiempo Terrestre (TT) en Modified Julian Date. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tiempo Dinámico Baricéntrico (TDB) en Modified Julian Date. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_mjday___t_d_b_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{_mjday___t_d_b_8cpp_source}{Mjday\+\_\+\+TDB.\+cpp}}.
+

@@ -1,3 +1,9 @@
+/**
+ * @file VarEqn.cpp
+ * @brief Implementación de la derivada del sistema variacional para la propagación de la matriz de transición en dinámica orbital.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\VarEqn.hpp"
 
 Matrix& VarEqn(double x, Matrix& yPhi){

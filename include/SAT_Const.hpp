@@ -1,6 +1,17 @@
 #ifndef _SAT_CONST_
 #define _SAT_CONST_
 
+/**
+ * @file SAT_Const.hpp
+ * @brief Constantes astronómicas y físicas usadas en dinámica orbital y propagación satelital.
+ * @author Francisco Bartolome Alcalde
+ */
+
+/**
+ * @class SAT_Const
+ * @brief Contiene constantes matemáticas, astronómicas y físicas necesarias para cálculos orbitales.
+ */
+
 class SAT_Const{
 public:
 

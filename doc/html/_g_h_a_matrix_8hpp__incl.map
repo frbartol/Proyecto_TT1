@@ -1,0 +1,37 @@
+<map id="include/GHAMatrix.hpp" name="include/GHAMatrix.hpp">
+<area shape="rect" id="Node000001" title="Cabecera de la función que calcula la matriz de ángulo horario de Greenwich (GHA) en función del tiem..." alt="" coords="198,5,354,32"/>
+<area shape="rect" id="Node000002" href="$matrix_8hpp.html" title=" " alt="" coords="163,155,245,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,33,269,67,253,108,228,144,224,141,248,105,263,66,271,32"/>
+<area shape="rect" id="Node000007" href="$_r__z_8hpp.html" title="Matriz de rotación en torno al eje Z." alt="" coords="169,80,239,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="266,34,229,71,225,67,262,31"/>
+<area shape="rect" id="Node000008" href="$gast_8hpp.html" title="Cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST)." alt="" coords="467,80,538,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="316,30,453,73,452,79,315,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,229,62,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="175,184,77,226,75,221,173,179"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="85,229,144,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="190,184,144,221,140,217,187,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="322,304,380,331"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="219,180,329,291,326,295,215,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="168,229,240,256"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="207,182,207,214,202,214,202,182"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="207,107,207,139,202,139,202,107"/>
+<area shape="rect" id="Node000009" href="$gmst_8hpp.html" title="Cálculo del Tiempo Sidéreo Medio de Greenwich (GMST) a partir del MJD en UT1." alt="" coords="405,155,480,181"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="494,109,465,145,461,141,490,106"/>
+<area shape="rect" id="Node000011" href="$_s_a_t___const_8hpp.html" title="Constantes astronómicas y físicas usadas en dinámica orbital y propagación satelital." alt="" coords="556,304,669,331"/>
+<area shape="poly" id="edge13_Node000008_Node000011" title=" " alt="" coords="540,100,588,116,643,141,670,158,696,178,717,201,735,228,738,241,738,252,725,272,702,288,675,301,673,296,700,284,721,269,733,251,733,241,730,230,713,204,692,182,667,162,641,146,586,121,538,105"/>
+<area shape="rect" id="Node000012" href="$_eqn_equinox_8hpp.html" title="Cálculo de la ecuación de los equinoccios." alt="" coords="505,155,621,181"/>
+<area shape="poly" id="edge14_Node000008_Node000012" title=" " alt="" coords="515,106,545,141,541,145,511,109"/>
+<area shape="rect" id="Node000010" href="$_frac_8hpp.html" title="Cálculo de la parte fraccionaria de un número real." alt="" coords="315,229,387,256"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="428,184,380,222,377,218,425,180"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="465,180,531,227,594,290,590,294,528,231,462,184"/>
+<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="354,257,354,288,348,288,348,257"/>
+<area shape="rect" id="Node000013" href="$_nut_angles_8hpp.html" title="Cálculo de los ángulos de nutación: Δψ y Δε." alt="" coords="410,229,518,256"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="547,184,495,222,492,218,544,180"/>
+<area shape="rect" id="Node000015" href="$_mean_obliquity_8hpp.html" title="Cálculo de la oblicuidad media de la eclíptica en función del tiempo." alt="" coords="592,229,720,256"/>
+<area shape="poly" id="edge19_Node000012_Node000015" title=" " alt="" coords="581,180,630,218,627,222,577,184"/>
+<area shape="poly" id="edge18_Node000013_Node000005" title=" " alt="" coords="446,259,385,298,382,293,443,254"/>
+<area shape="poly" id="edge16_Node000013_Node000011" title=" " alt="" coords="491,254,574,294,571,299,489,259"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="440,304,489,331"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="467,257,467,288,462,288,462,257"/>
+<area shape="poly" id="edge20_Node000015_Node000011" title=" " alt="" coords="651,258,630,292,625,289,646,255"/>
+</map>

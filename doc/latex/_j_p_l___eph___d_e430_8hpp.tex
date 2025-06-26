@@ -1,0 +1,84 @@
+\doxysection{include/\+JPL\+\_\+\+Eph\+\_\+\+DE430.hpp File Reference}
+\hypertarget{_j_p_l___eph___d_e430_8hpp}{}\label{_j_p_l___eph___d_e430_8hpp}\index{include/JPL\_Eph\_DE430.hpp@{include/JPL\_Eph\_DE430.hpp}}
+
+
+Cálculo de posiciones planetarias usando la efeméride JPL DE430.  
+
+
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include "{}matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}global.\+hpp"{}}\newline
+{\ttfamily \#include "{}Cheb3\+D.\+hpp"{}}\newline
+Include dependency graph for JPL\+\_\+\+Eph\+\_\+\+DE430.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{_j_p_l___eph___d_e430_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_j_p_l___eph___d_e430_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ \mbox{\hyperlink{_j_p_l___eph___d_e430_8hpp_a5e6fedfbbbe0ca32aa62a9016e7d3293}{JPL\+\_\+\+Eph\+\_\+\+DE430}} (double Mjd\+\_\+\+TDB)
+\begin{DoxyCompactList}\small\item\em Devuelve las posiciones de los principales cuerpos del sistema solar desde JPL DE430. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cálculo de posiciones planetarias usando la efeméride JPL DE430. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_j_p_l___eph___d_e430_8hpp_source}{JPL\+\_\+\+Eph\+\_\+\+DE430.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_j_p_l___eph___d_e430_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_j_p_l___eph___d_e430_8hpp_a5e6fedfbbbe0ca32aa62a9016e7d3293}\index{JPL\_Eph\_DE430.hpp@{JPL\_Eph\_DE430.hpp}!JPL\_Eph\_DE430@{JPL\_Eph\_DE430}}
+\index{JPL\_Eph\_DE430@{JPL\_Eph\_DE430}!JPL\_Eph\_DE430.hpp@{JPL\_Eph\_DE430.hpp}}
+\doxysubsubsection{\texorpdfstring{JPL\_Eph\_DE430()}{JPL\_Eph\_DE430()}}
+{\footnotesize\ttfamily \label{_j_p_l___eph___d_e430_8hpp_a5e6fedfbbbe0ca32aa62a9016e7d3293} 
+tuple$<$ \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \&, \mbox{\hyperlink{class_matrix}{Matrix}} \& $>$ JPL\+\_\+\+Eph\+\_\+\+DE430 (\begin{DoxyParamCaption}\item[{double}]{Mjd\+\_\+\+TDB}{}\end{DoxyParamCaption})}
+
+
+
+Devuelve las posiciones de los principales cuerpos del sistema solar desde JPL DE430. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mjd\+\_\+\+TDB} & Fecha en Tiempo Dinámico Baricéntrico (TDB) en formato MJD. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con las posiciones (3x1) en km de\+:
+\begin{DoxyItemize}
+\item Mercurio
+\item Venus
+\item Tierra
+\item Luna
+\item Marte
+\item Júpiter
+\item Saturno
+\item Urano
+\item Neptuno
+\item Plutón
+\item Sol 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_j_p_l___eph___d_e430_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{_j_p_l___eph___d_e430_8cpp_source}{JPL\+\_\+\+Eph\+\_\+\+DE430.\+cpp}}.
+

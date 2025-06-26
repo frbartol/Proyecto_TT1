@@ -1,0 +1,15 @@
+<map id="src/EccAnom.cpp" name="src/EccAnom.cpp">
+<area shape="rect" id="Node000001" title="Implementación del cálculo de la anomalía excéntrica mediante el método de Newton&#45;Raphson." alt="" coords="195,5,321,32"/>
+<area shape="rect" id="Node000002" href="$_ecc_anom_8hpp.html" title="Cálculo de la anomalía excéntrica a partir de la media y la excentricidad." alt="" coords="178,80,338,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,33,261,64,255,64,255,33"/>
+<area shape="rect" id="Node000003" href="$_s_a_t___const_8hpp.html" title="Constantes astronómicas y físicas usadas en dinámica orbital y propagación satelital." alt="" coords="5,155,119,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="225,110,112,151,110,146,223,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="143,155,205,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="245,109,202,146,198,142,242,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="229,155,287,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="261,107,261,139,255,139,255,107"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="310,155,363,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="274,105,314,142,310,146,270,109"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="386,155,458,181"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="288,105,380,145,378,150,285,110"/>
+</map>

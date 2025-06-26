@@ -1,3 +1,9 @@
+/**
+ * @file AccelPointMass.cpp
+ * @brief Implementación de la función AccelPointMass para calcular aceleración de marea por masa puntual.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "../include/AccelPointMass.hpp"
 
 Matrix& AccelPointMass(Matrix &r, Matrix &s, double GM){

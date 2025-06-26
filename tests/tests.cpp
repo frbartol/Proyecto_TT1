@@ -1,3 +1,15 @@
+/**
+ * @file tests.cpp
+ * @brief Batería de tests unitarios del sistema de dinámica orbital.
+ *
+ * Este archivo ejecuta pruebas unitarias sobre la clase Matrix y diversas funciones científicas
+ * relacionadas con la dinámica orbital, interpolación, transformaciones, aceleraciones y filtrado
+ * mediante Kalman. Los tests están organizados por módulos.
+ *
+ * Antes de ejecutar los tests, se cargan datos reales como EOP, coeficientes GGM03S y DE430.
+ *
+ * @author Francisco Bartolome Alcalde
+ */
 #include "..\include\SAT_Const.hpp"
 #include "..\include\matrix.hpp"
 #include "..\include\AccelPointMass.hpp"

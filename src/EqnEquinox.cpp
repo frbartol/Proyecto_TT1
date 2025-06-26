@@ -1,3 +1,9 @@
+/**
+ * @file EqnEquinox.cpp
+ * @brief Implementación del cálculo de la ecuación de los equinoccios.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\EqnEquinox.hpp"
 
 double EqnEquinox(double Mjd_TT){

@@ -1,0 +1,73 @@
+\doxysection{include/\+Position.hpp File Reference}
+\hypertarget{_position_8hpp}{}\label{_position_8hpp}\index{include/Position.hpp@{include/Position.hpp}}
+
+
+Conversión de coordenadas geodésicas a coordenadas cartesianas ECEF.  
+
+
+{\ttfamily \#include "{}matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}SAT\+\_\+\+Const.\+hpp"{}}\newline
+Include dependency graph for Position.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{_position_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_position_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_position_8hpp_ad3ff3004edb305ae3aed0230373b848e}{Position}} (double lon, double lat, double h)
+\begin{DoxyCompactList}\small\item\em Calcula el vector de posición ECEF a partir de longitud, latitud y altura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Conversión de coordenadas geodésicas a coordenadas cartesianas ECEF. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_position_8hpp_source}{Position.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_position_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_position_8hpp_ad3ff3004edb305ae3aed0230373b848e}\index{Position.hpp@{Position.hpp}!Position@{Position}}
+\index{Position@{Position}!Position.hpp@{Position.hpp}}
+\doxysubsubsection{\texorpdfstring{Position()}{Position()}}
+{\footnotesize\ttfamily \label{_position_8hpp_ad3ff3004edb305ae3aed0230373b848e} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Position (\begin{DoxyParamCaption}\item[{double}]{lon}{, }\item[{double}]{lat}{, }\item[{double}]{h}{}\end{DoxyParamCaption})}
+
+
+
+Calcula el vector de posición ECEF a partir de longitud, latitud y altura. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lon} & Longitud geodésica (en radianes). \\
+\hline
+{\em lat} & Latitud geodésica (en radianes). \\
+\hline
+{\em h} & Altura sobre el elipsoide (en km). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector posición en coordenadas ECEF (3x1). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_position_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_position_8cpp_source}{Position.\+cpp}}.
+

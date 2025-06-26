@@ -1,0 +1,113 @@
+\doxysection{tests/\+EKF\+\_\+\+GEOS3.cpp File Reference}
+\hypertarget{_e_k_f___g_e_o_s3_8cpp}{}\label{_e_k_f___g_e_o_s3_8cpp}\index{tests/EKF\_GEOS3.cpp@{tests/EKF\_GEOS3.cpp}}
+
+
+Estimación de la órbita de un satélite usando el filtro de Kalman extendido (EKF) y medidas reales del satélite GEOS-\/3.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+SAT\+\_\+\+Const.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel\+Point\+Mass.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Cheb3d.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Ecc\+Anom.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Frac.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Mean\+Obliquity.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Mjday.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Mjday\+\_\+\+TDB.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Position.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+R\+\_\+x.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+R\+\_\+y.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+R\+\_\+z.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}timediff.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Az\+El\+Pa.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+IERS.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Legendre.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Nut\+Angles.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Time\+Update.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}global.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel\+Harmonic.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Eqn\+Equinox.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+JPL\+\_\+\+Eph\+\_\+\+DE430.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+LTC.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Nut\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Pole\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Prec\+Matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}gmst.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}gast.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Meas\+Update.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+G\+\_\+\+Accel\+Harmonic.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+GHAMatrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Var\+Eqn.\+hpp"{}}\newline
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+DEInteg.\+hpp"{}}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for EKF\+\_\+\+GEOS3.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_e_k_f___g_e_o_s3_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_e_k_f___g_e_o_s3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Estimación de la órbita de un satélite usando el filtro de Kalman extendido (EKF) y medidas reales del satélite GEOS-\/3. 
+
+El programa carga observaciones topocéntricas (acimut, elevación, distancia) desde el fichero {\ttfamily GEOS3.\+txt} y estima la trayectoria del satélite integrando su movimiento con un modelo dinámico completo que incluye\+:
+\begin{DoxyItemize}
+\item Campo gravitatorio armónico terrestre (modelo GGM03S)
+\item Perturbaciones de cuerpos mayores (Luna, Sol, planetas)
+\item Parámetros de orientación terrestre (EOP) e instantes en distintos sistemas de tiempo (UTC, UT1, TT, TDB)
+\end{DoxyItemize}
+
+Se inicializa el estado con una aproximación, se propaga usando {\ttfamily DEInteg}, y se aplica el EKF con las funciones\+:
+\begin{DoxyItemize}
+\item {\ttfamily Accel}\+: dinámica orbital
+\item {\ttfamily Var\+Eqn}\+: derivadas de transición
+\item {\ttfamily Meas\+Update}\+: actualizaciones del estado por medidas
+\item {\ttfamily Time\+Update}\+: predicción de la covarianza
+\item {\ttfamily Az\+El\+Pa}\+: conversión de coordenadas topocéntricas y derivadas parciales
+\end{DoxyItemize}
+
+Finalmente se compara el estado estimado con el estado real para evaluar la precisión de la estimación.
+
+Entradas\+:
+\begin{DoxyItemize}
+\item Fichero {\ttfamily ../data/\+GEOS3.txt} con 46 observaciones (formato fijo)
+\end{DoxyItemize}
+
+Salida\+:
+\begin{DoxyItemize}
+\item Errores de posición y velocidad estimados respecto a valores conocidos
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_e_k_f___g_e_o_s3_8cpp_source}{EKF\+\_\+\+GEOS3.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_e_k_f___g_e_o_s3_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_e_k_f___g_e_o_s3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{EKF\_GEOS3.cpp@{EKF\_GEOS3.cpp}!main@{main}}
+\index{main@{main}!EKF\_GEOS3.cpp@{EKF\_GEOS3.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_e_k_f___g_e_o_s3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_e_k_f___g_e_o_s3_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{_e_k_f___g_e_o_s3_8cpp_source}{EKF\+\_\+\+GEOS3.\+cpp}}.
+

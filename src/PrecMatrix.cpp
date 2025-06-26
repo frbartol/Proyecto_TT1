@@ -1,3 +1,9 @@
+/**
+ * @file PrecMatrix.cpp
+ * @brief Implementación del cálculo de la matriz de precesión entre dos fechas dadas en MJD.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\PrecMatrix.hpp"
 
 Matrix& PrecMatrix(double Mjd_1, double Mjd_2){

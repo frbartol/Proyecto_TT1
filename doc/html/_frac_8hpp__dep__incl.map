@@ -1,0 +1,39 @@
+<map id="include/Frac.hpp" name="include/Frac.hpp">
+<area shape="rect" id="Node000001" title="Cálculo de la parte fraccionaria de un número real." alt="" coords="696,5,813,32"/>
+<area shape="rect" id="Node000002" href="$gmst_8hpp.html" title="Cálculo del Tiempo Sidéreo Medio de Greenwich (GMST) a partir del MJD en UT1." alt="" coords="626,80,747,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="734,45,700,81,696,78,730,42"/>
+<area shape="rect" id="Node000007" href="$_e_k_f___g_e_o_s3_8cpp.html" title="Estimación de la órbita de un satélite usando el filtro de Kalman extendido (EKF) y medidas reales de..." alt="" coords="28,379,185,405"/>
+<area shape="poly" id="edge22_Node000001_Node000007" title=" " alt="" coords="681,22,495,25,384,32,272,44,170,62,85,88,53,104,28,123,13,144,8,167,8,244,10,265,17,285,39,323,66,354,92,376,88,380,63,358,35,326,12,288,5,266,3,244,3,166,8,141,25,119,50,100,83,83,169,57,272,39,384,27,495,20,681,16"/>
+<area shape="rect" id="Node000008" href="$tests_8cpp.html" title="Batería de tests unitarios del sistema de dinámica orbital." alt="" coords="643,379,752,405"/>
+<area shape="poly" id="edge23_Node000001_Node000008" title=" " alt="" coords="777,43,809,97,822,131,827,166,827,244,824,268,815,290,788,328,753,359,721,380,718,376,750,355,784,325,811,287,818,266,821,244,821,167,817,132,804,100,772,46"/>
+<area shape="rect" id="Node000014" href="$_frac_8cpp.html" title="Implementación de la función que calcula la parte fraccionaria de un número real." alt="" coords="861,80,955,107"/>
+<area shape="poly" id="edge21_Node000001_Node000014" title=" " alt="" coords="796,37,882,77,880,82,794,41"/>
+<area shape="rect" id="Node000003" href="$gast_8hpp.html" title="Cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST)." alt="" coords="498,155,614,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="652,117,580,156,578,152,649,112"/>
+<area shape="poly" id="edge19_Node000002_Node000007" title=" " alt="" coords="611,108,525,124,422,149,312,184,258,206,207,232,158,261,141,279,124,305,116,324,111,344,109,378,104,378,106,343,111,322,119,303,136,276,154,257,204,227,256,201,310,179,420,143,524,118,610,102"/>
+<area shape="poly" id="edge20_Node000002_Node000008" title=" " alt="" coords="720,115,737,132,750,154,759,186,761,219,758,252,750,284,728,341,707,380,703,377,723,339,745,283,752,251,756,219,754,187,746,156,733,136,716,119"/>
+<area shape="rect" id="Node000013" href="$gmst_8cpp.html" title="Implementación del cálculo del Tiempo Sidéreo Medio de Greenwich (GMST)." alt="" coords="638,155,735,181"/>
+<area shape="poly" id="edge18_Node000002_Node000013" title=" " alt="" coords="689,122,689,154,684,154,684,122"/>
+<area shape="rect" id="Node000004" href="$_g_h_a_matrix_8hpp.html" title="Cabecera de la función que calcula la matriz de ángulo horario de Greenwich (GHA) en función del tiem..." alt="" coords="332,229,489,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="518,191,437,231,435,226,516,186"/>
+<area shape="poly" id="edge16_Node000003_Node000007" title=" " alt="" coords="483,177,405,188,315,211,269,228,225,249,184,275,147,306,134,323,123,343,112,379,107,378,118,341,129,320,143,302,181,271,223,245,267,223,313,206,404,183,482,171"/>
+<area shape="poly" id="edge17_Node000003_Node000008" title=" " alt="" coords="586,190,635,238,660,269,680,303,693,343,699,378,694,379,688,345,675,305,655,272,631,241,582,193"/>
+<area shape="rect" id="Node000012" href="$gast_8cpp.html" title="Implementación del cálculo del Tiempo Sidéreo Aparente de Greenwich (GAST)." alt="" coords="513,229,607,256"/>
+<area shape="poly" id="edge15_Node000003_Node000012" title=" " alt="" coords="560,197,562,229,557,229,555,197"/>
+<area shape="rect" id="Node000005" href="$_accel_8hpp.html" title="Prototipo de la función que calcula la aceleración total que actúa sobre un satélite." alt="" coords="195,304,320,331"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="371,265,285,306,283,301,369,261"/>
+<area shape="poly" id="edge13_Node000004_Node000007" title=" " alt="" coords="318,258,250,276,216,290,184,306,162,323,143,343,116,380,112,377,139,340,159,319,181,302,214,285,248,271,317,253"/>
+<area shape="poly" id="edge14_Node000004_Node000008" title=" " alt="" coords="502,257,587,277,623,289,648,302,666,319,680,340,696,377,691,380,675,343,662,323,645,306,621,294,586,282,500,262"/>
+<area shape="rect" id="Node000009" href="$_var_eqn_8hpp.html" title="Declaración de la función para calcular la derivada del sistema variacional para propagación de la ma..." alt="" coords="344,304,477,331"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="413,272,413,304,408,304,408,272"/>
+<area shape="rect" id="Node000011" href="$_g_h_a_matrix_8cpp.html" title="Implementación de la función que calcula la matriz de ángulo horario de Greenwich (GHA)." alt="" coords="501,304,635,331"/>
+<area shape="poly" id="edge12_Node000004_Node000011" title=" " alt="" coords="453,260,541,301,539,306,451,265"/>
+<area shape="rect" id="Node000006" href="$_accel_8cpp.html" title="Implementación de la función que calcula la aceleración total actuando sobre un satélite." alt="" coords="209,379,311,405"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="261,346,262,378,257,378,256,347"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="219,340,134,380,132,376,216,335"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="335,329,643,379,642,384,334,334"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="343,337,161,381,159,375,342,332"/>
+<area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="476,332,648,375,646,381,475,338"/>
+<area shape="rect" id="Node000010" href="$_var_eqn_8cpp.html" title="Implementación de la derivada del sistema variacional para la propagación de la matriz de transición ..." alt="" coords="356,379,466,405"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="413,346,413,378,408,378,408,346"/>
+</map>

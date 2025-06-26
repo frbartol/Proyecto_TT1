@@ -1,0 +1,15 @@
+\doxysection{Mean\+Obliquity.\+cpp}
+\hypertarget{_mean_obliquity_8cpp_source}{}\label{_mean_obliquity_8cpp_source}\index{src/MeanObliquity.cpp@{src/MeanObliquity.cpp}}
+\mbox{\hyperlink{_mean_obliquity_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_mean_obliquity_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_mean_obliquity_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_mean_obliquity_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_mean_obliquity_8hpp}{..\(\backslash\)include\(\backslash\)MeanObliquity.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_mean_obliquity_8cpp_source_l00008}\mbox{\hyperlink{_mean_obliquity_8hpp_a11f057ac4e8a0c5a7958f77379e30d40}{00008}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{_mean_obliquity_8cpp_a11f057ac4e8a0c5a7958f77379e30d40}{MeanObliquity}}(\textcolor{keywordtype}{double}\ Mjd\_TT)\{}
+\DoxyCodeLine{\Hypertarget{_mean_obliquity_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{double}\ T\ =\ (Mjd\_TT-\/\mbox{\hyperlink{class_s_a_t___const_ab7ba8d3bdb9b06b52877b1e6c24b3d37}{SAT\_Const::MJD\_J2000}})/36525.0;}
+\DoxyCodeLine{\Hypertarget{_mean_obliquity_8cpp_source_l00010}00010\ \ \ \ \ \textcolor{keywordtype}{double}\ MOblq\ =\ \mbox{\hyperlink{class_s_a_t___const_a8cd545a117a0d02fba3e18c843a8e112}{SAT\_Const::Rad}}\ *(\ 84381.448/3600.0-\/(46.8150+(0.00059-\/0.001813*T)*T)*T/3600.0\ );}
+\DoxyCodeLine{\Hypertarget{_mean_obliquity_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_mean_obliquity_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{return}\ MOblq;}
+\DoxyCodeLine{\Hypertarget{_mean_obliquity_8cpp_source_l00013}00013\ \}}
+
+\end{DoxyCode}

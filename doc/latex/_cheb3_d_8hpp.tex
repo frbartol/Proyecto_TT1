@@ -1,0 +1,80 @@
+\doxysection{include/\+Cheb3D.hpp File Reference}
+\hypertarget{_cheb3_d_8hpp}{}\label{_cheb3_d_8hpp}\index{include/Cheb3D.hpp@{include/Cheb3D.hpp}}
+
+
+Evaluación de interpolación de Chebyshev en 3D.  
+
+
+{\ttfamily \#include "{}matrix.\+hpp"{}}\newline
+Include dependency graph for Cheb3\+D.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{_cheb3_d_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_cheb3_d_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_cheb3_d_8hpp_a05a110559834c211c7a7eeac28dd8246}{Cheb3D}} (double t, int N, double Ta, double Tb, \mbox{\hyperlink{class_matrix}{Matrix}} \&Cx, \mbox{\hyperlink{class_matrix}{Matrix}} \&Cy, \mbox{\hyperlink{class_matrix}{Matrix}} \&Cz)
+\begin{DoxyCompactList}\small\item\em Evalúa la posición 3D usando una interpolación de Chebyshev. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Evaluación de interpolación de Chebyshev en 3D. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_cheb3_d_8hpp_source}{Cheb3\+D.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_cheb3_d_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_cheb3_d_8hpp_a05a110559834c211c7a7eeac28dd8246}\index{Cheb3D.hpp@{Cheb3D.hpp}!Cheb3D@{Cheb3D}}
+\index{Cheb3D@{Cheb3D}!Cheb3D.hpp@{Cheb3D.hpp}}
+\doxysubsubsection{\texorpdfstring{Cheb3D()}{Cheb3D()}}
+{\footnotesize\ttfamily \label{_cheb3_d_8hpp_a05a110559834c211c7a7eeac28dd8246} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Cheb3D (\begin{DoxyParamCaption}\item[{double}]{t}{, }\item[{int}]{N}{, }\item[{double}]{Ta}{, }\item[{double}]{Tb}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Cx}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Cy}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Cz}{}\end{DoxyParamCaption})}
+
+
+
+Evalúa la posición 3D usando una interpolación de Chebyshev. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Tiempo de evaluación. \\
+\hline
+{\em N} & Número de coeficientes. \\
+\hline
+{\em Ta} & Límite inferior del intervalo de tiempo. \\
+\hline
+{\em Tb} & Límite superior del intervalo de tiempo. \\
+\hline
+{\em Cx} & Coeficientes de Chebyshev para la componente X. \\
+\hline
+{\em Cy} & Coeficientes de Chebyshev para la componente Y. \\
+\hline
+{\em Cz} & Coeficientes de Chebyshev para la componente Z. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector posición 3D (1x3). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_cheb3_d_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_cheb3_d_8cpp_source}{Cheb3\+D.\+cpp}}.
+

@@ -1,0 +1,61 @@
+\doxysection{Accel\+Harmonic.\+cpp}
+\hypertarget{_accel_harmonic_8cpp_source}{}\label{_accel_harmonic_8cpp_source}\index{src/AccelHarmonic.cpp@{src/AccelHarmonic.cpp}}
+\mbox{\hyperlink{_accel_harmonic_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_accel_harmonic_8hpp}{..\(\backslash\)include\(\backslash\)AccelHarmonic.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00008}\mbox{\hyperlink{_accel_harmonic_8hpp_aa1b4c4eec7dc53fa60ce465c27f9d47a}{00008}}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ \mbox{\hyperlink{_accel_harmonic_8cpp_aa1b4c4eec7dc53fa60ce465c27f9d47a}{AccelHarmonic}}(\mbox{\hyperlink{class_matrix}{Matrix}}\&\ r,\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ E,\ \textcolor{keywordtype}{double}\ n\_max,\ \textcolor{keywordtype}{double}\ m\_max)\{}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{double}\ r\_ref,\ gm,\ d,\ latgc,\ lon,\ dUdr,\ dUdlatgc,\ dUdlon,\ q3,\ q2,\ q1,\ b1,\ b2,\ b3,\ r2xy,\ ax,\ ay,\ az;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00010}00010\ \ \ \ \ r\_ref\ =\ 6378.1363e3;\ \ \ \textcolor{comment}{//\ Earth's\ radius\ [m];\ GGM03S}}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00011}00011\ \ \ \ \ gm\ \ \ \ =\ 398600.4415e9;\ \textcolor{comment}{//\ [m\string^3/s\string^2];\ GGM03S}}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00012}00012\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{comment}{//\ Body-\/fixed\ position\ }}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ r\_bf\ =\ E\ *\ \mbox{\hyperlink{matrix_8hpp_acbd9778b697f9ad3da64ef53b850e2c9}{transpose}}(r);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00015}00015\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ Auxiliary\ quantities}}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00017}00017\ \ \ \ \ d\ =\ r\_bf.\mbox{\hyperlink{class_matrix_aa30b90656f5063a7eac84a8cc5607318}{norm}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ distance}}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00018}00018\ \ \ \ \ latgc\ =\ asin(r\_bf(3)/d);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00019}00019\ \ \ \ \ lon\ =\ atan2(r\_bf(2),r\_bf(1));}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00020}00020\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{auto}\ [pnm,\ dpnm]\ =\ \mbox{\hyperlink{_legendre_8hpp_a55ce532de3c95506384990ae714dd99d}{Legendre}}(n\_max,m\_max,latgc);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00023}00023\ \ \ \ \ dUdr\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00024}00024\ \ \ \ \ dUdlatgc\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00025}00025\ \ \ \ \ dUdlon\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00026}00026\ \ \ \ \ q3\ =\ 0.0;\ q2\ =\ q3;\ q1\ =\ q2;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ n=0;\ n<=n\_max;\ n++)\{}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ b1\ =\ (-\/gm/pow(d,2))*pow((r\_ref/d),n)*(n+1);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ b2\ =\ (gm/d)*pow((r\_ref/d),n);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ b3\ =\ (gm/d)*pow((r\_ref/d),n);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00031}00031\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ m=0;\ m<=m\_max;\ m++)\{}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ q1\ =\ q1\ +\ pnm(n+1,m+1)*(\mbox{\hyperlink{global_8hpp_aae4f5247dbe2733ec80f005dfbb2c3ed}{Cnm}}(n+1,m+1)*cos(m*lon)+\mbox{\hyperlink{global_8hpp_a19b1b61df2d43fbf34bc708611f8d589}{Snm}}(n+1,m+1)*sin(m*lon));}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ q2\ =\ q2\ +\ dpnm(n+1,m+1)*(\mbox{\hyperlink{global_8hpp_aae4f5247dbe2733ec80f005dfbb2c3ed}{Cnm}}(n+1,m+1)*cos(m*lon)+\mbox{\hyperlink{global_8hpp_a19b1b61df2d43fbf34bc708611f8d589}{Snm}}(n+1,m+1)*sin(m*lon));}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ q3\ =\ q3\ +\ m*pnm(n+1,m+1)*(\mbox{\hyperlink{global_8hpp_a19b1b61df2d43fbf34bc708611f8d589}{Snm}}(n+1,m+1)*cos(m*lon)-\/\mbox{\hyperlink{global_8hpp_aae4f5247dbe2733ec80f005dfbb2c3ed}{Cnm}}(n+1,m+1)*sin(m*lon));}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ dUdr\ \ \ \ \ =\ dUdr\ \ \ \ \ +\ q1*b1;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ dUdlatgc\ =\ dUdlatgc\ +\ q2*b2;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ dUdlon\ \ \ =\ dUdlon\ \ \ +\ q3*b3;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ q3\ =\ 0.0;\ q2\ =\ q3;\ q1\ =\ q2;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00042}00042\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00043}00043\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ Body-\/fixed\ acceleration}}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00045}00045\ \ \ \ \ r2xy\ =\ pow(r\_bf(1),2)+pow(r\_bf(2),2);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00046}00046\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00047}00047\ \ \ \ \ ax\ =\ (1/d*dUdr-\/r\_bf(3)/(pow(d,2)*sqrt(r2xy))*dUdlatgc)*r\_bf(1)-\/(1/r2xy*dUdlon)*r\_bf(2);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00048}00048\ \ \ \ \ ay\ =\ (1/d*dUdr-\/r\_bf(3)/(pow(d,2)*sqrt(r2xy))*dUdlatgc)*r\_bf(2)+(1/r2xy*dUdlon)*r\_bf(1);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00049}00049\ \ \ \ \ az\ =\ \ 1/d*dUdr*r\_bf(3)+sqrt(r2xy)/pow(d,2)*dUdlatgc;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ a\_bf\ =\ \mbox{\hyperlink{matrix_8hpp_a56d60ea1f08402246a7cfd477d69a618}{zeros}}(3,1);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00052}00052\ \ \ \ \ a\_bf(1)\ =\ ax;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00053}00053\ \ \ \ \ a\_bf(2)\ =\ ay;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00054}00054\ \ \ \ \ a\_bf(3)\ =\ az;}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00055}00055\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ Inertial\ acceleration\ }}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{matrix_8hpp_acbd9778b697f9ad3da64ef53b850e2c9}{transpose}}(\mbox{\hyperlink{matrix_8hpp_acbd9778b697f9ad3da64ef53b850e2c9}{transpose}}(E)*a\_bf);}
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00058}00058\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_accel_harmonic_8cpp_source_l00059}00059\ \}}
+
+\end{DoxyCode}

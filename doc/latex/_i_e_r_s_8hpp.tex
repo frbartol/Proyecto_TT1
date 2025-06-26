@@ -1,0 +1,85 @@
+\doxysection{include/\+IERS.hpp File Reference}
+\hypertarget{_i_e_r_s_8hpp}{}\label{_i_e_r_s_8hpp}\index{include/IERS.hpp@{include/IERS.hpp}}
+
+
+Interpolación de parámetros del IERS a una fecha dada.  
+
+
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include "{}matrix.\+hpp"{}}\newline
+{\ttfamily \#include "{}SAT\+\_\+\+Const.\+hpp"{}}\newline
+Include dependency graph for IERS.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{_i_e_r_s_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_i_e_r_s_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ double, double, double, double, double, double, double, double, double $>$ \mbox{\hyperlink{_i_e_r_s_8hpp_a95030f50da11c7d73c99c0dc1090a603}{IERS}} (\mbox{\hyperlink{class_matrix}{Matrix}} \&eop, double Mjd\+\_\+\+UTC, char interp)
+\begin{DoxyCompactList}\small\item\em Interpola los parámetros EOP (Earth Orientation Parameters) para una fecha dada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interpolación de parámetros del IERS a una fecha dada. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_i_e_r_s_8hpp_source}{IERS.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_i_e_r_s_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_i_e_r_s_8hpp_a95030f50da11c7d73c99c0dc1090a603}\index{IERS.hpp@{IERS.hpp}!IERS@{IERS}}
+\index{IERS@{IERS}!IERS.hpp@{IERS.hpp}}
+\doxysubsubsection{\texorpdfstring{IERS()}{IERS()}}
+{\footnotesize\ttfamily \label{_i_e_r_s_8hpp_a95030f50da11c7d73c99c0dc1090a603} 
+tuple$<$ double, double, double, double, double, double, double, double, double $>$ IERS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{eop}{, }\item[{double}]{Mjd\+\_\+\+UTC}{, }\item[{char}]{interp}{}\end{DoxyParamCaption})}
+
+
+
+Interpola los parámetros EOP (Earth Orientation Parameters) para una fecha dada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eop} & Matriz de parámetros EOP (cada fila representa una fecha). \\
+\hline
+{\em Mjd\+\_\+\+UTC} & Fecha UTC en formato Modified Julian Date. \\
+\hline
+{\em interp} & Modo de interpolación\+: \textquotesingle{}l\textquotesingle{} para lineal, cualquier otro carácter para sin interpolación. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con\+:
+\begin{DoxyItemize}
+\item x\+\_\+p\+: coordenada del polo en segundos de arco.
+\item y\+\_\+p\+: coordenada del polo en segundos de arco.
+\item UT1-\/\+UTC en segundos.
+\item LOD\+: duración del día.
+\item dpsi\+: corrección de la precesión nutación en longitud.
+\item deps\+: corrección de la precesión nutación en oblicuidad.
+\item dx\+: corrección del modelo IAU2000 en x.
+\item dy\+: corrección del modelo IAU2000 en y.
+\item TAI-\/\+UTC en segundos. 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_i_e_r_s_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_i_e_r_s_8cpp_source}{IERS.\+cpp}}.
+

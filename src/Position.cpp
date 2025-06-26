@@ -1,3 +1,8 @@
+/**
+ * @file Position.cpp
+ * @brief Implementación de la conversión de coordenadas geodésicas a ECEF.
+ * @author Francisco Bartolome Alcalde
+ */
 #include "..\include\Position.hpp"
 
 Matrix& Position(double lon, double lat, double h){

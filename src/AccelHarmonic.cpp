@@ -1,3 +1,8 @@
+/**
+ * @file AccelHarmonic.cpp
+ * @brief Implementación de la aceleración perturbadora debida al campo gravitacional armónico terrestre.
+ * @author Francisco Bartolome Alcalde
+ */
 #include "..\include\AccelHarmonic.hpp"
 
 Matrix& AccelHarmonic(Matrix& r, Matrix& E, double n_max, double m_max){

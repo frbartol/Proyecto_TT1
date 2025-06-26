@@ -1,0 +1,77 @@
+\doxysection{include/timediff.hpp File Reference}
+\hypertarget{timediff_8hpp}{}\label{timediff_8hpp}\index{include/timediff.hpp@{include/timediff.hpp}}
+
+
+Cálculo de diferencias de tiempo entre escalas temporales estándar.  
+
+
+{\ttfamily \#include $<$tuple$>$}\newline
+Include dependency graph for timediff.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{timediff_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timediff_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+tuple$<$ double, double, double, double, double $>$ \mbox{\hyperlink{timediff_8hpp_a0772112289293a570d2edb0667dbb3a9}{timediff}} (double UT1\+\_\+\+UTC, double TAI\+\_\+\+UTC)
+\begin{DoxyCompactList}\small\item\em Calcula las diferencias entre escalas de tiempo UT1, TAI, TT, UTC y GPS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cálculo de diferencias de tiempo entre escalas temporales estándar. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{timediff_8hpp_source}{timediff.\+hpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{timediff_8hpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{timediff_8hpp_a0772112289293a570d2edb0667dbb3a9}\index{timediff.hpp@{timediff.hpp}!timediff@{timediff}}
+\index{timediff@{timediff}!timediff.hpp@{timediff.hpp}}
+\doxysubsubsection{\texorpdfstring{timediff()}{timediff()}}
+{\footnotesize\ttfamily \label{timediff_8hpp_a0772112289293a570d2edb0667dbb3a9} 
+tuple$<$ double, double, double, double, double $>$ timediff (\begin{DoxyParamCaption}\item[{double}]{UT1\+\_\+\+UTC}{, }\item[{double}]{TAI\+\_\+\+UTC}{}\end{DoxyParamCaption})}
+
+
+
+Calcula las diferencias entre escalas de tiempo UT1, TAI, TT, UTC y GPS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em UT1\+\_\+\+UTC} & Diferencia UT1 -\/ UTC \mbox{[}s\mbox{]}. \\
+\hline
+{\em TAI\+\_\+\+UTC} & Diferencia TAI -\/ UTC \mbox{[}s\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tupla con\+:
+\begin{DoxyItemize}
+\item UT1 -\/ UTC
+\item TAI -\/ UTC
+\item UTC -\/ TAI
+\item GPS -\/ UTC
+\item TT -\/ UTC 
+\end{DoxyItemize}
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{timediff_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{timediff_8cpp_source}{timediff.\+cpp}}.
+

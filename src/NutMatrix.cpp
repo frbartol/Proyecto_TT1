@@ -1,3 +1,9 @@
+/**
+ * @file NutMatrix.cpp
+ * @brief Implementación del cálculo de la matriz de nutación.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\NutMatrix.hpp"
 
 Matrix& NutMatrix(double Mjd_TT){

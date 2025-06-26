@@ -1,3 +1,8 @@
+/**
+ * @file G_AccelHarmonic.cpp
+ * @brief Implementación del cálculo del gradiente de la aceleración armónica gravitacional terrestre por diferencias finitas centradas.
+ * @author Francisco Bartolome Alcalde
+ */
 #include "..\include\AccelHarmonic.hpp"
 
 Matrix& G_AccelHarmonic( Matrix& r, Matrix& U, int n_max, int m_max ){

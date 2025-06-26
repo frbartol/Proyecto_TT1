@@ -1,3 +1,9 @@
+/**
+ * @file NutAngles.cpp
+ * @brief Implementación del cálculo de los ángulos de nutación Δψ y Δε a partir de la fecha TT.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\NutAngles.hpp"
 
 tuple<double, double> NutAngles(double Mjd_TT){

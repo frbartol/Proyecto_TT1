@@ -1,3 +1,8 @@
+/**
+ * @file matrix.cpp
+ * @brief Implementación de la clase Matrix y funciones asociadas.
+ * @author Francisco Bartolome Alcalde
+ */
 #include "..\include\matrix.hpp"
 
 //hay que añadir un constructor vacio

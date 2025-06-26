@@ -1,0 +1,37 @@
+\doxysection{Cheb3\+D.\+cpp}
+\hypertarget{_cheb3_d_8cpp_source}{}\label{_cheb3_d_8cpp_source}\index{src/Cheb3D.cpp@{src/Cheb3D.cpp}}
+\mbox{\hyperlink{_cheb3_d_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_cheb3_d_8hpp}{../include/Cheb3D.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00007}\mbox{\hyperlink{_cheb3_d_8hpp_a05a110559834c211c7a7eeac28dd8246}{00007}}\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ \mbox{\hyperlink{_cheb3_d_8cpp_a05a110559834c211c7a7eeac28dd8246}{Cheb3D}}(\textcolor{keywordtype}{double}\ t,\ \textcolor{keywordtype}{int}\ N,\ \textcolor{keywordtype}{double}\ Ta,\ \textcolor{keywordtype}{double}\ Tb,\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ Cx,\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ Cy,\ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ Cz)\{}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00008}00008\ \ \ \ \ \textcolor{keywordflow}{if}(t<Ta\ ||\ Tb<t)\{}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00009}00009\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Cheb3D:\ Time\ out\ of\ range"{}};}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00010}00010\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{if}(Cx.\mbox{\hyperlink{class_matrix_a72848e6895f6a6b638410be60b25ed7a}{n\_column}}!=N\ ||\ Cy.\mbox{\hyperlink{class_matrix_a72848e6895f6a6b638410be60b25ed7a}{n\_column}}!=N\ ||\ Cz.\mbox{\hyperlink{class_matrix_a72848e6895f6a6b638410be60b25ed7a}{n\_column}}!=N)\{}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ cout<<\textcolor{stringliteral}{"{}Cheb3D:\ Incorrect\ size\ of\ Cx/Cy/Cz"{}};}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00014}00014\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{double}\ tau\ =\ (2*t-\/Ta-\/Tb)/(Tb-\/Ta);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ f1\ =\ \mbox{\hyperlink{matrix_8hpp_a56d60ea1f08402246a7cfd477d69a618}{zeros}}(1,3);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ f2\ =\ \mbox{\hyperlink{matrix_8hpp_a56d60ea1f08402246a7cfd477d69a618}{zeros}}(1,3);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ old\_f1\ =\ \mbox{\hyperlink{matrix_8hpp_a56d60ea1f08402246a7cfd477d69a618}{zeros}}(1,3);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ N;\ i>=2;\ i-\/-\/)\{}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ old\_f1\ =\ f1;}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ f1\ =\ f1*2*tau\ -\/\ f2;}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ f1(1,1)\ =\ f1(1,1)\ +\ Cx(1,i);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ f1(1,2)\ =\ f1(1,2)\ +\ Cy(1,i);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ f1(1,3)\ =\ f1(1,3)\ +\ Cz(1,i);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ f2\ =\ old\_f1;}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00027}00027\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{class_matrix}{Matrix}}\&\ ChebApp\ =\ \mbox{\hyperlink{matrix_8hpp_a56d60ea1f08402246a7cfd477d69a618}{zeros}}(1,3);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00030}00030\ \ \ \ \ ChebApp\ =\ f1*tau-\/f2;}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00031}00031\ \ \ \ \ ChebApp(1,1)\ =\ ChebApp(1,1)+Cx(1,1);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00032}00032\ \ \ \ \ ChebApp(1,2)\ =\ ChebApp(1,2)+Cy(1,1);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00033}00033\ \ \ \ \ ChebApp(1,3)\ =\ ChebApp(1,3)+Cz(1,1);}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ ChebApp;}
+\DoxyCodeLine{\Hypertarget{_cheb3_d_8cpp_source_l00035}00035\ \}}
+
+\end{DoxyCode}

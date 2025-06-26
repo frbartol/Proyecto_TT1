@@ -1,3 +1,9 @@
+/**
+ * @file Accel.cpp
+ * @brief Implementación de la función que calcula la aceleración total actuando sobre un satélite.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\Accel.hpp"
 
 Matrix& Accel(double x, Matrix& Y){

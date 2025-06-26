@@ -1,0 +1,62 @@
+\doxysection{src/\+Accel.cpp File Reference}
+\hypertarget{_accel_8cpp}{}\label{_accel_8cpp}\index{src/Accel.cpp@{src/Accel.cpp}}
+
+
+Implementación de la función que calcula la aceleración total actuando sobre un satélite.  
+
+
+{\ttfamily \#include "{}..\textbackslash{}include\textbackslash{}\+Accel.\+hpp"{}}\newline
+Include dependency graph for Accel.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_accel_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& \mbox{\hyperlink{_accel_8cpp_a28040ec3672b4e1805218ad1cd43bfa0}{Accel}} (double x, \mbox{\hyperlink{class_matrix}{Matrix}} \&Y)
+\begin{DoxyCompactList}\small\item\em Calcula la aceleración total sobre un satélite, teniendo en cuenta efectos gravitacionales y perturbaciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la función que calcula la aceleración total actuando sobre un satélite. 
+
+\begin{DoxyAuthor}{Author}
+Francisco Bartolome Alcalde 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_accel_8cpp_source}{Accel.\+cpp}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{_accel_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_accel_8cpp_a28040ec3672b4e1805218ad1cd43bfa0}\index{Accel.cpp@{Accel.cpp}!Accel@{Accel}}
+\index{Accel@{Accel}!Accel.cpp@{Accel.cpp}}
+\doxysubsubsection{\texorpdfstring{Accel()}{Accel()}}
+{\footnotesize\ttfamily \label{_accel_8cpp_a28040ec3672b4e1805218ad1cd43bfa0} 
+\mbox{\hyperlink{class_matrix}{Matrix}} \& Accel (\begin{DoxyParamCaption}\item[{double}]{x}{, }\item[{\mbox{\hyperlink{class_matrix}{Matrix}} \&}]{Y}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la aceleración total sobre un satélite, teniendo en cuenta efectos gravitacionales y perturbaciones. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Tiempo en MJD\+\_\+\+TT (Modified Julian Date, Tiempo Terrestre). \\
+\hline
+{\em Y} & Vector de estado del satélite (posición y velocidad). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Aceleración total en el sistema de referencia inercial. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_accel_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_accel_8cpp_source}{Accel.\+cpp}}.
+

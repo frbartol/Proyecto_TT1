@@ -1,3 +1,9 @@
+/**
+ * @file R_z.cpp
+ * @brief Implementación de la matriz de rotación respecto al eje Z.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\R_z.hpp"
 
 Matrix& R_z(double angle){

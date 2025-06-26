@@ -1,3 +1,9 @@
+/**
+ * @file Mjday.cpp
+ * @brief Implementación del cálculo del Modified Julian Date (MJD) desde fecha y hora calendario.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\Mjday.hpp"
 double Mjday(int yr, int mon, int day, int hr, int min, double sec){
     double jd = 367.0*yr

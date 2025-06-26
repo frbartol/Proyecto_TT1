@@ -1,3 +1,9 @@
+/**
+ * @file Legendre.cpp
+ * @brief Implementación del cálculo de los polinomios de Legendre normalizados y sus derivadas.
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\Legendre.hpp"
 
 tuple<Matrix&, Matrix&> Legendre(int n, int m, double fi){

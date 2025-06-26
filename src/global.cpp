@@ -1,3 +1,12 @@
+/**
+ * @file global.cpp
+ * @brief Implementación de las funciones y variables globales para el sistema de dinámica orbital.
+ *
+ * Contiene la inicialización y carga de datos de orientación terrestre, coeficientes gravitacionales,
+ * efemérides y parámetros auxiliares que se utilizan de forma compartida en el sistema.
+ *
+ * @author Francisco Bartolome Alcalde
+ */
 #include "..\include\global.hpp"
 Matrix eopdata;
 Matrix Cnm;

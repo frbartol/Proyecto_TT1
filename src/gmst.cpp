@@ -1,3 +1,9 @@
+/**
+ * @file gmst.cpp
+ * @brief Implementación del cálculo del Tiempo Sidéreo Medio de Greenwich (GMST).
+ * @author Francisco Bartolome Alcalde
+ */
+
 #include "..\include\gmst.hpp"
 
 double gmst(double Mjd_UT1){
